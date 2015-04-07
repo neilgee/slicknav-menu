@@ -2,7 +2,7 @@
 
 Contributors: neilgee
 Donate link: http://wpbeaches.com/
-Tags: mobile, menu
+Tags: mobile, menu, responsive, aria, accessible, graceful
 Requires at least: 4.0
 Tested up to: 4.1.0
 Stable tag: 1.0.0
@@ -15,14 +15,14 @@ Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
-This plugin adds the option to use the SlickNav Mobile Menu in place of a regular menu at a designated size.
+This plugin adds the option to use the SlickNav Responsive Mobile Menu in place of a regular menu at a designated size.
 
 
 == Description ==
 
-This plugin adds SlickNav Mobile Menu functionality to WordPress.
+This plugin adds SlickNav Responsive Mobile Menu functionality to WordPress.
 
-SlickNav Menu has multi level menu support. 
+SlickNav Responsive Menu has multi level menu support. 
 
 Cross browser Compatible.
 
@@ -32,7 +32,7 @@ Degrades gracefully without JavaScript.
 
 Creates ARIA compliant menu.
 
-Please note that SlickNav is the work of Josh Cope, he is not responsible for the working of this plugin.
+Please note that SlickNav is the work of Josh Cope, he is not responsible for the working or support of this plugin.
 
 == Installation ==
 

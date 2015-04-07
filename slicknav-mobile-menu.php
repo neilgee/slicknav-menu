@@ -11,6 +11,12 @@ License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
 */
 
 
+  // If called direct, refuse
+  if ( ! defined( 'ABSPATH' ) ) {
+          die;
+  }
+
+
 /*
  * Assign global variables
  *

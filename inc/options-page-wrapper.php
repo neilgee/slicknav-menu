@@ -147,7 +147,7 @@
 
 						<div class="inside">
 							<p><?php esc_attr_e(
-									'Please note More Slick Nav Info...',
+									'More Slick Nav Info...',
 									'wp_admin_style'
 								); ?></p><ul>
 										<li><a href="http://slicknav.com/">SlickNav Home</a></li>
