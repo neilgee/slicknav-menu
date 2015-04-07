@@ -95,8 +95,7 @@
 										<td><label for="ng_slicknav_button_position">Menu Button Position</label></td>
 										<td>	
 											<strong><?php echo $ng_slicknav_button_position; ?></strong>
-										</td>
-										<td>Reposition	
+										&nbsp;&nbsp;Reposition	
 											<select name="ng_slicknav_button_position" id="ng_slicknav_button_position">
 											<option  value="right">Right</option>
 											<option value="left">Left</option>
@@ -111,8 +110,7 @@
 										<td><label for="ng_slicknav_submenu_position">SubMenu Button Indicator</label></td>
 										<td>	
 											<strong><?php echo $ng_slicknav_submenu_position; ?></strong>
-										</td>
-										<td>Reposition	
+										&nbsp;&nbsp;Reposition	
 											<select name="ng_slicknav_submenu_position" id="ng_slicknav_submenu_position">
 											<option selected="selected" value="right">Right</option>
 											<option value="none">Left</option>
