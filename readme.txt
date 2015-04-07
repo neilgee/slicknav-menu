@@ -32,6 +32,8 @@ Degrades gracefully without JavaScript.
 
 Creates ARIA compliant menu.
 
+Please note that SlickNav is the work of Josh Cope, he is not responsible for the working of this plugin.
+
 == Installation ==
 
 This section describes how to install the plugin:
