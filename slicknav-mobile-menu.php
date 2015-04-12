@@ -50,11 +50,22 @@ function ng_slicknav_responsive_menujs() {
       $options = get_option('ng_slicknavmenu');
         if ( $options !== '') {
         $ng_slicknav_menu = $options['ng_slicknav_menu'];
+        $ng_slicknav_position = $options['ng_slicknav_position'];
+        $ng_slicknav_label = $options['ng_slicknav_label'];
+        $ng_slicknav_parent_links = $options['ng_slicknav_parent_links'];
 }?>
 
       <script>
             jQuery(function($) {
-            $('<?php echo $ng_slicknav_menu; ?>').slicknav();
+            $('<?php echo $ng_slicknav_menu; ?>').slicknav({
+                prependTo:'<?php if( $ng_slicknav_position =='') {
+              echo 'body'; 
+            }
+              else {
+              echo $ng_slicknav_position; }?>',
+                label:'<?php echo $ng_slicknav_label; ?>',
+                allowParentLinks: <?php echo $ng_slicknav_parent_links; ?>,
+            });
             });
         </script>
 
@@ -158,6 +169,9 @@ function wpslicknav_menu_options_page() {
           $ng_slicknav_button_position= esc_html( $_POST['ng_slicknav_button_position']);
           $ng_slicknav_font= esc_html( $_POST['ng_slicknav_font']);
           $ng_slicknav_submenu_position = esc_html( $_POST['ng_slicknav_submenu_position']);
+          $ng_slicknav_position = esc_html( $_POST['ng_slicknav_position']);
+          $ng_slicknav_label = esc_html( $_POST['ng_slicknav_label']);
+          $ng_slicknav_parent_links = esc_html( $_POST['ng_slicknav_parent_links']);
 
           $options['ng_slicknav_menu'] = $ng_slicknav_menu;
           $options['ng_slicknav_width'] = $ng_slicknav_width;
@@ -166,6 +180,9 @@ function wpslicknav_menu_options_page() {
           $options['ng_slicknav_button_position'] = $ng_slicknav_button_position;
           $options['ng_slicknav_font'] = $ng_slicknav_font;
           $options['ng_slicknav_submenu_position'] = $ng_slicknav_submenu_position;
+          $options['ng_slicknav_position'] = $ng_slicknav_position;
+          $options['ng_slicknav_label'] = $ng_slicknav_label;
+          $options['ng_slicknav_parent_links'] = $ng_slicknav_parent_links;
           $options['last_updated']     = time();
 
           update_option('ng_slicknavmenu', $options);
@@ -186,6 +203,9 @@ function wpslicknav_menu_options_page() {
         $ng_slicknav_button_position = $options['ng_slicknav_button_position'];
         $ng_slicknav_font = $options['ng_slicknav_font'];
         $ng_slicknav_submenu_position = $options['ng_slicknav_submenu_position'];
+        $ng_slicknav_position = $options['ng_slicknav_position'];
+        $ng_slicknav_label = $options['ng_slicknav_label'];
+        $ng_slicknav_parent_links = $options['ng_slicknav_parent_links'];
 
     }
 
