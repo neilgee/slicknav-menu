@@ -82,4 +82,4 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
 = 1.1.2  - 12th April 2015 - Added open/close Menu speed amount.
 
-= 1.1.3  - 13th April 2015 - BugFix - Select Option Dropdowns now retains previous selection on update.
+= 1.1.3  - 13th April 2015 - BugFix, Select Option Dropdowns now retains previous selection on update.

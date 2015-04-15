@@ -4,10 +4,10 @@ Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com/using-slick-responsive-menus-genesis-child-theme/
 Description: Using SlickNav Responsive Mobile Menus in WordPress
 Author: Neil Gee
-Version: 1.1.3
+Version: 1.1.4
 Author URI: http://wpbeaches.com
-License:           GPL-2.0+
-License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+License: GPL-2.0+
+License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 */
 
 
@@ -92,6 +92,8 @@ function ng_slicknav_responsive_menucss() {
         $ng_slicknav_width = $options['ng_slicknav_width'];
         $ng_slicknav_background = $options['ng_slicknav_background'];
         $ng_slicknav_button = $options['ng_slicknav_button'];
+        $ng_slicknav_label_color = $options['ng_slicknav_label_color'];
+        $ng_slicknav_icon_color = $options['ng_slicknav_icon_color'];
         $ng_slicknav_button_position = $options['ng_slicknav_button_position'];
         $ng_slicknav_font = $options['ng_slicknav_font'];
         $ng_slicknav_submenu_position = $options['ng_slicknav_submenu_position'];
@@ -121,6 +123,12 @@ function ng_slicknav_responsive_menucss() {
              }
              .slicknav_nav .slicknav_arrow {
                 float: <?php echo $ng_slicknav_submenu_position; ?>
+             }
+             .slicknav_menu .slicknav_menutxt {
+                color: <?php echo $ng_slicknav_label_color; ?>;
+             }
+             .slicknav_menu .slicknav_icon-bar {
+                background-color: <?php echo $ng_slicknav_icon_color; ?>;
              }
       }
         </style>
@@ -172,6 +180,8 @@ function wpslicknav_menu_options_page() {
           $ng_slicknav_width = esc_html( $_POST['ng_slicknav_width'] );
           $ng_slicknav_background = esc_html( $_POST['ng_slicknav_background'] );
           $ng_slicknav_button = esc_html( $_POST['ng_slicknav_button'] );
+          $ng_slicknav_label_color = esc_html( $_POST['ng_slicknav_label_color'] );
+          $ng_slicknav_icon_color = esc_html( $_POST['ng_slicknav_icon_color'] );
           $ng_slicknav_button_position= esc_html( $_POST['ng_slicknav_button_position']);
           $ng_slicknav_font= esc_html( $_POST['ng_slicknav_font']);
           $ng_slicknav_submenu_position = esc_html( $_POST['ng_slicknav_submenu_position']);
@@ -184,6 +194,8 @@ function wpslicknav_menu_options_page() {
           $options['ng_slicknav_width'] = $ng_slicknav_width;
           $options['ng_slicknav_background'] = $ng_slicknav_background;
           $options['ng_slicknav_button'] = $ng_slicknav_button;
+          $options['ng_slicknav_label_color'] = $ng_slicknav_label_color;
+          $options['ng_slicknav_icon_color'] = $ng_slicknav_icon_color;
           $options['ng_slicknav_button_position'] = $ng_slicknav_button_position;
           $options['ng_slicknav_font'] = $ng_slicknav_font;
           $options['ng_slicknav_submenu_position'] = $ng_slicknav_submenu_position;
@@ -208,6 +220,8 @@ function wpslicknav_menu_options_page() {
         $ng_slicknav_width = $options['ng_slicknav_width'];
         $ng_slicknav_background = $options['ng_slicknav_background'];
         $ng_slicknav_button = $options['ng_slicknav_button'];
+        $ng_slicknav_label_color = $options['ng_slicknav_label_color'];
+        $ng_slicknav_icon_color = $options['ng_slicknav_icon_color'];
         $ng_slicknav_button_position = $options['ng_slicknav_button_position'];
         $ng_slicknav_font = $options['ng_slicknav_font'];
         $ng_slicknav_submenu_position = $options['ng_slicknav_submenu_position'];
