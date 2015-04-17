@@ -51,6 +51,32 @@
 										<td><input name="ng_slicknav_icon_color" id="ng_slicknav_icon_color" type="text" value="#ffffff" class="regular-text" placeholder="#ffffff" /></td>										
 									</tr>
 									<tr>
+										<td><label for="ng_slicknav_label_shadow"><?php _e( 'Menu Label Shadow', 'slicknav-mobile-menu' ); ?></label></td>
+										<td>	
+											<select name="ng_slicknav_label_shadow" id="ng_slicknav_label_shadow">
+											<option selected="selected" value="0 1px 3px #000"><?php _e( 'On', 'slicknav-mobile-menu' ); ?></option>
+											<option value="none"><?php _e( 'Off', 'slicknav-mobile-menu' ); ?></option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td><label for="ng_slicknav_icon_shadow"><?php _e( 'Menu Icon Shadow', 'slicknav-mobile-menu' ); ?></label></td>
+										<td>	
+											<select name="ng_slicknav_icon_shadow" id="ng_slicknav_icon_shadow">
+											<option selected="selected" value="0 1px 0 rgba(0,0,0,0.25)"><?php _e( 'On', 'slicknav-mobile-menu' ); ?></option>
+											<option value="none"><?php _e( 'Off', 'slicknav-mobile-menu' ); ?></option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td><label for="ng_slicknav_link_color"><?php _e( 'Menu Link Color', 'slicknav-mobile-menu' ); ?></label></td>
+										<td><input name="ng_slicknav_link_color" id="ng_slicknav_link_color" type="text" value="#ffffff" class="regular-text" placeholder="#ffffff" /></td>										
+									</tr>
+									<tr>
+										<td><label for="ng_slicknav_link_hover_color"><?php _e( 'Menu Link Hover Color', 'slicknav-mobile-menu' ); ?></label></td>
+										<td><input name="ng_slicknav_link_hover_color" id="ng_slicknav_link_hover_color" type="text" value="#cccccc" class="regular-text" placeholder="#ffffff" /></td>										
+									</tr>
+									<tr>
 										<td><label for="ng_slicknav_button_position"><?php _e( 'Menu Button Position', 'slicknav-mobile-menu' ); ?></label></td>
 										<td>	
 											<select name="ng_slicknav_button_position" id="ng_slicknav_button_position">
@@ -63,6 +89,30 @@
 										<td><label for="ng_slicknav_font"><?php _e( 'Menu Font Size (16px Default)', 'slicknav-mobile-menu' ); ?></label></td>
 										<td><input name="ng_slicknav_font" id="ng_slicknav_font" type="number" value="16" class="regular-text" placeholder="16" /></td>										
 									</tr>
+									<tr>
+										<td><label for="ng_slicknav_label_size"><?php _e( 'Menu Label Size (16px Default)', 'slicknav-mobile-menu' ); ?></label></td>
+										<td><input name="ng_slicknav_label_size" id="ng_slicknav_label_size" type="number" value="16" class="regular-text" placeholder="16" /></td>										
+									</tr>
+									<tr>
+									<td><label for="ng_slicknav_label_weight"><?php _e( 'Menu Label Weight', 'slicknav-mobile-menu' ); ?></label></td>
+									<td>	
+										<select name="ng_slicknav_label_weight" id="ng_slicknav_label_weight">
+										<option  value="normal"><?php _e( 'Normal', 'slicknav-mobile-menu' ); ?></option>
+										<option  selected="selected" value="bold" ><?php _e( 'Bold', 'slicknav-mobile-menu' ); ?></option>
+										</select>
+									</td>
+								</tr>
+									<tr>
+										<td><label for="ng_slicknav_font_case"><?php _e( 'Menu link font case', 'slicknav-mobile-menu' ); ?></label></td>
+										<td>	
+											<select name="ng_slicknav_font_case" id="ng_slicknav_font_case">
+											<option selected="selected" value="None"><?php _e( 'none', 'slicknav-mobile-menu' ); ?></option>
+											<option value="capitalize"><?php _e( 'Capitalize', 'slicknav-mobile-menu' ); ?></option>
+											<option value="lowercase"><?php _e( 'Lowercase', 'slicknav-mobile-menu' ); ?></option>
+											<option value="uppercase"><?php _e( 'Uppercase', 'slicknav-mobile-menu' ); ?></option>
+											</select>
+										</td>
+									</tr>		
 									<tr>
 										<td><label for="ng_slicknav_submenu_position"><?php _e( 'SubMenu Button Indicator', 'slicknav-mobile-menu' ); ?></label></td>
 										<td>	
@@ -131,18 +181,42 @@
 									<td><input name="ng_slicknav_button" id="ng_slicknav_button" type="text" value="<?php echo $ng_slicknav_button; ?>" class="regular-text" placeholder="#222222" /></td>										
 								</tr>
 								<tr>
-										<td><label for="ng_slicknav_label_color"><?php _e( 'Menu Label Color', 'slicknav-mobile-menu' ); ?></label></td>
-										<td><input name="ng_slicknav_label_color" id="ng_slicknav_label_color" type="text" value="<?php echo $ng_slicknav_label_color; ?>" class="regular-text" placeholder="#ffffff" /></td>										
+									<td><label for="ng_slicknav_label_color"><?php _e( 'Menu Label Color', 'slicknav-mobile-menu' ); ?></label></td>
+									<td><input name="ng_slicknav_label_color" id="ng_slicknav_label_color" type="text" value="<?php echo $ng_slicknav_label_color; ?>" class="regular-text" placeholder="#ffffff" /></td>										
 								</tr>
 								<tr>
-										<td><label for="ng_slicknav_icon_color"><?php _e( 'Menu Icon Color', 'slicknav-mobile-menu' ); ?></label></td>
-										<td><input name="ng_slicknav_icon_color" id="ng_slicknav_icon_color" type="text" value="<?php echo $ng_slicknav_icon_color; ?>" class="regular-text" placeholder="#ffffff" /></td>										
-									</tr>
+									<td><label for="ng_slicknav_icon_color"><?php _e( 'Menu Icon Color', 'slicknav-mobile-menu' ); ?></label></td>
+									<td><input name="ng_slicknav_icon_color" id="ng_slicknav_icon_color" type="text" value="<?php echo $ng_slicknav_icon_color; ?>" class="regular-text" placeholder="#ffffff" /></td>										
+								</tr>
+								<tr>
+									<td><label for="ng_slicknav_label_shadow"><?php _e( 'Menu Label Shadow', 'slicknav-mobile-menu' ); ?></label></td>
+									<td>	
+										<select name="ng_slicknav_label_shadow" id="ng_slicknav_label_shadow">
+										<option value="0 1px 3px #000"  <?php selected($options['ng_slicknav_label_shadow'], '0 1px 3px #000' ); ?>><?php _e( 'On', 'slicknav-mobile-menu' ); ?></option>
+										<option value="none"  <?php selected($options['ng_slicknav_label_shadow'], 'none' ); ?>><?php _e( 'Off', 'slicknav-mobile-menu' ); ?></option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td><label for="ng_slicknav_icon_shadow"><?php _e( 'Menu Icon Shadow', 'slicknav-mobile-menu' ); ?></label></td>
+									<td>	
+										<select name="ng_slicknav_icon_shadow" id="ng_slicknav_icon_shadow">
+										<option value="0 1px 0 rgba(0,0,0,0.25)" <?php selected($options['ng_slicknav_icon_shadow'], '0 1px 0 rgba(0,0,0,0.25)' ); ?>><?php _e( 'On', 'slicknav-mobile-menu' ); ?></option>
+										<option value="none" <?php selected($options['ng_slicknav_icon_shadow'], 'none' ); ?>><?php _e( 'Off', 'slicknav-mobile-menu' ); ?></option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td><label for="ng_slicknav_link_color"><?php _e( 'Menu Link Color', 'slicknav-mobile-menu' ); ?></label></td>
+									<td><input name="ng_slicknav_link_color" id="ng_slicknav_link_color" type="text" value="<?php echo $ng_slicknav_link_color; ?>" class="regular-text" placeholder="#ffffff" /></td>										
+								</tr>
+								<tr>
+									<td><label for="ng_slicknav_link_hover_color"><?php _e( 'Menu Link Hover Color', 'slicknav-mobile-menu' ); ?></label></td>
+									<td><input name="ng_slicknav_link_hover_color" id="ng_slicknav_link_hover_color" type="text" value="<?php echo $ng_slicknav_link_hover_color; ?>" class="regular-text" placeholder="#ffffff" /></td>										
+								</tr>
 								<tr>
 									<td><label for="ng_slicknav_button_position"><?php _e( 'Menu Button Position', 'slicknav-mobile-menu' ); ?></label></td>
 									<td>	
-										<strong><?php echo $ng_slicknav_button_position; ?></strong>
-									&nbsp;&nbsp;<?php _e( 'Reposition', 'slicknav-mobile-menu' ); ?>	
 										<select name="ng_slicknav_button_position" id="ng_slicknav_button_position">
 										
 										<option  value="right" <?php selected($options['ng_slicknav_button_position'], 'right' ); ?>><?php _e( 'Right', 'slicknav-mobile-menu' ); ?></option>
@@ -156,10 +230,32 @@
 									<td><input name="ng_slicknav_font" id="ng_slicknav_font" type="number" value="<?php echo $ng_slicknav_font; ?>" class="regular-text" placeholder="16"/></td>										
 								</tr>
 								<tr>
+										<td><label for="ng_slicknav_label_size"><?php _e( 'Menu Label Size (16px Default)', 'slicknav-mobile-menu' ); ?></label></td>
+										<td><input name="ng_slicknav_label_size" id="ng_slicknav_label_size" type="number" value="<?php echo $ng_slicknav_label_size; ?>" class="regular-text" placeholder="16" /></td>										
+								</tr>
+								<tr>
+										<td><label for="ng_slicknav_label_weight"><?php _e( 'Menu Label Weight', 'slicknav-mobile-menu' ); ?></label></td>
+										<td>	
+											<select name="ng_slicknav_label_weight" id="ng_slicknav_label_weight">
+											<option  value="normal" <?php selected($options['ng_slicknav_label_weight'], 'normal' ); ?>><?php _e( 'Normal', 'slicknav-mobile-menu' ); ?></option>
+											<option  value="bold" <?php selected($options['ng_slicknav_label_weight'], 'bold' ); ?>><?php _e( 'Bold', 'slicknav-mobile-menu' ); ?></option>
+											</select>
+										</td>
+								</tr>
+								<tr>
+									<td><label for="ng_slicknav_font_case"><?php _e( 'Menu link font case', 'slicknav-mobile-menu' ); ?></label></td>
+									<td>	
+										<select name="ng_slicknav_font_case" id="ng_slicknav_font_case">
+										<option selected="selected" value="None"><?php _e( 'none', 'slicknav-mobile-menu' ); ?></option>
+										<option value="capitalize" <?php selected($options['ng_slicknav_font_case'], 'capitalize' ); ?>><?php _e( 'Capitalize', 'slicknav-mobile-menu' ); ?></option>
+										<option value="lowercase" <?php selected($options['ng_slicknav_font_case'], 'lowercase' ); ?>><?php _e( 'Lowercase', 'slicknav-mobile-menu' ); ?></option>
+										<option value="uppercase" <?php selected($options['ng_slicknav_font_case'], 'uppercase' ); ?>><?php _e( 'Uppercase', 'slicknav-mobile-menu' ); ?></option>
+										</select>
+									</td>
+								</tr>
+								<tr>
 									<td><label for="ng_slicknav_submenu_position"><?php _e( 'SubMenu Button Indicator', 'slicknav-mobile-menu' ); ?></label></td>
 									<td>	
-										<strong><?php echo $ng_slicknav_submenu_position; ?></strong>
-									&nbsp;&nbsp;<?php _e( 'Reposition', 'slicknav-mobile-menu' ); ?>
 										<select name="ng_slicknav_submenu_position" id="ng_slicknav_submenu_position">
 										<option value="right" <?php selected($options['ng_slicknav_submenu_position'], 'right' ); ?>><?php _e( 'Right', 'slicknav-mobile-menu' ); ?></option>
 										<option value="none" <?php selected($options['ng_slicknav_submenu_position'], 'none' ); ?>><?php _e( 'none', 'slicknav-mobile-menu' ); ?></option>
@@ -177,9 +273,7 @@
 								</tr>
 								<tr>
 									<td><label for="ng_slicknav_parent_links"><?php _e( 'Allow Parent Links', 'slicknav-mobile-menu' ); ?></label></td>
-									<td>	
-										<strong><?php echo $ng_slicknav_parent_links; ?></strong>
-									&nbsp;&nbsp;<?php _e( 'Switch', 'slicknav-mobile-menu' ); ?>	
+									<td>		
 										<select name="ng_slicknav_parent_links" id="ng_slicknav_parent_links">
 										<option  value="true" <?php selected($options['ng_slicknav_parent_links'], 'true' ); ?>><?php _e( 'True', 'slicknav-mobile-menu' ); ?></option>
 										<option value="false" <?php selected($options['ng_slicknav_parent_links'], 'false' ); ?>><?php _e( 'False', 'slicknav-mobile-menu' ); ?></option>
@@ -189,8 +283,6 @@
 								<tr>
 									<td><label for="ng_slicknav_speed"><?php _e( 'Speed of Menu open/close (Lower numbers are faster)', 'slicknav-mobile-menu' ); ?></label></td>
 									<td>
-										<strong><?php echo $ng_slicknav_speed; ?></strong>	
-									&nbsp;&nbsp;<?php _e( 'Switch', 'slicknav-mobile-menu' ); ?>
 										<select name="ng_slicknav_speed" id="ng_slicknav_speed">
 										<option value="200"<?php selected($options['ng_slicknav_speed'], '200' ); ?>><?php _e( '200', 'slicknav-mobile-menu' ); ?></option>
 										<option value="400" <?php selected($options['ng_slicknav_speed'], '400' ); ?>><?php _e( '400', 'slicknav-mobile-menu' ); ?></option>
