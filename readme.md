@@ -5,12 +5,12 @@ Donate link: http://wpbeaches.com/
 Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
 Requires at least: 4.0
 Tested up to: 4.1.1
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
 Author: Neil Gee
-Version: 1.2.0
+Version: 1.2.1
 Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -84,7 +84,7 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
  - Open/close Menu speed option
 
- Demo - http://themes.wpbeaches.com/genesischild/
+ Demo - http://wpbeaches.com
 
  Please note that SlickNav is the work of Josh Cope, he is not responsible for the working or support of this plugin.
 
@@ -111,3 +111,5 @@ The settings are found via the dashboard Settings > SlickNav Menu
 = 1.1.5	- 16th April 2015 - Added link color and background color hover on links
 
 = 1.2.0	- 17th April 2015 - Added shadow on/off for label and icon, added label font size adjustment, label weight adjustment,  admin layout tweaks
+
+= 1.2.1	- 18th April 2015 - Added color pickers for color options
