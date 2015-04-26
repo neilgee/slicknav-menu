@@ -1,0 +1,313 @@
+# WordPress Blank Pot
+# Copyright (C) 2014 ...
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: slicknav-mobile-menu\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2015-04-26 15:53+1000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Neil Gee <ngowran@mac.com>\n"
+"Language-Team: WP Beaches <web@wpbeaches.com>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,"
+"_nc:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: inc/options-page-wrapper.php:12
+msgid "SlickNav Mobile Menu Options"
+msgstr "SlickNav mobiles Options du menu"
+
+#: inc/options-page-wrapper.php:17
+msgid "Mobile Menu"
+msgstr "mobile Menu"
+
+#: inc/options-page-wrapper.php:30
+msgid ""
+"Enter your menu CSS selector for the Mobile Menu name value, for example; "
+"#primary-menu or #menu-primary-menu etc."
+msgstr ""
+"Entrez votre sélecteur CSS de menu pour le nom Menu valeur mobile , par "
+"exemple ; #primary-menu or #menu-primary-menu etc."
+
+#: inc/options-page-wrapper.php:41 inc/options-page-wrapper.php:179
+msgid "SlickNav Mobile Menu Name"
+msgstr "SlickNav mobile Menu Nom"
+
+#: inc/options-page-wrapper.php:42 inc/options-page-wrapper.php:180
+msgid "CSS Selector Menu Name"
+msgstr "Sélecteur CSS Menu Nom"
+
+#: inc/options-page-wrapper.php:45
+msgid "Maximum width to use SlickNav (600px Default)"
+msgstr "Largeur maximale à utiliser SlickNav ( 600px par défaut )"
+
+#: inc/options-page-wrapper.php:49 inc/options-page-wrapper.php:187
+msgid "Menu Background Color"
+msgstr "Menu Couleur de fond"
+
+#: inc/options-page-wrapper.php:53 inc/options-page-wrapper.php:191
+msgid "Menu Button Color"
+msgstr "Menu Bouton Couleur"
+
+#: inc/options-page-wrapper.php:57 inc/options-page-wrapper.php:195
+msgid "Menu Label Color"
+msgstr "Menu Couleur Label"
+
+#: inc/options-page-wrapper.php:61 inc/options-page-wrapper.php:199
+msgid "Menu Icon Color"
+msgstr "Menu Icône Couleur"
+
+#: inc/options-page-wrapper.php:65 inc/options-page-wrapper.php:203
+msgid "Menu Label Shadow"
+msgstr "Menu Étiquette Ombre"
+
+#: inc/options-page-wrapper.php:68 inc/options-page-wrapper.php:77
+#: inc/options-page-wrapper.php:206 inc/options-page-wrapper.php:215
+msgid "On"
+msgstr "sur"
+
+#: inc/options-page-wrapper.php:69 inc/options-page-wrapper.php:78
+#: inc/options-page-wrapper.php:207 inc/options-page-wrapper.php:216
+msgid "Off"
+msgstr "de"
+
+#: inc/options-page-wrapper.php:74 inc/options-page-wrapper.php:212
+msgid "Menu Icon Shadow"
+msgstr "Menu Icon Ombre"
+
+#: inc/options-page-wrapper.php:83 inc/options-page-wrapper.php:221
+msgid "Menu Link Color"
+msgstr "Menu Couleur des liens"
+
+#: inc/options-page-wrapper.php:87 inc/options-page-wrapper.php:225
+msgid "Menu Link Hover Color"
+msgstr "Menu Lien Hover Couleur"
+
+#: inc/options-page-wrapper.php:91 inc/options-page-wrapper.php:229
+msgid "Menu Button Position"
+msgstr "Bouton Menu Position"
+
+#: inc/options-page-wrapper.php:94 inc/options-page-wrapper.php:132
+#: inc/options-page-wrapper.php:233 inc/options-page-wrapper.php:271
+msgid "Right"
+msgstr "Right"
+
+#: inc/options-page-wrapper.php:95 inc/options-page-wrapper.php:131
+#: inc/options-page-wrapper.php:234
+msgid "Left"
+msgstr "left"
+
+#: inc/options-page-wrapper.php:100 inc/options-page-wrapper.php:240
+msgid "Menu Font Size (16px Default)"
+msgstr "Menu Taille de la police ( 16px défaut )"
+
+#: inc/options-page-wrapper.php:104 inc/options-page-wrapper.php:244
+msgid "Menu Label Size (16px Default)"
+msgstr "Menu Taille de l'étiquette ( par défaut 16px )"
+
+#: inc/options-page-wrapper.php:108 inc/options-page-wrapper.php:248
+msgid "Menu Label Weight"
+msgstr "Menu Étiquette Poids"
+
+#: inc/options-page-wrapper.php:111 inc/options-page-wrapper.php:251
+msgid "Normal"
+msgstr "Normal"
+
+#: inc/options-page-wrapper.php:112 inc/options-page-wrapper.php:252
+msgid "Bold"
+msgstr "Bold"
+
+#: inc/options-page-wrapper.php:117 inc/options-page-wrapper.php:257
+msgid "Menu link font case"
+msgstr "Menu lien cas police"
+
+#: inc/options-page-wrapper.php:120 inc/options-page-wrapper.php:260
+#: inc/options-page-wrapper.php:272
+msgid "None"
+msgstr "Aucun"
+
+#: inc/options-page-wrapper.php:121 inc/options-page-wrapper.php:261
+msgid "Capitalize"
+msgstr "Capitalize"
+
+#: inc/options-page-wrapper.php:122 inc/options-page-wrapper.php:262
+msgid "Lowercase"
+msgstr "Lowercase"
+
+#: inc/options-page-wrapper.php:123 inc/options-page-wrapper.php:263
+msgid "Uppercase"
+msgstr "Uppercase"
+
+#: inc/options-page-wrapper.php:128 inc/options-page-wrapper.php:268
+msgid "SubMenu Button Indicator"
+msgstr "SubMenu Indicateur Button"
+
+#: inc/options-page-wrapper.php:137 inc/options-page-wrapper.php:277
+msgid "Menu Position (body by default, using body puts the Menu at the top."
+msgstr ""
+"Menu Position ( corps par défaut , en utilisant le corps met le menu en "
+"haut ."
+
+#: inc/options-page-wrapper.php:138 inc/options-page-wrapper.php:278
+msgid "However you can adjust this location by adding in a CSS class"
+msgstr "Cependant, vous pouvez régler ce lieu en ajoutant dans une classe CSS"
+
+#: inc/options-page-wrapper.php:142 inc/options-page-wrapper.php:282
+msgid "Menu Label (\"MENU\" by default, leave blank for no label)"
+msgstr ""
+"Menu Étiquette ( \"MENU\" par défaut , laissez en blanc sans étiquette)"
+
+#: inc/options-page-wrapper.php:146 inc/options-page-wrapper.php:286
+msgid "Allow Parent Links"
+msgstr "Autoriser parent Liens"
+
+#: inc/options-page-wrapper.php:149 inc/options-page-wrapper.php:289
+msgid "True"
+msgstr "True"
+
+#: inc/options-page-wrapper.php:150 inc/options-page-wrapper.php:290
+msgid "False"
+msgstr "False"
+
+#: inc/options-page-wrapper.php:155
+msgid "Speed of Menu open/close (Higher numbers are slower)"
+msgstr ""
+"Vitesse du Menu d'ouverture / fermeture ( nombres plus élevés sont plus "
+"lents )"
+
+#: inc/options-page-wrapper.php:168
+msgid "Save"
+msgstr "Enregistrer"
+
+#: inc/options-page-wrapper.php:183
+msgid "Maximum Width to use SlickNav (600px Default)"
+msgstr "Largeur maximum à utiliser SlickNav ( 600px par défaut )"
+
+#: inc/options-page-wrapper.php:295
+msgid "Speed of Menu open/close (Lower numbers are faster)"
+msgstr ""
+"Vitesse du Menu d'ouverture / fermeture ( nombres inférieurs sont plus "
+"rapides )"
+
+#: inc/options-page-wrapper.php:308
+msgid "Update"
+msgstr "mettre à jour"
+
+#: inc/options-page-wrapper.php:331
+msgid "Additional Resources"
+msgstr "Ressources supplémentaires"
+
+#: inc/options-page-wrapper.php:334
+msgid "More Slick Nav Info..."
+msgstr "Plus Slick Nav Info ..."
+
+#: inc/options-page-wrapper.php:336
+msgid "SlickNav Home"
+msgstr "SlickNav Accueil"
+
+#: inc/options-page-wrapper.php:337
+msgid "SlickNav GitHub"
+msgstr "SlickNav GitHub"
+
+#: inc/options-page-wrapper.php:338
+msgid "WP Beaches Genesis Guide"
+msgstr "Plages WP Guide Genesis"
+
+#: inc/options-page-wrapper.php:339
+msgid "WP Beaches TwentyTwelve Guide"
+msgstr "Plages WP Guide TwentyTwelve"
+
+#~ msgid "none"
+#~ msgstr "none"
+
+#~ msgid "Y"
+#~ msgstr "Y"
+
+#~ msgid "600"
+#~ msgstr "600"
+
+#~ msgid "#4c4c4c"
+#~ msgstr "#4c4c4c"
+
+#~ msgid "#222222"
+#~ msgstr "#222222"
+
+#~ msgid "#fff"
+#~ msgstr "#fff"
+
+#~ msgid "0 1px 3px #000"
+#~ msgstr "0 1px 3px #000"
+
+#~ msgid "0 1px 0 rgba(0,0,0,0.25)"
+#~ msgstr "0 1px 0 rgba(0,0,0,0.25)"
+
+#~ msgid "#ccc"
+#~ msgstr "#ccc"
+
+#~ msgid "right"
+#~ msgstr "right"
+
+#~ msgid "left"
+#~ msgstr "left"
+
+#~ msgid "16"
+#~ msgstr "16"
+
+#~ msgid "normal"
+#~ msgstr "normal"
+
+#~ msgid "bold"
+#~ msgstr "bold"
+
+#~ msgid "capitalize"
+#~ msgstr "capitalize"
+
+#~ msgid "lowercase"
+#~ msgstr "lowercase"
+
+#~ msgid "uppercase"
+#~ msgstr "uppercase"
+
+#~ msgid "body"
+#~ msgstr "body"
+
+#~ msgid "MENU"
+#~ msgstr "MENU"
+
+#~ msgid "true"
+#~ msgstr "true"
+
+#~ msgid "false"
+#~ msgstr "false"
+
+#~ msgid "200"
+#~ msgstr "200"
+
+#~ msgid "400"
+#~ msgstr "400"
+
+#~ msgid "800"
+#~ msgstr "800"
+
+#~ msgid "1000"
+#~ msgstr "1000"
+
+#~ msgid "2000"
+#~ msgstr "2000"
+
+#~ msgid "#222"
+#~ msgstr "#222"
+
+#~ msgid "SlickNav Menu"
+#~ msgstr "SlickNav Menu"
