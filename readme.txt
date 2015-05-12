@@ -5,12 +5,12 @@ Donate link: http://wpbeaches.com/
 Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
 Requires at least: 4.0
 Tested up to: 4.2
-Stable tag: 1.3.0
+Stable tag: 1.4.0
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
 Author: Neil Gee
-Version: 1.3.0
+Version: 1.4.0
 Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -84,6 +84,8 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
  - Parent links, true or false, whether a parent link that has a submenu is clickable to a page 
 
+ - Show Child Links, false by default
+
  - Open/close Menu speed option
 
  Demo - http://wpbeaches.com
@@ -104,36 +106,48 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
 = 1.1.0	= 
 
-* 11th April 2015 - Position, Label and Parent Links options added. Placeholder text added.
+* 11/4/15  - Position, Label and Parent Links options added. Placeholder text added.
 
 = 1.1.1	=
 
-* 12th April 2015 - Position, Label and Parent Links options added. Placeholder text added.
+* 12/4/15 - Position, Label and Parent Links options added. Placeholder text added.
 
 = 1.1.2	=
 
-* 12th April 2015 - Added open/close Menu speed amount.
+* 12/4/15 - Added open/close Menu speed amount.
 
 = 1.1.3	=
 
-* 13th April 2015 - BugFix, Select Option Dropdowns now retains previous selection on update.
+* 13/4/15  - BugFix, Select Option Dropdowns now retains previous selection on update.
 
 = 1.1.4	=
 
-* 15th April 2015 - Added color options for Menu label name and icon, redid dropdown value retentions.
+* 15/4/15  - Added color options for Menu label name and icon, redid dropdown value retentions.
 
 = 1.1.5	=
 
-* 16th April 2015 - Added link color and background color hover on links
+* 16/4/15  - Added link color and background color hover on links.
 
 = 1.2.0	=
 
-* 17th April 2015 - Added shadow on/off for label and icon, added label font size adjustment, label weight adjustment,  admin layout tweaks
+* 17/4/15  - Added shadow on/off for label and icon, added label font size adjustment, label weight adjustment,  admin layout tweaks.
 
 = 1.2.1	=
 
-* 18th April 2015 - Added color pickers for color options
+* 18/4/15  - Added color pickers for color options.
 
 = 1.3.0 =
 
-* 26th April 2015 - Internationalized -  French translation added.
+* 26/4/15  - Internationalized -  French translation added.
+
+= 1.3.1 =
+
+* 28/4/15 - Core SlickNav upgrade version 1.0.3 - CSS minified - Hover Color Option for Items that contain submenus.
+
+= 1.3.2 =
+
+* 3/5/15 - Added Child Links show/hide on open - Added 'Settings Updated' admin notify
+
+= 1.4.0 =
+
+* 12/5/15 - No front end changes, All javascript now passed via wp_localize_script, Parent links on by default, Show Child links on open is off be default

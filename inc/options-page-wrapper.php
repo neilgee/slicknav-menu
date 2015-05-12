@@ -88,6 +88,10 @@
 										<td><input name="ng_slicknav_link_hover_color" id="ng_slicknav_link_hover_color" type="text" value="#ccc" class="my-color-field" placeholder="#ccc" /></td>										
 									</tr>
 									<tr>
+										<td><label for="ng_slicknav_link_hover_color_submenu"><?php esc_attr_e( 'Menu Link Hover Color, Containing SubMenus', 'slicknav-mobile-menu' ); ?></label></td>
+										<td><input name="ng_slicknav_link_hover_color_submenu" id="ng_slicknav_link_hover_color_submenu" type="text" value="#ccc" class="my-color-field" placeholder="#ccc" /></td>										
+									</tr>
+									<tr>
 										<td><label for="ng_slicknav_button_position"><?php esc_attr_e( 'Menu Button Position', 'slicknav-mobile-menu' ); ?></label></td>
 										<td>	
 											<select name="ng_slicknav_button_position" id="ng_slicknav_button_position">
@@ -139,17 +143,27 @@
 										<td><input name="ng_slicknav_position" id="ng_slicknav_position" type="text" value="body" class="regular-text"  placeholder="body"/></td>										
 									</tr>
 									<tr>
-										<td><label for="ng_slicknav_label"><?php esc_attr_e( 'Menu Label ("MENU" by default, leave blank for no label)', 'slicknav-mobile-menu' ); ?></label></td>
+										<td><label for="ng_slicknav_label"><?php esc_attr_e( 'Menu Label ("MENU" by default, leave blank for no label and just the symbol)', 'slicknav-mobile-menu' ); ?></label></td>
 										<td><input name="ng_slicknav_label" id="ng_slicknav_label" type="text" value="MENU" class="regular-text" placeholder="MENU" /></td>										
 									</tr>
 									<tr>
 										<td><label for="ng_slicknav_parent_links"><?php esc_attr_e( 'Allow Parent Links', 'slicknav-mobile-menu' ); ?></label></td>
-										<td>	
-											<select name="ng_slicknav_parent_links" id="ng_slicknav_parent_links">
-											<option value="true"><?php esc_attr_e( 'True', 'slicknav-mobile-menu' ); ?></option>
-											<option value="false"><?php esc_attr_e( 'False', 'slicknav-mobile-menu' ); ?></option>
-											</select>
+										<td>
+											<label for="ng_slicknav_parent_links">
+											<input name="ng_slicknav_parent_links" type="checkbox" id="ng_slicknav_parent_links" value="1" checked />
+											<span><?php esc_attr_e( 'Allow Parent Links', 'slicknav-mobile-menu' ); ?></span>
+											</label>
 										</td>
+									</tr>
+									<tr>
+										<td><label for="ng_slicknav_child_links"><?php esc_attr_e( 'Show Child Links on Open', 'slicknav-mobile-menu' ); ?></label></td>
+										<td>
+											<label for="ng_slicknav_child_links">	
+											<input name="ng_slicknav_child_links" type="checkbox" id="ng_slicknav_child_linkss" value="1" />
+											<span><?php esc_attr_e( 'Show Child Links on Open', 'slicknav-mobile-menu' ); ?></span>
+											</label>
+										</td>
+									</td>
 									</tr>
 									<tr>
 										<td><label for="ng_slicknav_speed"><?php esc_attr_e( 'Speed of Menu open/close (Higher numbers are slower)', 'slicknav-mobile-menu' ); ?></label></td>
@@ -223,8 +237,12 @@
 								</tr>
 								<tr>
 									<td><label for="ng_slicknav_link_hover_color"><?php esc_attr_e( 'Menu Link Hover Color', 'slicknav-mobile-menu' ); ?></label></td>
-									<td><input name="ng_slicknav_link_hover_color" id="ng_slicknav_link_hover_color" type="text" value="<?php echo esc_attr( $ng_slicknav_link_hover_color); ?>" class="my-color-field" placeholder="#fff" /></td>										
+									<td><input name="ng_slicknav_link_hover_color" id="ng_slicknav_link_hover_color" type="text" value="<?php echo esc_attr( $ng_slicknav_link_hover_color); ?>" class="my-color-field" placeholder="#ccc" /></td>										
 								</tr>
+								<tr>
+										<td><label for="ng_slicknav_link_hover_color_submenu"><?php esc_attr_e( 'Menu Link Hover Color, Containing SubMenus', 'slicknav-mobile-menu' ); ?></label></td>
+										<td><input name="ng_slicknav_link_hover_color_submenu" id="ng_slicknav_link_hover_color_submenu" type="text" value="<?php echo esc_attr( $ng_slicknav_link_hover_color_submenu); ?>" class="my-color-field" placeholder="#ccc" /></td>										
+									</tr>
 								<tr>
 									<td><label for="ng_slicknav_button_position"><?php esc_attr_e( 'Menu Button Position', 'slicknav-mobile-menu' ); ?></label></td>
 									<td>	
@@ -279,16 +297,26 @@
 									<td><input name="ng_slicknav_position" id="ng_slicknav_position" type="text" value="<?php echo ( $ng_slicknav_position); ?>" class="regular-text" placeholder="<?php echo ('body'); ?>" /></td>										
 								</tr>
 								<tr>
-									<td><label for="ng_slicknav_label"><?php esc_attr_e( 'Menu Label ("MENU" by default, leave blank for no label)', 'slicknav-mobile-menu' ); ?></label></td>
+									<td><label for="ng_slicknav_label"><?php esc_attr_e( 'Menu Label ("MENU" by default, leave blank for no label and just the symbol)', 'slicknav-mobile-menu' ); ?></label></td>
 									<td><input name="ng_slicknav_label" id="ng_slicknav_label" type="text" value="<?php echo ($ng_slicknav_label); ?>" class="regular-text" placeholder="<?php echo ('MENU'); ?>"  /></td>										
 								</tr>
 								<tr>
 									<td><label for="ng_slicknav_parent_links"><?php esc_attr_e( 'Allow Parent Links', 'slicknav-mobile-menu' ); ?></label></td>
-									<td>		
-										<select name="ng_slicknav_parent_links" id="ng_slicknav_parent_links">
-										<option value="true" <?php selected($options['ng_slicknav_parent_links'], 'true' ); ?>><?php esc_attr_e( 'True', 'slicknav-mobile-menu' ); ?></option>
-										<option value="false" <?php selected($options['ng_slicknav_parent_links'], 'false' ); ?>><?php esc_attr_e( 'False', 'slicknav-mobile-menu' ); ?></option>
-										</select>
+									<td>
+										<label for="ng_slicknav_parent_links">
+											<input name="ng_slicknav_parent_links" type="checkbox" id="ng_slicknav_parent_links" value="1" <?php checked($options['ng_slicknav_parent_links'],'1'); ?> />
+											<span><?php esc_attr_e( 'Allow Parent Links', 'slicknav-mobile-menu' ); ?></span>
+										</label>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label for="ng_slicknav_child_links"><?php esc_attr_e( 'Show Child Links on Open', 'slicknav-mobile-menu' ); ?></label></td>
+									<td>
+										<label for="ng_slicknav_child_links">
+											<input name="ng_slicknav_child_links" type="checkbox" id="ng_slicknav_child_links" value="1" <?php checked($options['ng_slicknav_child_links'],'1'); ?> />
+											<span><?php esc_attr_e( 'Show Child Links on Open', 'slicknav-mobile-menu' ); ?></span>
+										</label>
 									</td>
 								</tr>
 								<tr>
@@ -307,6 +335,9 @@
 						</table>
 						<p><input class="button-primary" type="submit" name="ng_slicknav_menu_submit" value="<?php esc_attr_e( 'Update', 'slicknav-mobile-menu'); ?>" /></p>
 							
+					<div class="updated"><p><?php esc_attr_e( 'Settings Updated', 'wp_admin_style' ); ?></p></div>
+					
+
 					</form>
 					<?php endif; ?>
 						</div>
