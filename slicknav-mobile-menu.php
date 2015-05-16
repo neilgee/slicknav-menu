@@ -4,7 +4,7 @@ Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com/using-slick-responsive-menus-genesis-child-theme/
 Description: Using SlickNav Responsive Mobile Menus in WordPress
 Author: Neil Gee
-Version: 1.4.0
+Version: 1.4.1
 Author URI: http://wpbeaches.com
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -208,8 +208,8 @@ function wpslicknav_menu_options_page() {
           $ng_slicknav_submenu_position = esc_html( $_POST['ng_slicknav_submenu_position']);
           $ng_slicknav_position = esc_html( $_POST['ng_slicknav_position']);
           $ng_slicknav_label = esc_html( $_POST['ng_slicknav_label']);
-          $ng_slicknav_parent_links = esc_html( $_POST['ng_slicknav_parent_links']);
-          $ng_slicknav_child_links = esc_html( $_POST['ng_slicknav_child_links']);
+          $ng_slicknav_parent_links = esc_html( isset($_POST['ng_slicknav_parent_links']));
+          $ng_slicknav_child_links = esc_html( isset($_POST['ng_slicknav_child_links']));
           $ng_slicknav_speed = esc_html( $_POST['ng_slicknav_speed']);
           $ng_slicknav_link_color = esc_html( $_POST['ng_slicknav_link_color']);
           $ng_slicknav_link_hover_color = esc_html( $_POST['ng_slicknav_link_hover_color']);

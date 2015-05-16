@@ -5,12 +5,12 @@ Donate link: http://wpbeaches.com/
 Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
 Requires at least: 4.0
 Tested up to: 4.2
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
 Author: Neil Gee
-Version: 1.4.0
+Version: 1.4.1
 Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -151,3 +151,7 @@ The settings are found via the dashboard Settings > SlickNav Menu
 = 1.4.0 =
 
 * 12/5/15 - No front end changes, All javascript now passed via wp_localize_script, Parent links on by default, Show Child links on open is off be default
+
+= 1.4.1 =
+
+* 17/5/15 - No front end changes, Fix wp-debub notice on undefined index when checkboxes are not set
