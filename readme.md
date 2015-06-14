@@ -5,12 +5,12 @@ Donate link: http://wpbeaches.com/
 Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
 Requires at least: 4.0
 Tested up to: 4.2
-Stable tag: 1.4.1
+Stable tag: 1.5.1
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
 Author: Neil Gee
-Version: 1.4.1
+Version: 1.5.1
 Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -33,6 +33,10 @@ Degrades gracefully without JavaScript.
 Creates ARIA compliant menu.
 
 Internationalized
+
+Search Field Option
+
+Menu Logo Option
 
 
 
@@ -87,6 +91,12 @@ The settings are found via the dashboard Settings > SlickNav Menu
  - Show Child Links, false by default
 
  - Open/close Menu speed option
+
+ - Fix Menu to Head, using position fixed to body tag
+
+ - Option for branding logo opposite menu label - smaller works better such as 40px in height and up to 140px in width
+
+ - Option to add in a search field at the bottom of the menu
 
  Demo - http://wpbeaches.com
 
@@ -146,12 +156,24 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
 = 1.3.2 =
 
-* 3/5/15 - Added Child Links show/hide on open - Added 'Settings Updated' admin notify
+* 3/5/15 - Added Child Links show/hide on open - Added 'Settings Updated' admin notify.
 
 = 1.4.0 =
 
-* 12/5/15 - No front end changes, All javascript now passed via wp_localize_script, Parent links on by default, Show Child links on open is off be default
+* 12/5/15 - No front end changes, All javascript now passed via wp_localize_script, Parent links on by default, Show Child links on open. is off by default
 
 = 1.4.1 =
 
-* 17/5/15 - No front end changes, Fix wp-debub notice on undefined index when checkboxes are not set
+* 17/5/15 - No front end changes, Fix wp-debug notice on undefined index when checkboxes are not set.
+
+= 1.4.2 =
+
+* 31/5/15 - Option to fix menu to Head by using position fixed to body tag.
+
+= 1.5.0 =
+
+* 7/6/15 - Updated POT file, Core SlickNav upgrade version to 1.0.4, option for Branding Logo opposite label, using input field of media uploader
+
+= 1.5.1 =
+
+* 11/6/15 - Option to add in a search field at bottom of menu
