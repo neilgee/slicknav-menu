@@ -5,12 +5,12 @@ Donate link: http://wpbeaches.com/
 Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
 Requires at least: 4.0
 Tested up to: 4.2
-Stable tag: 1.5.1
+Stable tag: 1.5.3
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
 Author: Neil Gee
-Version: 1.5.1
+Version: 1.5.3
 Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -33,10 +33,6 @@ Degrades gracefully without JavaScript.
 Creates ARIA compliant menu.
 
 Internationalized
-
-Search Field Option
-
-Menu Logo Option
 
 
 
@@ -98,6 +94,8 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
  - Option to add in a search field at the bottom of the menu
 
+ - Options to change the opening and closing symbols
+
  Demo - http://wpbeaches.com
 
  Please note that SlickNav is the work of Josh Cope, he is not responsible for the working or support of this plugin.
@@ -107,6 +105,8 @@ The settings are found via the dashboard Settings > SlickNav Menu
 1. Image of internal options
 
 2. Image of front end view example menu
+
+3. Shows menu logo position and search form enabled
 
 == Changelog ==
 
@@ -177,3 +177,11 @@ The settings are found via the dashboard Settings > SlickNav Menu
 = 1.5.1 =
 
 * 11/6/15 - Option to add in a search field at bottom of menu
+
+= 1.5.2 =
+
+* 13/6/15 - Options to change the opening and closing symbols
+
+= 1.5.3 =
+
+* 26/6/15 - Bug fixes: removed placedholder value for brand logo, added a max-width value on logo,  code tidy up

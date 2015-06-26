@@ -132,8 +132,8 @@
 										<td><label for="ng_slicknav_submenu_position"><?php esc_attr_e( 'SubMenu Button Indicator', 'slicknav-mobile-menu' ); ?></label></td>
 										<td>	
 											<select name="ng_slicknav_submenu_position" id="ng_slicknav_submenu_position">
-											<option selected="selected" value="none"><?php esc_attr_e( 'Left', 'slicknav-mobile-menu' ); ?></option>
-											<option value="right"><?php esc_attr_e( 'Right', 'slicknav-mobile-menu' ); ?></option>
+											<option value="none"><?php esc_attr_e( 'Left', 'slicknav-mobile-menu' ); ?></option>
+											<option selected="selected" value="right"><?php esc_attr_e( 'Right', 'slicknav-mobile-menu' ); ?></option>
 											</select>
 										</td>
 									</tr>
@@ -183,8 +183,8 @@
 										</td>
 									</tr>
 									<tr>
-										<td><label for="ng_slicknav_brand"><?php esc_attr_e( 'Enter an URL or upload an image for a logo smaller is better here, like 40px in depth and up to 140px in width', 'slicknav-mobile-menu' ); ?></label></td>
-										<td><input name="ng_slicknav_brand" id="ng_slicknav_brand" type="text" class="regular-text" value="http://"  /></td>	
+										<td><label for="ng_slicknav_brand"><?php esc_attr_e( 'Enter a URL or upload an image for a logo smaller is better here, like 45px in depth and up to 200px in width', 'slicknav-mobile-menu' ); ?></label></td>
+										<td><input name="ng_slicknav_brand" id="ng_slicknav_brand" type="text" class="regular-text" value="" /></td>	
 										<td><input id="upload_image_button" type="button" value="Upload Image" class="button-secondary" /></td>									
 									</tr>
 									<tr>
@@ -199,7 +199,15 @@
 											<option value="2000">2000</option>
 											</select>
 										</td>
-									</tr>																				
+									</tr>
+									<tr>
+										<td><label for="ng_slicknav_closedsymbol"><?php esc_attr_e( 'Closed Symbol, default &#9658;', 'slicknav-mobile-menu' ); ?>&amp;#9658;</label></td>
+										<td><input name="ng_slicknav_closedsymbol" id="ng_slicknav_closedsymbol" type="text" value="&#9658;" class="regular-text" placeholder="&#9658;" /></td>										
+									</tr>	
+									<tr>
+										<td><label for="ng_slicknav_openedsymbol"><?php esc_attr_e( 'Opened Symbol, default &#9660;', 'slicknav-mobile-menu' ); ?>&amp;#9660;</label></td>
+										<td><input name="ng_slicknav_openedsymbol" id="ng_slicknav_openedsymbol" type="text" value="&#9660;" class="regular-text" placeholder="&#9660;" /></td>										
+									</tr>																			
 							</table>
 							<p><input class="button-primary" type="submit" name="ng_slicknav_menu_submit" value="<?php esc_attr_e ('Save', 'slicknav-mobile-menu'); ?>" /></p>
 								
@@ -309,7 +317,7 @@
 									<td>	
 										<select name="ng_slicknav_submenu_position" id="ng_slicknav_submenu_position">
 										<option value="right" <?php selected($options['ng_slicknav_submenu_position'], 'right' ); ?>><?php esc_attr_e( 'Right', 'slicknav-mobile-menu' ); ?></option>
-										<option value="none" <?php selected($options['ng_slicknav_submenu_position'], 'none' ); ?>><?php esc_attr_e( 'None', 'slicknav-mobile-menu' ); ?></option>
+										<option value="none" <?php selected($options['ng_slicknav_submenu_position'], 'none' ); ?>><?php esc_attr_e( 'Left', 'slicknav-mobile-menu' ); ?></option>
 										</select>
 									</td>
 								</tr>
@@ -360,8 +368,8 @@
 									</td>
 								</tr>
 								<tr>
-									<td><label for="ng_slicknav_brand"><?php esc_attr_e( 'Enter an URL or upload an image for a logo smaller is better here, like 32px in depth', 'slicknav-mobile-menu' ); ?></label></td>
-									<td><input name="ng_slicknav_brand" id="ng_slicknav_brand" type="text" class="regular-text" value="<?php echo ($ng_slicknav_brand); ?>"  /></td>	
+									<td><label for="ng_slicknav_brand"><?php esc_attr_e( 'Enter a URL or upload an image for a logo smaller is better here, like 45px in depth and up to 200px in width', 'slicknav-mobile-menu' ); ?></label></td>
+									<td><input name="ng_slicknav_brand" id="ng_slicknav_brand" type="text" class="regular-text" value="<?php echo ($ng_slicknav_brand); ?>" /></td>	
 									<td><input id="upload_image_button" type="button" value="Upload Image" class="button-secondary" /></td>									
 									</tr>
 								<tr>
@@ -376,7 +384,15 @@
 										<option value="2000" <?php selected($options['ng_slicknav_speed'], '2000'); ?>>2000</option>
 										</select>
 									</td>
-								</tr>											
+								</tr>
+								<tr>
+									<td><label for="ng_slicknav_closedsymbol"><?php esc_attr_e( 'Closed Symbol, default  ', 'slicknav-mobile-menu' ); ?> &amp;#9658;</label></td>
+									<td><input name="ng_slicknav_closedsymbol" id="ng_slicknav_closedsymbol" type="text" value="<?php echo ($ng_slicknav_closedsymbol); ?>" class="regular-text" placeholder="&#9658;" /></td>										
+								</tr>	
+								<tr>
+									<td><label for="ng_slicknav_openedsymbol"><?php esc_attr_e( 'Opened Symbol, default  ', 'slicknav-mobile-menu' ); ?>&amp;#9660;</label></td>
+									<td><input name="ng_slicknav_openedsymbol" id="ng_slicknav_openedsymbol" type="text" value="<?php echo ($ng_slicknav_openedsymbol); ?>" class="regular-text" placeholder="&#9660;" /></td>										
+								</tr>												
 						</table>
 						<p><input class="button-primary" type="submit" name="ng_slicknav_menu_submit" value="<?php esc_attr_e( 'Update', 'slicknav-mobile-menu'); ?>" /></p>
 							
@@ -413,6 +429,7 @@
 								<li><a href="https://github.com/ComputerWolf/SlickNav" rel="nofollow"><?php esc_attr_e('SlickNav GitHub','slicknav-mobile-menu'); ?></a></li>
 								<li><a href="http://wpbeaches.com/using-slick-responsive-menus-genesis-child-theme/" rel="nofollow"><?php esc_attr_e('WP Beaches Genesis Guide','slicknav-mobile-menu'); ?></a></li>
 								<li><a href="http://wpbeaches.com/swap-wordpress-twenty-twelve-mobile-menu-slick-navigation/" rel="nofollow"><?php esc_attr_e('WP Beaches TwentyTwelve Guide','slicknav-mobile-menu'); ?></a></li>
+								<li><a href="http://www.alanwood.net/unicode/geometric_shapes.html" target="_blank"><?php esc_attr_e('Symbol Reference','slicknav-mobile-menu'); ?></a></li>
 							</ul>
 						</div>
 						<!-- .inside -->

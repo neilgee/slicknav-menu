@@ -135,7 +135,8 @@
   font-size: 18px;
   line-height: 30px;
   padding: 7px 12px;
-  height: 44px; }
+  height: 44px;
+  max-width: 200px }
 
   /*Added by Neil Gowran*/
    #slicknav-searchform input[type="text"] {
@@ -167,3 +168,4 @@
   position: relative;
   padding-bottom: 10px;
  }
+
