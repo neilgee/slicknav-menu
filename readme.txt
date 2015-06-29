@@ -5,12 +5,12 @@ Donate link: http://wpbeaches.com/
 Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
 Requires at least: 4.0
 Tested up to: 4.2
-Stable tag: 1.5.3
+Stable tag: 1.5.4
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
 Author: Neil Gee
-Version: 1.5.3
+Version: 1.5.4
 Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -48,7 +48,7 @@ This section describes how to install the plugin:
 
 The settings are found via the dashboard Settings > SlickNav Menu
 
- - Here you add in your CSS Menu Selector
+ - Here you choose your Menu to be used as Mobile Menu - original has to already be on page
 
  - Maximum width for the menu to appear, default is 600px
 
@@ -96,7 +96,7 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
  - Options to change the opening and closing symbols
 
- Demo - http://wpbeaches.com
+ Demo - http://wpbeaches.com (resize browser window to below 600px)
 
  Please note that SlickNav is the work of Josh Cope, he is not responsible for the working or support of this plugin.
 
@@ -185,3 +185,7 @@ The settings are found via the dashboard Settings > SlickNav Menu
 = 1.5.3 =
 
 * 26/6/15 - Bug fixes: removed placedholder value for brand logo, added a max-width value on logo,  code tidy up
+
+= 1.5.4 = 
+
+* 28/6/15 - Select menu from dropdown of available menus instead of text input field - original menu still has to be already output on the page
