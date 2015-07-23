@@ -187,9 +187,13 @@
 										<td>
 											<label for="ng_slicknav_search">	
 											<input name="ng_slicknav_search" type="checkbox" id="ng_slicknav_search" value="1" />
-											<span><?php esc_attr_e( 'Show search field', 'slicknav-mobile-menu' ); ?></span>
+											<span><?php esc_attr_e( 'Show Search Field', 'slicknav-mobile-menu' ); ?></span>
 											</label>
 										</td>
+									</tr>
+									<tr>
+										<td><label for="ng_slicknav_search_color"><?php esc_attr_e( 'Search Icon Background Color', 'slicknav-mobile-menu' ); ?></label></td>
+										<td><input name="ng_slicknav_search_color" id="ng_slicknav_search_color" type="text" value="#333" class="my-color-field" placeholder="#333" /></td>										
 									</tr>
 									<tr>
 										<td><label for="ng_slicknav_fixhead"><?php esc_attr_e( 'Fix Menu to Head', 'slicknav-mobile-menu' ); ?></label></td>
@@ -204,6 +208,10 @@
 										<td><label for="ng_slicknav_brand"><?php esc_attr_e( 'Enter a URL or upload an image for a logo smaller is better here, like 45px in depth and up to 200px in width', 'slicknav-mobile-menu' ); ?></label></td>
 										<td><input name="ng_slicknav_brand" id="ng_slicknav_brand" type="text" class="regular-text" value="" /></td>	
 										<td><input id="upload_image_button" type="button" value="Upload Image" class="button-secondary" /></td>									
+									</tr>
+									<tr>
+										<td><label for="ng_slicknav_alt"><?php esc_attr_e( 'Logo Alt Text', 'slicknav-mobile-menu' ); ?></label></td>
+										<td><input name="ng_slicknav_alt" id="ng_slicknav_alt" type="text" value="" class="regular-text" placeholder="alt text" /></td>										
 									</tr>
 									<tr>
 										<td><label for="ng_slicknav_speed"><?php esc_attr_e( 'Speed of Menu open/close (Higher numbers are slower)', 'slicknav-mobile-menu' ); ?></label></td>
@@ -397,6 +405,10 @@
 									</td>
 								</tr>
 								<tr>
+										<td><label for="ng_slicknav_search_color"><?php esc_attr_e( 'Search Icon Background Color', 'slicknav-mobile-menu' ); ?></label></td>
+										<td><input name="ng_slicknav_search_color" id="ng_slicknav_search_color" type="text" value="<?php echo ( $ng_slicknav_search_color ); ?>" class="my-color-field" placeholder="#333" /></td>										
+									</tr>
+								<tr>
 									<td><label for="ng_slicknav_fixhead"><?php esc_attr_e( 'Sticky Menu to Head', 'slicknav-mobile-menu' ); ?></label></td>
 									<td>
 										<label for="ng_slicknav_fixhead">	
@@ -409,7 +421,11 @@
 									<td><label for="ng_slicknav_brand"><?php esc_attr_e( 'Enter a URL or upload an image for a logo smaller is better here, like 45px in depth and up to 200px in width', 'slicknav-mobile-menu' ); ?></label></td>
 									<td><input name="ng_slicknav_brand" id="ng_slicknav_brand" type="text" class="regular-text" value="<?php echo ($ng_slicknav_brand); ?>" /></td>	
 									<td><input id="upload_image_button" type="button" value="Upload Image" class="button-secondary" /></td>									
-									</tr>
+								</tr>
+								<tr>
+									<td><label for="ng_slicknav_alt"><?php esc_attr_e( 'Logo Alt Text', 'slicknav-mobile-menu' ); ?></label></td>
+									<td><input name="ng_slicknav_alt" id="ng_slicknav_alt" type="text" value="<?php echo ($ng_slicknav_alt); ?>" class="regular-text" placeholder="alt text" /></td>										
+								</tr>
 								<tr>
 									<td><label for="ng_slicknav_speed"><?php esc_attr_e( 'Speed of Menu open/close (Lower numbers are faster)', 'slicknav-mobile-menu' ); ?></label></td>
 									<td>

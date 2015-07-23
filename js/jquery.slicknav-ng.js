@@ -89,8 +89,9 @@
         // create menu bar
         $this.mobileNav.attr('class', prefix + '_nav');
         menuBar = $('<div class="' + prefix + '_menu"></div>');
+        //NG edited brand so its a src of an image
         if (settings.brand !== '') {
-            var brand = $('<div class="' + prefix + '_brand"><img src="' + settings.brand + '" /></div>');//Made the brand into a src URL for an image
+            var brand = $('<div class="' + prefix + '_brand"><a href="' + phpVars.ng_slicknav.ng_slicksearch + '"><img src="' + settings.brand + '" alt="' + phpVars.ng_slicknav.ng_slicknav_alt + '" /></a></div>');//Made the brand into a src URL for an image
             $(menuBar).append(brand);
         }
         $this.btn = $(
