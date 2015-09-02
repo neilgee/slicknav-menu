@@ -27,7 +27,7 @@
 
 					<div class="postbox">
 
-						<h3><span><?php esc_attr_e( 'Select your menu to be used as the Mobile Menu from the dropdown', 'slicknav-mobile-menu' ); ?></span></h3>
+						<h3><span><?php esc_attr_e( 'Enter your menu CSS selector for the Mobile Menu name value, for example; #primary-menu or #menu-primary-menu etc.', 'slicknav-mobile-menu' ); ?></span></h3>
 
 						<div class="inside">
 						<?php if( !isset( $ng_slicknav_menu ) || $ng_slicknav_menu == ''): ?>
@@ -37,27 +37,9 @@
 								<input type="hidden" name="ng_slicknav_form_submitted" value="Y">
 
 							<table class="form-table">
-									  <tr>							
+									<tr>
 										<td><label for="ng_slicknav_menu"><?php esc_attr_e( 'SlickNav Mobile Menu Name', 'slicknav-mobile-menu' ); ?></label></td>
-										<td>
-											<select name="ng_slicknav_menu" id="ng_slicknav_menu">
-										       <option selected="selected">Choose one</option>
-
-										        <?php
-										        // Menu array
-										        $menus = get_terms( 'nav_menu', array( 'hide_empty' => false ) );
-										        
-										        // Iterating through the menu array
-										        foreach($menus as $menu){
-										        ?>
-										        <option value="#menu-<?php echo strtolower($menu->slug); ?>"><?php echo $menu->name; ?></option>
-
-										        <?php
-										        }
-
-										        ?>
-									    	</select>
-									    </td>
+										<td><input name="ng_slicknav_menu" id="ng_slicknav_menu" type="text" value="" class="regular-text" placeholder="<?php esc_attr_e('CSS Selector Menu Name', 'slicknav-mobile-menu'); ?>" /></td>
 									</tr>
 									<tr>
 										<td><label for="ng_slicknav_width"><?php esc_attr_e( 'Maximum width to use SlickNav (600px Default)', 'slicknav-mobile-menu' ); ?></label></td>
@@ -70,6 +52,10 @@
 									<tr>
 										<td><label for="ng_slicknav_button"><?php esc_attr_e( 'Menu Button Color', 'slicknav-mobile-menu' ); ?></label></td>
 										<td><input name="ng_slicknav_button" id="ng_slicknav_button" type="text" value="#222222" class="my-color-field" placeholder="#222222" /></td>										
+									</tr>
+									<tr>
+										<td><label for="ng_slicknav_button_expand"><?php esc_attr_e( 'Menu Button Color Expanded', 'slicknav-mobile-menu' ); ?></label></td>
+										<td><input name="ng_slicknav_button_expand" id="ng_slicknav_button_expand" type="text" value="#222222" class="my-color-field" placeholder="#222222" /></td>										
 									</tr>
 									<tr>
 										<td><label for="ng_slicknav_label_color"><?php esc_attr_e( 'Menu Label Color', 'slicknav-mobile-menu' ); ?></label></td>
@@ -247,26 +233,7 @@
 						<table class="form-table">
 								<tr>
 									<td><label for="ng_slicknav_menu"><?php esc_attr_e( 'SlickNav Mobile Menu Name', 'slicknav-mobile-menu' ); ?></label></td>
-									<td>	
-										<select name="ng_slicknav_menu" id="ng_slicknav_menu">
-											<option value="<?php echo ( $ng_slicknav_menu ); ?>"><?php echo ( $ng_slicknav_menu ); ?></option>
-											<option value="">---reset all to defaults---</option>
-											
-									        <?php
-									        // Menu array
-									        $menus = get_terms( 'nav_menu', array( 'hide_empty' => false ) );
-									        
-									        // Iterating through the menu array
-									        foreach($menus as $menu){
-									        ?>
-									       <option value="#menu-<?php echo strtolower($menu->slug); ?>"><?php echo $menu->name; ?></option>
-
-									        <?php
-									        }
-
-									        ?>
-								    	</select>
-									</td>
+									<td><input name="ng_slicknav_menu" id="ng_slicknav_menu" type="text" value="<?php echo ($ng_slicknav_menu); ?>" class="regular-text" placeholder="<?php esc_attr_e('CSS Selector Menu Name', 'slicknav-mobile-menu'); ?>"/></td>
 								</tr>
 
 								<tr>
@@ -280,6 +247,10 @@
 								<tr>
 									<td><label for="ng_slicknav_button"><?php esc_attr_e( 'Menu Button Color', 'slicknav-mobile-menu' ); ?></label></td>
 									<td><input name="ng_slicknav_button" id="ng_slicknav_button" type="text" value="<?php echo ( $ng_slicknav_button); ?>" class="my-color-field" placeholder="#222" /></td>										
+								</tr>
+								<tr>
+									<td><label for="ng_slicknav_button_expand"><?php esc_attr_e( 'Menu Button Color Expanded', 'slicknav-mobile-menu' ); ?></label></td>
+									<td><input name="ng_slicknav_button_expand" id="ng_slicknav_button_expand" type="text" value="<?php echo ( $ng_slicknav_button_expand); ?>" class="my-color-field" placeholder="#222222" /></td>										
 								</tr>
 								<tr>
 									<td><label for="ng_slicknav_label_color"><?php esc_attr_e( 'Menu Label Color', 'slicknav-mobile-menu' ); ?></label></td>

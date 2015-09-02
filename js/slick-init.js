@@ -1,4 +1,4 @@
-if(phpVars.ng_slicknav.ng_slicknav_fixhead ) {
+if(phpVars.ng_slicknav.ng_slicknav_fixhead  || !phpVars.ng_slicknav.ng_slicknav_position ) {
     phpVars.ng_slicknav.ng_slicknav_position = 'body';
 }
 

@@ -167,5 +167,15 @@
  #slicknav-searchform  {
   position: relative;
   padding-bottom: 10px;
+  margin-top: 10px;
  }
+
+  .admin-bar > .slicknav_menu{
+  top: 46px;
+}
+@media screen and (min-width: 783px) {
+  .admin-bar > .slicknav_menu{
+    top: 32px;
+  }
+}
 

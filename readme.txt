@@ -4,13 +4,13 @@ Contributors: neilgee
 Donate link: http://wpbeaches.com/
 Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
 Requires at least: 4.0
-Tested up to: 4.2
-Stable tag: 1.5.6
+Tested up to: 4.3
+Stable tag: 1.6.0
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
 Author: Neil Gee
-Version: 1.5.6
+Version: 1.6.0
 Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -31,6 +31,10 @@ Keyboard Accessible.
 Degrades gracefully without JavaScript.
 
 Creates ARIA compliant menu.
+
+Option to add a search field.
+
+Option to add a logo.
 
 Internationalized
 
@@ -55,6 +59,8 @@ The settings are found via the dashboard Settings > SlickNav Menu
  - Menu background color, default is #4c4c4c
 
  - Menu button color, default is #333
+
+ - Menu button expanded color, default is #333
 
  - Menu label color, default is #fff
 
@@ -94,11 +100,13 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
  - Option to add in a search field at the bottom of the menu
 
+ - Search icon background color
+
  - Options to change the opening and closing symbols
 
  Demo - http://wpbeaches.com (resize browser window to below 600px)
 
- Please note that SlickNav is the work of Josh Cope, he is not responsible for the working or support of this plugin.
+ Please note that SlickNav jQuery plugin is the work of Josh Cope, he is not responsible for the working or support of this plugin.
 
 == Screenshots ==
 
@@ -196,4 +204,8 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
 = 1.5.6 =
 
-* 25/7/15 - Color option for Search Icon background, logo link to home page, logo alt text field
+* 25/7/15 - Color option for Search Icon background, logo link to home page, logo alt text field - Set Menu selection back to manual text input
+
+= 1.6.0 = 
+ 
+* 15/8/15 - Back end PHP functions are now namespaced, script handle names redefined with more description, minor CSS tweaks for spacing on search field, option added for Button background color when menu is expanded, CSS styles added so menu is visible when logged in with Admin toolbar visible, updated translation files. Added fallback to body selector if selector is blank.
