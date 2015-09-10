@@ -5,7 +5,7 @@ Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com/using-slick-responsive-menus-genesis-child-theme/
 Description: Using SlickNav Responsive Mobile Menus in WordPress
 Author: Neil Gee
-Version: 1.6.0
+Version: 1.6.1
 Author URI: http://wpbeaches.com
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -41,6 +41,7 @@ add_action( 'plugins_loaded', __NAMESPACE__ . '\\load_textdomain' );
 
 //Script-tac-ulous -> All the Scripts and Styles Registered and Enqueued
 function scripts_styles() {
+  $options = get_option( 'ng_slicknavmenu' );
 
   wp_register_script ( 'slicknavjs' , plugins_url( '/js/jquery.slicknav.min.js',  __FILE__ ), array( 'jquery' ), '1.0.4', false );
   wp_register_style ( 'slicknavcss' , plugins_url( '/css/slicknav.min.css',  __FILE__ ), '' , '1.0.4', 'all' );
@@ -48,8 +49,12 @@ function scripts_styles() {
 
   wp_enqueue_script( 'slicknavjs' );
   wp_enqueue_style( 'slicknavcss' );
-  wp_enqueue_style( 'dashicons' );
 
+//Enqueue Dashicons only if Search option is ticked
+  if( $options['ng_slicknav_search'] == true ) {
+  wp_enqueue_style( 'dashicons' );
+  }
+  
 $options = get_option( 'ng_slicknavmenu' );
 
  $data = array (
@@ -68,8 +73,6 @@ $options = get_option( 'ng_slicknavmenu' );
         'ng_slicknav_closedsymbol'      => esc_html( $options['ng_slicknav_closedsymbol'] ),
         'ng_slicknav_openedsymbol'      => esc_html( $options['ng_slicknav_openedsymbol'] ),
         'ng_slicknav_alt'               => esc_html( $options['ng_slicknav_alt'] ),
-        
-
     ),
 );
 
@@ -130,6 +133,14 @@ function responsive_menucss() {
                 display: none;
             }
 
+            <?php
+            if( $ng_slicknav_button_position == "left"  ) { ?> 
+                .slicknav_brand {
+                  float: right;
+                }
+            <?php }
+            ?>
+
             <?php 
             if( $ng_slicknav_fixhead == true) { ?>
 
@@ -140,7 +151,7 @@ function responsive_menucss() {
                 width: 100%;
                 left: 0;
                 top: 0;
-                z-index: 999;
+                z-index: 999999;
               }
 
               html {
@@ -160,14 +171,14 @@ function responsive_menucss() {
                   background: <?php echo $ng_slicknav_background; ?>;
                }
                .slicknav_btn {
-                  background-color:<?php echo $ng_slicknav_button; ?> ;
+                  background-color:<?php echo $ng_slicknav_button; ?>;
                   float: <?php echo $ng_slicknav_button_position; ?>;
                }
                a.slicknav_open {
-                  background-color:<?php echo $ng_slicknav_button_expand; ?> ;
+                  background-color:<?php echo $ng_slicknav_button_expand; ?>;
                }
                .slicknav_nav .slicknav_arrow {
-                  float: <?php echo $ng_slicknav_submenu_position; ?>
+                  float: <?php echo $ng_slicknav_submenu_position; ?>;
                }
                .slicknav_menu .slicknav_menutxt {
                   color: <?php echo $ng_slicknav_label_color; ?>;
@@ -177,7 +188,7 @@ function responsive_menucss() {
                }
                .slicknav_menu .slicknav_icon-bar {
                   background-color: <?php echo $ng_slicknav_icon_color; ?>;
-                  box-shadow: <?php echo $ng_slicknav_icon_shadow; ?>;;
+                  box-shadow: <?php echo $ng_slicknav_icon_shadow; ?>;
                }
                .slicknav_nav li a {
                   color: <?php echo $ng_slicknav_link_color; ?>;
@@ -195,20 +206,13 @@ function responsive_menucss() {
                   background: <?php echo $ng_slicknav_search_color; ?>;
                }
            
-              
-
              }
-  
-
-      
 
         </style>
-
 <?php
 }
 
 add_action( 'wp_head', __NAMESPACE__ . '\\responsive_menucss' );
-
 
 
 function slicknav_menu() {
@@ -279,8 +283,6 @@ function menu_options_page() {
           $ng_slicknav_alt                      = esc_html( $_POST['ng_slicknav_alt'] );
 
           
-
-
           //Assign the above variables as values to the options db as a serialized array
           $options['ng_slicknav_menu']                     = $ng_slicknav_menu;
           $options['ng_slicknav_width']                    = $ng_slicknav_width;
@@ -313,13 +315,10 @@ function menu_options_page() {
           $options['ng_slicknav_openedsymbol']             = $ng_slicknav_openedsymbol;
           $options['ng_slicknav_alt']                      = $ng_slicknav_alt;
 
-
           $options['last_updated']     = time();
 
           update_option( 'ng_slicknavmenu', $options );
-
         }
-
     }
 
     $options = get_option('ng_slicknavmenu');
@@ -355,9 +354,7 @@ function menu_options_page() {
         $ng_slicknav_search_color             = $options['ng_slicknav_search_color'];
         $ng_slicknav_openedsymbol             = $options['ng_slicknav_openedsymbol'];
         $ng_slicknav_closedsymbol             = $options['ng_slicknav_closedsymbol'];
-        $ng_slicknav_alt                      = $options['ng_slicknav_alt'];
-        
-
+        $ng_slicknav_alt                      = $options['ng_slicknav_alt'];        
     }
 
    require( 'inc/options-page-wrapper.php' );
@@ -371,5 +368,3 @@ function color_picker( $hook_suffix ) {
     wp_enqueue_script( 'slicknav-color-picker', plugins_url( '/js/color-picker.js', __FILE__ ), array( 'wp-color-picker' ), false, true );
 }
 add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\color_picker' );
-
-

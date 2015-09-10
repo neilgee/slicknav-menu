@@ -208,3 +208,7 @@ The settings are found via the dashboard Settings > SlickNav Menu
 = 1.6.0 = 
  
 * 15/8/15 - Back end PHP functions are now namespaced, script handle names redefined with more description, minor CSS tweaks for spacing on search field, option added for Button background color when menu is expanded, CSS styles added so menu is visible when logged in with Admin toolbar visible, updated translation files. Added fallback to body selector if selector is blank.
+
+= 1.6.1 =
+
+* 10/9/15 Menu Button Position - if set to left, brand logo (if used) will then appear to the right, code error fix ups, added a form nonce for security -> props Ov3rfly

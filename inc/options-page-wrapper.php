@@ -96,7 +96,7 @@
 										<td><input name="ng_slicknav_link_hover_color_submenu" id="ng_slicknav_link_hover_color_submenu" type="text" value="#ccc" class="my-color-field" placeholder="#ccc" /></td>										
 									</tr>
 									<tr>
-										<td><label for="ng_slicknav_button_position"><?php esc_attr_e( 'Menu Button Position', 'slicknav-mobile-menu' ); ?></label></td>
+										<td><label for="ng_slicknav_button_position"><?php esc_attr_e( 'Menu Button Position, default is right', 'slicknav-mobile-menu' ); ?></label></td>
 										<td>	
 											<select name="ng_slicknav_button_position" id="ng_slicknav_button_position">
 											<option selected="selected" value="right"><?php esc_attr_e( 'Right', 'slicknav-mobile-menu' ); ?></option>
@@ -113,14 +113,14 @@
 										<td><input name="ng_slicknav_label_size" id="ng_slicknav_label_size" type="number" value="16" class="regular-text" placeholder="16'" /></td>										
 									</tr>
 									<tr>
-									<td><label for="ng_slicknav_label_weight"><?php esc_attr_e( 'Menu Label Weight', 'slicknav-mobile-menu' ); ?></label></td>
-									<td>	
-										<select name="ng_slicknav_label_weight" id="ng_slicknav_label_weight">
-										<option  value="normal"><?php esc_attr_e( 'Normal', 'slicknav-mobile-menu' ); ?></option>
-										<option  selected="selected" value="bold" ><?php esc_attr_e( 'Bold', 'slicknav-mobile-menu' ); ?></option>
-										</select>
-									</td>
-								</tr>
+										<td><label for="ng_slicknav_label_weight"><?php esc_attr_e( 'Menu Label Weight', 'slicknav-mobile-menu' ); ?></label></td>
+										<td>	
+											<select name="ng_slicknav_label_weight" id="ng_slicknav_label_weight">
+											<option  value="normal"><?php esc_attr_e( 'Normal', 'slicknav-mobile-menu' ); ?></option>
+											<option  selected="selected" value="bold" ><?php esc_attr_e( 'Bold', 'slicknav-mobile-menu' ); ?></option>
+											</select>
+										</td>
+									</tr>
 									<tr>
 										<td><label for="ng_slicknav_font_case"><?php esc_attr_e( 'Menu link font case', 'slicknav-mobile-menu' ); ?></label></td>
 										<td>	
@@ -143,7 +143,7 @@
 									</tr>
 									<tr>
 										<td><label for="ng_slicknav_position"><?php esc_attr_e( 'Menu Position (body by default, using body puts the Menu at the top.', 'slicknav-mobile-menu' ); ?><br>
-										<?php esc_attr_e( 'However you can adjust this location by adding in a CSS class', 'slicknav-mobile-menu' ); ?></label></td>										
+											<?php esc_attr_e( 'However you can adjust this location by adding in a CSS class', 'slicknav-mobile-menu' ); ?></label></td>										
 										<td><input name="ng_slicknav_position" id="ng_slicknav_position" type="text" value="body" class="regular-text"  placeholder="body"/></td>										
 									</tr>
 									<tr>
@@ -191,7 +191,7 @@
 										</td>
 									</tr>
 									<tr>
-										<td><label for="ng_slicknav_brand"><?php esc_attr_e( 'Enter a URL or upload an image for a logo smaller is better here, like 45px in depth and up to 200px in width', 'slicknav-mobile-menu' ); ?></label></td>
+										<td><label for="ng_slicknav_brand"><strong>Logo - </strong><?php esc_attr_e( ' Enter a URL or upload an image for a logo, smaller is better here, like 45px in depth and up to 200px in width, default position is left, to swap to right change Menu Button Position (above) to left', 'slicknav-mobile-menu' ); ?></label></td>
 										<td><input name="ng_slicknav_brand" id="ng_slicknav_brand" type="text" class="regular-text" value="" /></td>	
 										<td><input id="upload_image_button" type="button" value="Upload Image" class="button-secondary" /></td>									
 									</tr>
@@ -222,8 +222,8 @@
 									</tr>																			
 							</table>
 							<p><input class="button-primary" type="submit" name="ng_slicknav_menu_submit" value="<?php esc_attr_e ('Save', 'slicknav-mobile-menu'); ?>" /></p>
-								
-						</form>
+								<?php wp_nonce_field( 'slicknav_action', 'slicknav_fields' ); ?>
+							</form>
 						<?php endif; ?>
 						<?php if( isset( $ng_slicknav_menu ) && $ng_slicknav_menu !== ''): ?>
 						<form name="ng_slicknav_menu_form" method="post" action="">
@@ -289,7 +289,7 @@
 								<tr>
 										<td><label for="ng_slicknav_link_hover_color_submenu"><?php esc_attr_e( 'Menu Link Hover Color, Containing SubMenus', 'slicknav-mobile-menu' ); ?></label></td>
 										<td><input name="ng_slicknav_link_hover_color_submenu" id="ng_slicknav_link_hover_color_submenu" type="text" value="<?php echo esc_attr( $ng_slicknav_link_hover_color_submenu); ?>" class="my-color-field" placeholder="#ccc" /></td>										
-									</tr>
+								</tr>
 								<tr>
 									<td><label for="ng_slicknav_button_position"><?php esc_attr_e( 'Menu Button Position', 'slicknav-mobile-menu' ); ?></label></td>
 									<td>	
@@ -306,17 +306,17 @@
 									<td><input name="ng_slicknav_font" id="ng_slicknav_font" type="number" value="<?php echo ($ng_slicknav_font); ?>" class="regular-text" placeholder="16"/></td>										
 								</tr>
 								<tr>
-										<td><label for="ng_slicknav_label_size"><?php esc_attr_e( 'Menu Label Size (16px Default)', 'slicknav-mobile-menu' ); ?></label></td>
-										<td><input name="ng_slicknav_label_size" id="ng_slicknav_label_size" type="number" value="<?php echo ($ng_slicknav_label_size); ?>" class="regular-text" placeholder="16" /></td>										
+									<td><label for="ng_slicknav_label_size"><?php esc_attr_e( 'Menu Label Size (16px Default)', 'slicknav-mobile-menu' ); ?></label></td>
+									<td><input name="ng_slicknav_label_size" id="ng_slicknav_label_size" type="number" value="<?php echo ($ng_slicknav_label_size); ?>" class="regular-text" placeholder="16" /></td>										
 								</tr>
 								<tr>
-										<td><label for="ng_slicknav_label_weight"><?php esc_attr_e( 'Menu Label Weight', 'slicknav-mobile-menu' ); ?></label></td>
-										<td>	
-											<select name="ng_slicknav_label_weight" id="ng_slicknav_label_weight">
-											<option  value="normal" <?php selected($options['ng_slicknav_label_weight'], 'normal' ); ?>><?php esc_attr_e( 'Normal', 'slicknav-mobile-menu' ); ?></option>
-											<option  value="bold'" <?php selected($options['ng_slicknav_label_weight'], 'bold' ); ?>><?php esc_attr_e( 'Bold', 'slicknav-mobile-menu' ); ?></option>
-											</select>
-										</td>
+									<td><label for="ng_slicknav_label_weight"><?php esc_attr_e( 'Menu Label Weight', 'slicknav-mobile-menu' ); ?></label></td>
+									<td>	
+										<select name="ng_slicknav_label_weight" id="ng_slicknav_label_weight">
+										<option  value="normal" <?php selected($options['ng_slicknav_label_weight'], 'normal' ); ?>><?php esc_attr_e( 'Normal', 'slicknav-mobile-menu' ); ?></option>
+										<option  value="bold" <?php selected($options['ng_slicknav_label_weight'], 'bold' ); ?>><?php esc_attr_e( 'Bold', 'slicknav-mobile-menu' ); ?></option>
+										</select>
+									</td>
 								</tr>
 								<tr>
 									<td><label for="ng_slicknav_font_case"><?php esc_attr_e( 'Menu link font case', 'slicknav-mobile-menu' ); ?></label></td>
@@ -340,7 +340,7 @@
 								</tr>
 								<tr>
 									<td><label for="ng_slicknav_position"><?php esc_attr_e( 'Menu Position (body by default, using body puts the Menu at the top.', 'slicknav-mobile-menu' ); ?><br>
-									<?php esc_attr_e( 'However you can adjust this location by adding in a CSS class', 'slicknav-mobile-menu' ); ?></label></td>
+										<?php esc_attr_e( 'However you can adjust this location by adding in a CSS class', 'slicknav-mobile-menu' ); ?></label></td>
 									<td><input name="ng_slicknav_position" id="ng_slicknav_position" type="text" value="<?php echo ( $ng_slicknav_position); ?>" class="regular-text" placeholder="<?php echo ('body'); ?>" /></td>										
 								</tr>
 								<tr>
@@ -389,7 +389,7 @@
 									</td>
 								</tr>
 								<tr>
-									<td><label for="ng_slicknav_brand"><?php esc_attr_e( 'Enter a URL or upload an image for a logo smaller is better here, like 45px in depth and up to 200px in width', 'slicknav-mobile-menu' ); ?></label></td>
+									<td><label for="ng_slicknav_brand"><strong>Logo - </strong><?php esc_attr_e( ' Enter a URL or upload an image for a logo, smaller is better here, like 45px in depth and up to 200px in width, default position is left, to swap to right change Menu Button Position (above) to left', 'slicknav-mobile-menu' ); ?></label></td>
 									<td><input name="ng_slicknav_brand" id="ng_slicknav_brand" type="text" class="regular-text" value="<?php echo ($ng_slicknav_brand); ?>" /></td>	
 									<td><input id="upload_image_button" type="button" value="Upload Image" class="button-secondary" /></td>									
 								</tr>
@@ -421,9 +421,13 @@
 						</table>
 						<p><input class="button-primary" type="submit" name="ng_slicknav_menu_submit" value="<?php esc_attr_e( 'Update', 'slicknav-mobile-menu'); ?>" /></p>
 							
-					<div class="updated"><p><?php esc_attr_e( 'Settings Updated', 'wp_admin_style' ); ?></p></div>
+							<?php if( isset( $_POST['ng_slicknav_form_submitted'] )) { ?>
+							    <div id="message" class="updated">
+							        <p><strong><?php _e('Settings Updated','wp_admin_style' ); ?></strong></p>
+							    </div>
+							<?php } ?>
 					
-
+							<?php wp_nonce_field( 'slicknav_action', 'slicknav_fields' ); ?>	
 					</form>
 					<?php endif; ?>
 						</div>
