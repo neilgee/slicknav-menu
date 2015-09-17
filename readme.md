@@ -212,3 +212,7 @@ The settings are found via the dashboard Settings > SlickNav Menu
 = 1.6.1 =
 
 * 10/9/15 Menu Button Position - if set to left, brand logo (if used) will then appear to the right, code error fix ups, added a form nonce for security -> props Ov3rfly
+
+= 1.6.2 =
+
+* 17/9/15 - Added a filter so Slicknav options can be changed outside of regular options page, props -> Ov3rfly - Instructions - https://wpbeaches.com/slicknav-wordpress-filter-to-adjust-values/
