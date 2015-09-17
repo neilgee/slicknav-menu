@@ -5,12 +5,12 @@ Donate link: http://wpbeaches.com/
 Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
 Requires at least: 4.0
 Tested up to: 4.3
-Stable tag: 1.6.2
+Stable tag: 1.6.3
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
 Author: Neil Gee
-Version: 1.6.2
+Version: 1.6.3
 Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -36,7 +36,9 @@ Option to add a search field.
 
 Option to add a logo.
 
-Internationalized
+Internationalized.
+
+Advanced Filter for values.
 
 
 
@@ -103,6 +105,8 @@ The settings are found via the dashboard Settings > SlickNav Menu
  - Search icon background color
 
  - Options to change the opening and closing symbols
+
+ - Advanced filter to adjust Slicknav values
 
  Demo - http://wpbeaches.com (resize browser window to below 600px)
 
@@ -217,3 +221,7 @@ The settings are found via the dashboard Settings > SlickNav Menu
 = 1.6.2 =
 
 * 17/9/15 - Added a filter so Slicknav options can be changed outside of regular options page, props -> Ov3rfly - Instructions - https://wpbeaches.com/slicknav-wordpress-filter-to-adjust-values/
+
+= 1.6.3 =
+
+* 17/9/15 - Backend fixes, nonce referrer completed, remove global variables, restructure output based on no values set -> props Ov3rfly

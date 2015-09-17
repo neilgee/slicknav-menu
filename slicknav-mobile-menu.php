@@ -5,7 +5,7 @@ Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com/using-slick-responsive-menus-genesis-child-theme/
 Description: Using SlickNav Responsive Mobile Menus in WordPress
 Author: Neil Gee
-Version: 1.6.2
+Version: 1.6.3
 Author URI: http://wpbeaches.com
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -20,16 +20,6 @@ Domain Path: /languages/
   }
 
 
-/*
- * Assign global variables
- *
- */
-
-
-$plugin_url = WP_PLUGIN_URL . '/slicknav-mobile-menu';
-$options = array();
-
-
 /**
  * Register our text domain.
  */
@@ -42,7 +32,7 @@ add_action( 'plugins_loaded', __NAMESPACE__ . '\\load_textdomain' );
 //Script-tac-ulous -> All the Scripts and Styles Registered and Enqueued
 function scripts_styles() {
   $options = get_option( 'ng_slicknavmenu' );
-
+if ( $options !== false ) {
   wp_register_script ( 'slicknavjs' , plugins_url( '/js/jquery.slicknav.min.js',  __FILE__ ), array( 'jquery' ), '1.0.4', false );
   wp_register_style ( 'slicknavcss' , plugins_url( '/css/slicknav.min.css',  __FILE__ ), '' , '1.0.4', 'all' );
   wp_register_script ( 'slicknav-init' , plugins_url( '/js/slick-init.js',  __FILE__ ), array( 'slicknavjs' ), '1.5.7', false );
@@ -51,37 +41,36 @@ function scripts_styles() {
   wp_enqueue_style( 'slicknavcss' );
 
 //Enqueue Dashicons only if Search option is ticked
-  if( $options['ng_slicknav_search'] == true ) {
-  wp_enqueue_style( 'dashicons' );
+  if( (bool) $options['ng_slicknav_search'] == true ) {
+    wp_enqueue_style( 'dashicons' );
+    }
+
+   $data = array (
+
+      'ng_slicknav' => array(
+          'ng_slicknav_menu'              => esc_html( $options['ng_slicknav_menu'] ),
+          'ng_slicknav_position'          => esc_html( $options['ng_slicknav_position'] ),
+          'ng_slicknav_parent_links'      => (bool)$options['ng_slicknav_parent_links'], // this is a boolean true/false
+          'ng_slicknav_child_links'       => (bool) $options['ng_slicknav_child_links'], // this is a boolean true/false
+          'ng_slicknav_speed'             => (int)$options['ng_slicknav_speed'], // this is an integer
+          'ng_slicknav_label'             => esc_html( $options['ng_slicknav_label'] ),
+          'ng_slicknav_fixhead'           => (bool) $options['ng_slicknav_fixhead'], // this is a boolean true/false
+          'ng_slicknav_brand'             => esc_html( $options['ng_slicknav_brand'] ),
+          'ng_slicknav_search'            => (bool) $options['ng_slicknav_search'], // this is a boolean true/false
+          'ng_slicksearch'                => home_url( '/' ),
+          'ng_slicknav_closedsymbol'      => esc_html( $options['ng_slicknav_closedsymbol'] ),
+          'ng_slicknav_openedsymbol'      => esc_html( $options['ng_slicknav_openedsymbol'] ),
+          'ng_slicknav_alt'               => esc_html( $options['ng_slicknav_alt'] ),
+      ),
+  );
+    //add filter
+    $data = apply_filters( 'ng_slicknav_php_vars', $data );
+
+    // Pass PHP variables to jQuery script
+    wp_localize_script( 'slicknav-init', 'phpVars', $data );
+
+    wp_enqueue_script( 'slicknav-init' );
   }
-  
-$options = get_option( 'ng_slicknavmenu' );
-
- $data = array (
-
-    'ng_slicknav' => array(
-        'ng_slicknav_menu'              => esc_html( $options['ng_slicknav_menu'] ),
-        'ng_slicknav_position'          => esc_html( $options['ng_slicknav_position'] ),
-        'ng_slicknav_parent_links'      => (bool)$options['ng_slicknav_parent_links'], // this is a boolean true/false
-        'ng_slicknav_child_links'       => (bool) $options['ng_slicknav_child_links'], // this is a boolean true/false
-        'ng_slicknav_speed'             => (int)$options['ng_slicknav_speed'], // this is an integer
-        'ng_slicknav_label'             => esc_html( $options['ng_slicknav_label'] ),
-        'ng_slicknav_fixhead'           => (bool) $options['ng_slicknav_fixhead'], // this is a boolean true/false
-        'ng_slicknav_brand'             => esc_html( $options['ng_slicknav_brand'] ),
-        'ng_slicknav_search'            => (bool) $options['ng_slicknav_search'], // this is a boolean true/false
-        'ng_slicksearch'                => home_url( '/' ),
-        'ng_slicknav_closedsymbol'      => esc_html( $options['ng_slicknav_closedsymbol'] ),
-        'ng_slicknav_openedsymbol'      => esc_html( $options['ng_slicknav_openedsymbol'] ),
-        'ng_slicknav_alt'               => esc_html( $options['ng_slicknav_alt'] ),
-    ),
-);
-  //add filter
-  $data = apply_filters( 'ng_slicknav_php_vars', $data );
-
-  // Pass PHP variables to jQuery script
-  wp_localize_script( 'slicknav-init', 'phpVars', $data );
-
-  wp_enqueue_script( 'slicknav-init' );
 }
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\scripts_styles' );
@@ -101,11 +90,8 @@ add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\media_uploader_scripts' 
 //Set Responsive Nav to fire - change CSS ID of menu to suit
 function responsive_menucss() {
 
-      global $plugin_url;
-      global $options;
-
       $options = get_option('ng_slicknavmenu');
-        if ( $options !== '') {
+        if ( $options !== false ) {
         $ng_slicknav_menu                     = $options['ng_slicknav_menu'];
         $ng_slicknav_width                    = $options['ng_slicknav_width'];
         $ng_slicknav_background               = $options['ng_slicknav_background'];
@@ -126,10 +112,7 @@ function responsive_menucss() {
         $ng_slicknav_icon_shadow              = $options['ng_slicknav_icon_shadow'];
         $ng_slicknav_label_weight             = $options['ng_slicknav_label_weight'];
         $ng_slicknav_fixhead                  = $options['ng_slicknav_fixhead'];
-
-
-}?>
-
+?>
       <style>
             .slicknav_menu {
                 display: none;
@@ -212,6 +195,8 @@ function responsive_menucss() {
 
         </style>
 <?php
+
+  }
 }
 
 add_action( 'wp_head', __NAMESPACE__ . '\\responsive_menucss' );
@@ -243,8 +228,7 @@ function menu_options_page() {
       wp_die( "Hall and Oates 'Say No Go'" );
     }
 
-    global $plugin_url;
-    global $options;
+  if ( !empty( $_POST ) && check_admin_referer( 'slicknav_action', 'slicknav_fields' ) ) {
 
     //Escape and Assign the values from the submitted form to variables
     if( isset( $_POST['ng_slicknav_form_submitted'] ) ) {
@@ -322,6 +306,8 @@ function menu_options_page() {
           update_option( 'ng_slicknavmenu', $options );
         }
     }
+
+  }
 
     $options = get_option('ng_slicknavmenu');
 
