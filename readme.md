@@ -39,9 +39,11 @@ Option to add a search field.
 
 Option to add a logo.
 
-Internationalized
+Filter Hook.
 
-Combine multiple menus into one Mobile Mega Menu
+Internationalized.
+
+Combine multiple menus into one Mobile Mega Menu.
 
 
 
