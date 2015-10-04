@@ -5,12 +5,12 @@ Donate link: http://wpbeaches.com/
 Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
 Requires at least: 4.0
 Tested up to: 4.3
-Stable tag: 1.6.3
+Stable tag: 1.7.0
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
 Author: Neil Gee
-Version: 1.6.3
+Version: 1.7.0
 Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -225,3 +225,7 @@ The settings are found via the dashboard Settings > SlickNav Menu
 = 1.6.3 =
 
 * 17/9/15 - Backend fixes, nonce referrer completed, remove global variables, restructure output based on no values set -> props Ov3rfly
+
+= 1.7.0 =
+
+* 30/9/15 - Now add comma separated menus for one combined menu -> props Ov3rfly, filter name more descriptively named.

@@ -27,7 +27,8 @@
 
 					<div class="postbox">
 
-						<h3><span><?php esc_attr_e( 'Enter your menu CSS selector for the Mobile Menu name value, for example; #primary-menu or #menu-primary-menu etc.', 'slicknav-mobile-menu' ); ?></span></h3>
+						<h3><span><?php esc_attr_e( 'Enter your CSS menu selector for the Mobile Menu, for example; #primary-menu or #menu-primary-menu etc.', 'slicknav-mobile-menu' ); ?></span></h3>
+						<h3><span><?php esc_attr_e( 'For combining multiple menus into one Mobile Menu, add them in comma separated.', 'slicknav-mobile-menu' ); ?></span></h3>
 
 						<div class="inside">
 						<?php if( !isset( $ng_slicknav_menu ) || $ng_slicknav_menu == ''): ?>
@@ -38,7 +39,7 @@
 
 							<table class="form-table">
 									<tr>
-										<td><label for="ng_slicknav_menu"><?php esc_attr_e( 'SlickNav Mobile Menu Name', 'slicknav-mobile-menu' ); ?></label></td>
+										<td><label for="ng_slicknav_menu"><?php esc_attr_e( 'CSS Menu ID to use for SlickNav Mobile', 'slicknav-mobile-menu' ); ?></label></td>
 										<td><input name="ng_slicknav_menu" id="ng_slicknav_menu" type="text" value="" class="regular-text" placeholder="<?php esc_attr_e('CSS Selector Menu Name', 'slicknav-mobile-menu'); ?>" /></td>
 									</tr>
 									<tr>
@@ -116,8 +117,8 @@
 										<td><label for="ng_slicknav_label_weight"><?php esc_attr_e( 'Menu Label Weight', 'slicknav-mobile-menu' ); ?></label></td>
 										<td>	
 											<select name="ng_slicknav_label_weight" id="ng_slicknav_label_weight">
-											<option  value="normal"><?php esc_attr_e( 'Normal', 'slicknav-mobile-menu' ); ?></option>
-											<option  selected="selected" value="bold" ><?php esc_attr_e( 'Bold', 'slicknav-mobile-menu' ); ?></option>
+											<option selected="selected" value="normal"><?php esc_attr_e( 'Normal', 'slicknav-mobile-menu' ); ?></option>
+											<option  value="bold" ><?php esc_attr_e( 'Bold', 'slicknav-mobile-menu' ); ?></option>
 											</select>
 										</td>
 									</tr>
@@ -163,11 +164,11 @@
 										<td><label for="ng_slicknav_child_links"><?php esc_attr_e( 'Show Child Links on Open', 'slicknav-mobile-menu' ); ?></label></td>
 										<td>
 											<label for="ng_slicknav_child_links">	
-											<input name="ng_slicknav_child_links" type="checkbox" id="ng_slicknav_child_linkss" value="1" />
+											<input name="ng_slicknav_child_links" type="checkbox" id="ng_slicknav_child_links" value="1" />
 											<span><?php esc_attr_e( 'Show Child Links on Open', 'slicknav-mobile-menu' ); ?></span>
 											</label>
 										</td>
-									</tr>
+									</tr>	
 									<tr>
 										<td><label for="ng_slicknav_search"><?php esc_attr_e( 'Show search field at bottom of Menu', 'slicknav-mobile-menu' ); ?></label></td>
 										<td>
@@ -232,7 +233,7 @@
 
 						<table class="form-table">
 								<tr>
-									<td><label for="ng_slicknav_menu"><?php esc_attr_e( 'SlickNav Mobile Menu Name', 'slicknav-mobile-menu' ); ?></label></td>
+									<td><label for="ng_slicknav_menu"><?php esc_attr_e( 'CSS Menu ID to use for SlickNav Mobile', 'slicknav-mobile-menu' ); ?></label></td>
 									<td><input name="ng_slicknav_menu" id="ng_slicknav_menu" type="text" value="<?php echo ($ng_slicknav_menu); ?>" class="regular-text" placeholder="<?php esc_attr_e('CSS Selector Menu Name', 'slicknav-mobile-menu'); ?>"/></td>
 								</tr>
 
@@ -456,8 +457,7 @@
 							<ul>
 								<li><a href="http://slicknav.com/" rel="nofollow"><?php esc_attr_e('SlickNav Home','slicknav-mobile-menu'); ?></a></li>
 								<li><a href="https://github.com/ComputerWolf/SlickNav" rel="nofollow"><?php esc_attr_e('SlickNav GitHub','slicknav-mobile-menu'); ?></a></li>
-								<li><a href="http://wpbeaches.com/using-slick-responsive-menus-genesis-child-theme/" rel="nofollow"><?php esc_attr_e('WP Beaches Genesis Guide','slicknav-mobile-menu'); ?></a></li>
-								<li><a href="http://wpbeaches.com/swap-wordpress-twenty-twelve-mobile-menu-slick-navigation/" rel="nofollow"><?php esc_attr_e('WP Beaches TwentyTwelve Guide','slicknav-mobile-menu'); ?></a></li>
+								<li><a href="https://wpbeaches.com/slicknav-wordpress-filter-to-adjust-values" rel="nofollow"><?php esc_attr_e('Advanced Filter Guide','slicknav-mobile-menu'); ?></a></li>
 								<li><a href="http://www.alanwood.net/unicode/geometric_shapes.html" target="_blank"><?php esc_attr_e('Symbol Reference','slicknav-mobile-menu'); ?></a></li>
 							</ul>
 						</div>
