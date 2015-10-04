@@ -1,30 +1,52 @@
-if(phpVars.ng_slicknav.ng_slicknav_fixhead  || !phpVars.ng_slicknav.ng_slicknav_position ) {
-    phpVars.ng_slicknav.ng_slicknav_position = 'body';
+if(slickNavVars.ng_slicknav.ng_slicknav_fixhead  || !slickNavVars.ng_slicknav.ng_slicknav_position ) {
+    slickNavVars.ng_slicknav.ng_slicknav_position = 'body';
 }
 
-if(phpVars.ng_slicknav.ng_slicknav_openedsymbol == "") {
-    phpVars.ng_slicknav.ng_slicknav_openedsymbol = "&#9660;"
+if(slickNavVars.ng_slicknav.ng_slicknav_openedsymbol == "") {
+    slickNavVars.ng_slicknav.ng_slicknav_openedsymbol = "&#9660;"
 }
 
-if(phpVars.ng_slicknav.ng_slicknav_closedsymbol == "") {
-    phpVars.ng_slicknav.ng_slicknav_closedsymbol = "&#9658;"
+if(slickNavVars.ng_slicknav.ng_slicknav_closedsymbol == "") {
+    slickNavVars.ng_slicknav.ng_slicknav_closedsymbol = "&#9658;"
 }
 
 jQuery(document).ready(function($) {
-    $(phpVars.ng_slicknav.ng_slicknav_menu).slicknav({
-    
-        prependTo: phpVars.ng_slicknav.ng_slicknav_position,
-        label: phpVars.ng_slicknav.ng_slicknav_label,               
-        duration: phpVars.ng_slicknav.ng_slicknav_speed,
-        showChildren: phpVars.ng_slicknav.ng_slicknav_child_links,
-        allowParentLinks: phpVars.ng_slicknav.ng_slicknav_parent_links,
-        brand: phpVars.ng_slicknav.ng_slicknav_brand,
-        openedSymbol: phpVars.ng_slicknav.ng_slicknav_openedsymbol,
-        closedSymbol: phpVars.ng_slicknav.ng_slicknav_closedsymbol,
 
+	// Ov3rfly
+	var ng_slicknav_menu = '';
+	var ng_slicknav_menu_duplicate = true;
+	var ng_slicknav_menu_arr = slickNavVars.ng_slicknav.ng_slicknav_menu.split(',');
+	if ( ng_slicknav_menu_arr.length > 1 ) {
+		// multiple comma seperated selectors
+		// based on http://codepen.io/ComputerWolf/pen/tjyIg
+		// clone all menus to keep them intact
+		ng_slicknav_menu = $( $.trim( ng_slicknav_menu_arr[0] ) ).clone();
+		for ( var i = 1; i < ng_slicknav_menu_arr.length; i++ ) {
+			var ng_slicknav_other = $( $.trim( ng_slicknav_menu_arr[i] ) ).clone();
+			ng_slicknav_other.children( 'li' ).appendTo( ng_slicknav_menu );
+		}
+		ng_slicknav_menu_duplicate = false;
+	} else {
+		// only one selector
+		ng_slicknav_menu = $.trim( ng_slicknav_menu_arr[0] );
+	}
+
+    $(ng_slicknav_menu).slicknav({	// Ov3rfly
+    
+        prependTo: slickNavVars.ng_slicknav.ng_slicknav_position,
+        label: slickNavVars.ng_slicknav.ng_slicknav_label,               
+        duration: slickNavVars.ng_slicknav.ng_slicknav_speed,
+        showChildren: slickNavVars.ng_slicknav.ng_slicknav_child_links,
+        allowParentLinks: slickNavVars.ng_slicknav.ng_slicknav_parent_links,
+        brand: slickNavVars.ng_slicknav.ng_slicknav_brand,
+        openedSymbol: slickNavVars.ng_slicknav.ng_slicknav_openedsymbol,
+        closedSymbol: slickNavVars.ng_slicknav.ng_slicknav_closedsymbol,
+
+		
+		duplicate: ng_slicknav_menu_duplicate	// Ov3rfly
 
     });
-    if ( phpVars.ng_slicknav.ng_slicknav_search == true ) {
-        $( '.slicknav_nav' ).append( '<li class="search"><form role="search" method="get" id="slicknav-searchform" action="'+ phpVars.ng_slicknav.ng_slicksearch + '"><input type="text" placeholder="search..." name="s" id="s" /><input type="submit" id="searchsubmit" value="&#xf179;" /></form></li>');
+    if ( slickNavVars.ng_slicknav.ng_slicknav_search == true ) {
+        $( '.slicknav_nav' ).append( '<li class="search"><form role="search" method="get" id="slicknav-searchform" action="'+ slickNavVars.ng_slicknav.ng_slicksearch + '"><input type="text" placeholder="search..." name="s" id="s" /><input type="submit" id="searchsubmit" value="&#xf179;" /></form></li>');
     }
  });

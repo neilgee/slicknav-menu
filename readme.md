@@ -5,15 +5,15 @@
 
 Contributors: neilgee
 Donate link: http://wpbeaches.com/
-Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
+Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level, multi-combine menus
 Requires at least: 4.0
 Tested up to: 4.2
-Stable tag: 1.6.3
+Stable tag: 1.7.0
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
 Author: Neil Gee
-Version: 1.6.3
+Version: 1.7.0
 Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
