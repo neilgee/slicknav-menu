@@ -5,7 +5,7 @@
 
 Contributors: neilgee
 Donate link: http://wpbeaches.com/
-Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
+Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level, multi-combine menus
 Requires at least: 4.0
 Tested up to: 4.2
 Stable tag: 1.7.0
@@ -226,3 +226,4 @@ The settings are found via the dashboard Settings > SlickNav Menu
 = 1.7.0 =
 
 * 30/9/15 - Now add comma separated menus for one combined menu -> props Ov3rfly, filter name more descriptively named.
+

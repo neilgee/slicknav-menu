@@ -38,7 +38,9 @@ Option to add a logo.
 
 Internationalized.
 
-Advanced Filter for values.
+Advanced Filter.
+
+Combine multiple menus.
 
 
 
