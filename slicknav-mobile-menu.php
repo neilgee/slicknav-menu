@@ -318,7 +318,7 @@ function menu_options_page() {
 
     $options = get_option('ng_slicknavmenu');
 
-    //Add new plugin options defaults here
+    //Add new plugin option defaults here, this avoids undefined php notices
    // if( !isset( $options['ng_slicknav_parent_tag'] ) ) $options['ng_slicknav_parent_tag'] = 'a';
 
 
