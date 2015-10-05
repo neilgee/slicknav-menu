@@ -40,7 +40,7 @@ Internationalized.
 
 Advanced Filter.
 
-Combine multiple menus.
+Combine multiple menus into one mobile menu.
 
 
 
