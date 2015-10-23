@@ -5,7 +5,7 @@ Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com/using-slick-responsive-menus-genesis-child-theme/
 Description: Using SlickNav Responsive Mobile Menus in WordPress
 Author: Neil Gee
-Version: 1.7.0
+Version: 1.7.1
 Author URI: http://wpbeaches.com
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -96,6 +96,10 @@ add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\media_uploader_scripts' 
 function responsive_menucss() {
 
       $options = get_option('ng_slicknavmenu');
+
+       //Add new plugin options defaults here
+        if( !isset( $options['ng_slicknav_header'] ) ) $options['ng_slicknav_header'] = '';
+
         if ( $options !== false ) {
         $ng_slicknav_menu                     = $options['ng_slicknav_menu'];
         $ng_slicknav_width                    = $options['ng_slicknav_width'];
@@ -117,8 +121,9 @@ function responsive_menucss() {
         $ng_slicknav_icon_shadow              = $options['ng_slicknav_icon_shadow'];
         $ng_slicknav_label_weight             = $options['ng_slicknav_label_weight'];
         $ng_slicknav_fixhead                  = $options['ng_slicknav_fixhead'];
+        $ng_slicknav_header                   = $options['ng_slicknav_header'];
 ?>
-      <style>
+      <style type="text/css">
             .slicknav_menu {
                 display: none;
             }
@@ -156,6 +161,11 @@ function responsive_menucss() {
               <?php echo $ng_slicknav_menu; ?> {
                   display: none;
                }
+               <?php if( $ng_slicknav_header == true ) { ?>
+              .site-header {
+                  display: none;
+                 }
+              <?php } ?>  
                .slicknav_menu {
                   display: block;
                   background: <?php echo $ng_slicknav_background; ?>;
@@ -195,7 +205,8 @@ function responsive_menucss() {
                .slicknav_nav input[type="submit"]{
                   background: <?php echo $ng_slicknav_search_color; ?>;
                }
-           
+    
+         
              }
 
         </style>
@@ -272,6 +283,7 @@ function menu_options_page() {
           $ng_slicknav_openedsymbol             = esc_html( $_POST['ng_slicknav_openedsymbol'] );
           $ng_slicknav_closedsymbol             = esc_html( $_POST['ng_slicknav_closedsymbol'] );
           $ng_slicknav_alt                      = esc_html( $_POST['ng_slicknav_alt'] );
+          $ng_slicknav_header                   = esc_html( isset($_POST['ng_slicknav_header']) );
 
           
           //Assign the above variables as values to the options db as a serialized array
@@ -305,6 +317,7 @@ function menu_options_page() {
           $options['ng_slicknav_closedsymbol']             = $ng_slicknav_closedsymbol;
           $options['ng_slicknav_openedsymbol']             = $ng_slicknav_openedsymbol;
           $options['ng_slicknav_alt']                      = $ng_slicknav_alt;
+          $options['ng_slicknav_header']                   = $ng_slicknav_header;
           
 
 
@@ -319,7 +332,7 @@ function menu_options_page() {
     $options = get_option('ng_slicknavmenu');
 
     //Add new plugin options defaults here
-   // if( !isset( $options['ng_slicknav_parent_tag'] ) ) $options['ng_slicknav_parent_tag'] = 'a';
+    if( !isset( $options['ng_slicknav_header'] ) ) $options['ng_slicknav_header'] = '';
 
 
     if ( $options !== false ) {
@@ -354,6 +367,7 @@ function menu_options_page() {
         $ng_slicknav_openedsymbol             = $options['ng_slicknav_openedsymbol'];
         $ng_slicknav_closedsymbol             = $options['ng_slicknav_closedsymbol'];
         $ng_slicknav_alt                      = $options['ng_slicknav_alt'];  
+        $ng_slicknav_header                   = $options['ng_slicknav_header']; 
     }
 
  

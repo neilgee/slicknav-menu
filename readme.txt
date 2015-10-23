@@ -5,12 +5,12 @@ Donate link: http://wpbeaches.com/
 Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
 Requires at least: 4.0
 Tested up to: 4.3
-Stable tag: 1.7.0
+Stable tag: 1.7.1
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
 Author: Neil Gee
-Version: 1.7.0
+Version: 1.7.1
 Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -40,7 +40,7 @@ Internationalized.
 
 Advanced Filter.
 
-Combine multiple menus into one mobile menu.
+Combine multiple menus.
 
 
 
@@ -101,6 +101,8 @@ The settings are found via the dashboard Settings > SlickNav Menu
  - Fix Menu to Head, using position fixed to body tag
 
  - Option for branding logo opposite menu label - smaller works better such as 40px in height and up to 140px in width
+
+ - Option to hide header with a '.site-header' class when Slicknav Menu is visible
 
  - Option to add in a search field at the bottom of the menu
 
@@ -198,7 +200,7 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
 = 1.5.3 =
 
-* 26/6/15 - Bug fixes: removed placedholder value for brand logo, added a max-width value on logo,  code tidy up
+* 26/6/15 - Bug fixes: removed placeholder value for brand logo, added a max-width value on logo,  code tidy up
 
 = 1.5.4 = 
 
@@ -231,3 +233,7 @@ The settings are found via the dashboard Settings > SlickNav Menu
 = 1.7.0 =
 
 * 30/9/15 - Now add comma separated menus for one combined menu -> props Ov3rfly, filter name more descriptively named.
+
+= 1.7.1 =
+
+* 23/10/15 - Option to hide header when SlickNav displays, this will only apply to themes with a header class of '.site-header' otherwise it will need to be done in the CSS, minor updates to descriptive text. Less padding around top & bottom of brand logo.

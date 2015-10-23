@@ -39,7 +39,7 @@
 
 							<table class="form-table">
 									<tr>
-										<td><label for="ng_slicknav_menu"><?php esc_attr_e( 'CSS Menu ID to use for SlickNav Mobile', 'slicknav-mobile-menu' ); ?></label></td>
+										<td><label for="ng_slicknav_menu"><?php esc_attr_e( 'CSS Menu ID or Class to use for SlickNav Mobile', 'slicknav-mobile-menu' ); ?></label></td>
 										<td><input name="ng_slicknav_menu" id="ng_slicknav_menu" type="text" value="" class="regular-text" placeholder="<?php esc_attr_e('CSS Selector Menu Name', 'slicknav-mobile-menu'); ?>" /></td>
 									</tr>
 									<tr>
@@ -201,6 +201,15 @@
 										<td><input name="ng_slicknav_alt" id="ng_slicknav_alt" type="text" value="" class="regular-text" placeholder="alt text" /></td>										
 									</tr>
 									<tr>
+										<td><label for="ng_slicknav_header"><?php esc_attr_e( 'Hide Main Header ', 'slicknav-mobile-menu' ); ?></label></td>
+										<td>
+											<label for="ng_slicknav_header">	
+											<input name="ng_slicknav_header" type="checkbox" id="ng_slicknav_header" value="1" />
+											<span><?php esc_attr_e( 'Hide Main Header when Mobile Menu is Visible', 'slicknav-mobile-menu' ); ?></span>
+											</label>
+										</td>
+									</tr>
+									<tr>
 										<td><label for="ng_slicknav_speed"><?php esc_attr_e( 'Speed of Menu open/close (Higher numbers are slower)', 'slicknav-mobile-menu' ); ?></label></td>
 										<td>	
 											<select name="ng_slicknav_speed" id="ng_slicknav_speed">
@@ -233,7 +242,7 @@
 
 						<table class="form-table">
 								<tr>
-									<td><label for="ng_slicknav_menu"><?php esc_attr_e( 'CSS Menu ID to use for SlickNav Mobile', 'slicknav-mobile-menu' ); ?></label></td>
+									<td><label for="ng_slicknav_menu"><?php esc_attr_e( 'CSS Menu ID or Class to use for SlickNav Mobile', 'slicknav-mobile-menu' ); ?></label></td>
 									<td><input name="ng_slicknav_menu" id="ng_slicknav_menu" type="text" value="<?php echo ($ng_slicknav_menu); ?>" class="regular-text" placeholder="<?php esc_attr_e('CSS Selector Menu Name', 'slicknav-mobile-menu'); ?>"/></td>
 								</tr>
 
@@ -397,6 +406,15 @@
 								<tr>
 									<td><label for="ng_slicknav_alt"><?php esc_attr_e( 'Logo Alt Text', 'slicknav-mobile-menu' ); ?></label></td>
 									<td><input name="ng_slicknav_alt" id="ng_slicknav_alt" type="text" value="<?php echo ($ng_slicknav_alt); ?>" class="regular-text" placeholder="alt text" /></td>										
+								</tr>
+								<tr>
+									<td><label for="ng_slicknav_header"><?php esc_attr_e( 'Hide Main Header ', 'slicknav-mobile-menu' ); ?></label></td>
+									<td>
+										<label for="ng_slicknav_header">	
+										<input name="ng_slicknav_header" type="checkbox" id="ng_slicknav_header" value="1" <?php checked($options['ng_slicknav_header'],'1'); ?> />
+										<span><?php esc_attr_e( 'Hide Main Header when Mobile Menu is Visible', 'slicknav-mobile-menu' ); ?></span>
+										</label>
+									</td>
 								</tr>
 								<tr>
 									<td><label for="ng_slicknav_speed"><?php esc_attr_e( 'Speed of Menu open/close (Lower numbers are faster)', 'slicknav-mobile-menu' ); ?></label></td>
