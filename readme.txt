@@ -4,13 +4,13 @@ Contributors: neilgee
 Donate link: http://wpbeaches.com/
 Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
 Requires at least: 4.0
-Tested up to: 4.3
-Stable tag: 1.7.1
+Tested up to: 4.4
+Stable tag: 1.7.2
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
 Author: Neil Gee
-Version: 1.7.1
+Version: 1.7.2
 Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -237,3 +237,7 @@ The settings are found via the dashboard Settings > SlickNav Menu
 = 1.7.1 =
 
 * 23/10/15 - Option to hide header when SlickNav displays, this will only apply to themes with a header class of '.site-header' otherwise it will need to be done in the CSS, minor updates to descriptive text. Less padding around top & bottom of brand logo.
+
+= 1.7.2 =
+
+* 12/12/15 - Updated core SlickNav to match 1.0.6, fixes for Undefined index notices displayed when WP_Debug set to true.

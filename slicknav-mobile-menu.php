@@ -5,7 +5,7 @@ Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com/using-slick-responsive-menus-genesis-child-theme/
 Description: Using SlickNav Responsive Mobile Menus in WordPress
 Author: Neil Gee
-Version: 1.7.1
+Version: 1.7.2
 Author URI: http://wpbeaches.com
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -33,9 +33,9 @@ add_action( 'plugins_loaded', __NAMESPACE__ . '\\load_textdomain' );
 function scripts_styles() {
   $options = get_option( 'ng_slicknavmenu' );
 if ( $options !== false ) {
-  wp_register_script ( 'slicknavjs' , plugins_url( '/js/jquery.slicknav.min.js',  __FILE__ ), array( 'jquery' ), '1.0.4', false );
-  wp_register_style ( 'slicknavcss' , plugins_url( '/css/slicknav.min.css',  __FILE__ ), '' , '1.0.4', 'all' );
-  wp_register_script ( 'slicknav-init' , plugins_url( '/js/slick-init.js',  __FILE__ ), array( 'slicknavjs' ), '1.7.0', false );
+  wp_register_script ( 'slicknavjs' , plugins_url( '/js/jquery.slicknav.min.js',  __FILE__ ), array( 'jquery' ), '1.0.6', false );
+  wp_register_style ( 'slicknavcss' , plugins_url( '/css/slicknav.min.css',  __FILE__ ), '' , '1.0.6', 'all' );
+  wp_register_script ( 'slicknav-init' , plugins_url( '/js/slick-init.js',  __FILE__ ), array( 'slicknavjs' ), '1.7.2', false );
 
   wp_enqueue_script( 'slicknavjs' );
   wp_enqueue_style( 'slicknavcss' );
@@ -99,6 +99,36 @@ function responsive_menucss() {
 
        //Add new plugin options defaults here
         if( !isset( $options['ng_slicknav_header'] ) ) $options['ng_slicknav_header'] = '';
+        if( !isset( $options['ng_slicknav_menu'] ) ) $options['ng_slicknav_menu'] = ''; 
+        if( !isset( $options['ng_slicknav_width'] ) ) $options['ng_slicknav_width'] = ''; 
+        if( !isset( $options['ng_slicknav_background'] ) ) $options['ng_slicknav_background'] = ''; 
+        if( !isset( $options['ng_slicknav_button'] ) ) $options['ng_slicknav_button'] = ''; 
+        if( !isset( $options['ng_slicknav_button_expand'] ) ) $options['ng_slicknav_button_expand'] = ''; 
+        if( !isset( $options['ng_slicknav_label_color'] ) ) $options['ng_slicknav_label_color'] = ''; 
+        if( !isset( $options['ng_slicknav_icon_color'] ) ) $options['ng_slicknav_icon_color'] = ''; 
+        if( !isset( $options['ng_slicknav_button_position'] ) ) $options['ng_slicknav_button_position'] = ''; 
+        if( !isset( $options['ng_slicknav_font'] ) ) $options['ng_slicknav_font'] = ''; 
+        if( !isset( $options['ng_slicknav_label_size'] ) ) $options['ng_slicknav_label_size'] = ''; 
+        if( !isset( $options['ng_slicknav_submenu_position'] ) ) $options['ng_slicknav_submenu_position'] = ''; 
+        if( !isset( $options['ng_slicknav_position'] ) ) $options['ng_slicknav_position'] = ''; 
+        if( !isset( $options['ng_slicknav_label'] ) ) $options['ng_slicknav_label'] = ''; 
+        if( !isset( $options['ng_slicknav_parent_links'] ) ) $options['ng_slicknav_parent_links'] = ''; 
+        if( !isset( $options['ng_slicknav_child_links'] ) ) $options['ng_slicknav_child_links'] = ''; 
+        if( !isset( $options['ng_slicknav_fixhead'] ) ) $options['ng_slicknav_fixhead'] = ''; 
+        if( !isset( $options['ng_slicknav_speed'] ) ) $options['ng_slicknav_speed'] = ''; 
+        if( !isset( $options['ng_slicknav_link_color'] ) ) $options['ng_slicknav_link_color'] = ''; 
+        if( !isset( $options['ng_slicknav_link_hover_color'] ) ) $options['ng_slicknav_link_hover_color'] = ''; 
+        if( !isset( $options['ng_slicknav_link_hover_color_submenu'] ) ) $options['ng_slicknav_link_hover_color_submenu'] = ''; 
+        if( !isset( $options['ng_slicknav_font_case'] ) ) $options['ng_slicknav_font_case'] = ''; 
+        if( !isset( $options['ng_slicknav_label_shadow'] ) ) $options['ng_slicknav_label_shadow'] = ''; 
+        if( !isset( $options['ng_slicknav_icon_shadow'] ) ) $options['ng_slicknav_icon_shadow'] = ''; 
+        if( !isset( $options['ng_slicknav_label_weight'] ) ) $options['ng_slicknav_label_weight'] = ''; 
+        if( !isset( $options['ng_slicknav_brand'] ) ) $options['ng_slicknav_brand'] = ''; 
+        if( !isset( $options['ng_slicknav_search'] ) ) $options['ng_slicknav_search'] = ''; 
+        if( !isset( $options['ng_slicknav_search_color'] ) ) $options['ng_slicknav_search_color'] = ''; 
+        if( !isset( $options['ng_slicknav_openedsymbol'] ) ) $options['ng_slicknav_openedsymbol'] = ''; 
+        if( !isset( $options['ng_slicknav_closedsymbol'] ) ) $options['ng_slicknav_closedsymbol'] = ''; 
+        if( !isset( $options['ng_slicknav_alt'] ) ) $options['ng_slicknav_alt'] = ''; 
 
         if ( $options !== false ) {
         $ng_slicknav_menu                     = $options['ng_slicknav_menu'];
@@ -332,7 +362,38 @@ function menu_options_page() {
     $options = get_option('ng_slicknavmenu');
 
     //Add new plugin options defaults here
-    if( !isset( $options['ng_slicknav_header'] ) ) $options['ng_slicknav_header'] = '';
+      if( !isset( $options['ng_slicknav_header'] ) ) $options['ng_slicknav_header'] = '';
+      if( !isset( $options['ng_slicknav_menu'] ) ) $options['ng_slicknav_menu'] = ''; 
+      if( !isset( $options['ng_slicknav_width'] ) ) $options['ng_slicknav_width'] = ''; 
+      if( !isset( $options['ng_slicknav_header'] ) ) $options['ng_slicknav_header'] = '';
+      if( !isset( $options['ng_slicknav_background'] ) ) $options['ng_slicknav_background'] = ''; 
+      if( !isset( $options['ng_slicknav_button'] ) ) $options['ng_slicknav_button'] = ''; 
+      if( !isset( $options['ng_slicknav_button_expand'] ) ) $options['ng_slicknav_button_expand'] = ''; 
+      if( !isset( $options['ng_slicknav_label_color'] ) ) $options['ng_slicknav_label_color'] = ''; 
+      if( !isset( $options['ng_slicknav_icon_color'] ) ) $options['ng_slicknav_icon_color'] = ''; 
+      if( !isset( $options['ng_slicknav_button_position'] ) ) $options['ng_slicknav_button_position'] = ''; 
+      if( !isset( $options['ng_slicknav_font'] ) ) $options['ng_slicknav_font'] = ''; 
+      if( !isset( $options['ng_slicknav_label_size'] ) ) $options['ng_slicknav_label_size'] = ''; 
+      if( !isset( $options['ng_slicknav_submenu_position'] ) ) $options['ng_slicknav_submenu_position'] = ''; 
+      if( !isset( $options['ng_slicknav_position'] ) ) $options['ng_slicknav_position'] = ''; 
+      if( !isset( $options['ng_slicknav_label'] ) ) $options['ng_slicknav_label'] = ''; 
+      if( !isset( $options['ng_slicknav_parent_links'] ) ) $options['ng_slicknav_parent_links'] = ''; 
+      if( !isset( $options['ng_slicknav_child_links'] ) ) $options['ng_slicknav_child_links'] = ''; 
+      if( !isset( $options['ng_slicknav_fixhead'] ) ) $options['ng_slicknav_fixhead'] = ''; 
+      if( !isset( $options['ng_slicknav_speed'] ) ) $options['ng_slicknav_speed'] = ''; 
+      if( !isset( $options['ng_slicknav_link_color'] ) ) $options['ng_slicknav_link_color'] = ''; 
+      if( !isset( $options['ng_slicknav_link_hover_color'] ) ) $options['ng_slicknav_link_hover_color'] = ''; 
+      if( !isset( $options['ng_slicknav_link_hover_color_submenu'] ) ) $options['ng_slicknav_link_hover_color_submenu'] = ''; 
+      if( !isset( $options['ng_slicknav_font_case'] ) ) $options['ng_slicknav_font_case'] = ''; 
+      if( !isset( $options['ng_slicknav_label_shadow'] ) ) $options['ng_slicknav_label_shadow'] = ''; 
+      if( !isset( $options['ng_slicknav_icon_shadow'] ) ) $options['ng_slicknav_icon_shadow'] = ''; 
+      if( !isset( $options['ng_slicknav_label_weight'] ) ) $options['ng_slicknav_label_weight'] = ''; 
+      if( !isset( $options['ng_slicknav_brand'] ) ) $options['ng_slicknav_brand'] = ''; 
+      if( !isset( $options['ng_slicknav_search'] ) ) $options['ng_slicknav_search'] = ''; 
+      if( !isset( $options['ng_slicknav_search_color'] ) ) $options['ng_slicknav_search_color'] = ''; 
+      if( !isset( $options['ng_slicknav_openedsymbol'] ) ) $options['ng_slicknav_openedsymbol'] = ''; 
+      if( !isset( $options['ng_slicknav_closedsymbol'] ) ) $options['ng_slicknav_closedsymbol'] = ''; 
+      if( !isset( $options['ng_slicknav_alt'] ) ) $options['ng_slicknav_alt'] = ''; 
 
 
     if ( $options !== false ) {

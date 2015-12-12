@@ -1,3 +1,8 @@
+/*!
+ * SlickNav Responsive Mobile Menu v1.0.6
+ * (c) 2015 Josh Cope
+ * licensed under MIT
+ */
 ;(function ($, document, window) {
     var
     // default settings object.
@@ -10,6 +15,7 @@
             closedSymbol: '&#9658;',
             openedSymbol: '&#9660;',
             prependTo: 'body',
+            appendTo: '',
             parentTag: 'a',
             closeOnClick: false,
             allowParentLinks: false,
@@ -17,6 +23,7 @@
             showChildren: false,
             removeIds: false,
             removeClasses: false,
+            removeStyles: false,
             brand: '',
             init: function () {},
             beforeOpen: function () {},
@@ -59,19 +66,27 @@
             });
         } else {
             $this.mobileNav = menu;
-            
+
             // remove ids if set
             $this.mobileNav.removeAttr('id');
             $this.mobileNav.find('*').each(function (i, e) {
                 $(e).removeAttr('id');
             });
         }
-        
+
         // remove classes if set
         if (settings.removeClasses) {
             $this.mobileNav.removeAttr('class');
             $this.mobileNav.find('*').each(function (i, e) {
                 $(e).removeAttr('class');
+            });
+        }
+        
+        // remove styles if set
+        if (settings.removeStyles) {
+            $this.mobileNav.removeAttr('style');
+            $this.mobileNav.find('*').each(function (i, e) {
+                $(e).removeAttr('style');
             });
         }
 
@@ -89,7 +104,7 @@
         // create menu bar
         $this.mobileNav.attr('class', prefix + '_nav');
         menuBar = $('<div class="' + prefix + '_menu"></div>');
-        //NG edited brand so its a src of an image
+            //NG edited brand so its a src of an image
         if (settings.brand !== '') {
             var brand = $('<div class="' + prefix + '_brand"><a href="' + slickNavVars.ng_slicknav.ng_slicksearch + '"><img src="' + settings.brand + '" alt="' + slickNavVars.ng_slicknav.ng_slicknav_alt + '" /></a></div>');//Made the brand into a src URL for an image
             $(menuBar).append(brand);
@@ -106,7 +121,11 @@
             ].join('')
         );
         $(menuBar).append($this.btn);
-        $(settings.prependTo).prepend(menuBar);
+        if(settings.appendTo !== '') {
+            $(settings.appendTo).append(menuBar);
+        } else {
+            $(settings.prependTo).prepend(menuBar);
+        }
         menuBar.append($this.mobileNav);
 
         // iterate over structure adding additional structure
@@ -155,7 +174,7 @@
                 } else {
                     item.addClass(prefix+'_open');
                 }
-                
+
                 item.addClass(prefix+'_parent');
 
                 // create parent arrow. wrap with link if parent links and separating
@@ -335,28 +354,25 @@
             $this._setVisAttr(el, false);
         } else {
             el.addClass(prefix+'_hidden');
-                
+
             //Fire init or beforeClose callback
             if (!init){
                 settings.beforeClose(trigger);
-            }else if (trigger == 'init'){
-                settings.init();
             }
-            
+
             el.slideUp(duration, this.settings.easingClose, function() {
                 el.attr('aria-hidden','true');
                 items.attr('tabindex', '-1');
                 $this._setVisAttr(el, true);
                 el.hide(); //jQuery 1.7 bug fix
-                
+
                 $(trigger).removeClass(prefix+'_animating');
                 $(parent).removeClass(prefix+'_animating');
 
                 //Fire init or afterClose callback
                 if (!init){
                     settings.afterClose(trigger);
-                }
-                else if (trigger == 'init'){
+                } else if (trigger == 'init'){
                     settings.init();
                 }
             });
