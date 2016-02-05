@@ -5,12 +5,12 @@ Donate link: http://wpbeaches.com/
 Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
 Requires at least: 4.0
 Tested up to: 4.4
-Stable tag: 1.7.2
+Stable tag: 1.7.3
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
 Author: Neil Gee
-Version: 1.7.2
+Version: 1.7.3
 Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -22,7 +22,7 @@ This plugin adds the option to use the SlickNav Responsive Mobile Menu in place 
 
 This plugin adds SlickNav Responsive Mobile Menu functionality to WordPress.
 
-SlickNav Responsive Menu has multi level menu support. 
+SlickNav Responsive Menu has multi level menu support.
 
 Cross browser Compatible.
 
@@ -92,7 +92,7 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
  - Menu Label, MENU is default
 
- - Parent links, true or false, whether a parent link that has a submenu is clickable to a page 
+ - Parent links, true or false, whether a parent link that has a submenu is clickable to a page
 
  - Show Child Links, false by default
 
@@ -110,7 +110,7 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
  - Options to change the opening and closing symbols
 
- - Advanced filter to adjust Slicknav values
+ - Advanced filter to adjust Slicknav values - https://wpbeaches.com/slicknav-wordpress-filter-to-adjust-values/
 
  Demo - http://wpbeaches.com (resize browser window to below 600px)
 
@@ -126,118 +126,123 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.7.3 =
 
-* Initial release.
+* 5/2/16 - CSS inline styles now added via wp_add_inline_style
 
-= 1.1.0	= 
+= 1.7.2 =
 
-* 11/4/15  - Position, Label and Parent Links options added. Placeholder text added.
-
-= 1.1.1	=
-
-* 12/4/15 - Position, Label and Parent Links options added. Placeholder text added.
-
-= 1.1.2	=
-
-* 12/4/15 - Added open/close Menu speed amount.
-
-= 1.1.3	=
-
-* 13/4/15  - BugFix, Select Option Dropdowns now retains previous selection on update.
-
-= 1.1.4	=
-
-* 15/4/15  - Added color options for Menu label name and icon, redid dropdown value retentions.
-
-= 1.1.5	=
-
-* 16/4/15  - Added link color and background color hover on links.
-
-= 1.2.0	=
-
-* 17/4/15  - Added shadow on/off for label and icon, added label font size adjustment, label weight adjustment,  admin layout tweaks.
-
-= 1.2.1	=
-
-* 18/4/15  - Added color pickers for color options.
-
-= 1.3.0 =
-
-* 26/4/15  - Internationalized -  French translation added.
-
-= 1.3.1 =
-
-* 28/4/15 - Core SlickNav upgrade version 1.0.3 - CSS minified - Hover Color Option for Items that contain submenus.
-
-= 1.3.2 =
-
-* 3/5/15 - Added Child Links show/hide on open - Added 'Settings Updated' admin notify.
-
-= 1.4.0 =
-
-* 12/5/15 - No front end changes, All javascript now passed via wp_localize_script, Parent links on by default, Show Child links on open. is off by default
-
-= 1.4.1 =
-
-* 17/5/15 - No front end changes, Fix wp-debug notice on undefined index when checkboxes are not set.
-
-= 1.4.2 =
-
-* 31/5/15 - Option to fix menu to Head by using position fixed to body tag.
-
-= 1.5.0 =
-
-* 7/6/15 - Updated POT file, Core SlickNav upgrade version to 1.0.4, option for Branding Logo opposite label, using input field of media uploader
-
-= 1.5.1 =
-
-* 11/6/15 - Option to add in a search field at bottom of menu
-
-= 1.5.2 =
-
-* 13/6/15 - Options to change the opening and closing symbols
-
-= 1.5.3 =
-
-* 26/6/15 - Bug fixes: removed placeholder value for brand logo, added a max-width value on logo,  code tidy up
-
-= 1.5.4 = 
-
-* 28/6/15 - Select menu from dropdown of available menus instead of text input field - original menu still has to be already output on the page
-
-= 1.5.5 = 
-
-* 2/7/15 - CSS bug fix for fixed positioning
-
-= 1.5.6 =
-
-* 25/7/15 - Color option for Search Icon background, logo link to home page, logo alt text field - Set Menu selection back to manual text input
-
-= 1.6.0 = 
- 
-* 15/8/15 - Back end PHP functions are now namespaced, script handle names redefined with more description, minor CSS tweaks for spacing on search field, option added for Button background color when menu is expanded, CSS styles added so menu is visible when logged in with Admin toolbar visible, updated translation files. Added fallback to body selector if selector is blank
-
-= 1.6.1 =
-
-* 10/9/15 Menu Button Position - if set to left, brand logo (if used) will then appear to the right, code error fix ups, added a form nonce for security -> props Ov3rfly
-
-= 1.6.2 =
-
-* 17/9/15 - Added a filter so Slicknav options can be changed outside of regular options page, props -> Ov3rfly - Instructions - https://wpbeaches.com/slicknav-wordpress-filter-to-adjust-values/
-
-= 1.6.3 =
-
-* 17/9/15 - Backend fixes, nonce referrer completed, remove global variables, restructure output based on no values set -> props Ov3rfly
-
-= 1.7.0 =
-
-* 30/9/15 - Now add comma separated menus for one combined menu -> props Ov3rfly, filter name more descriptively named.
+* 12/12/15 - Updated core SlickNav to match 1.0.6, fixes for Undefined index notices displayed when WP_Debug set to true.
 
 = 1.7.1 =
 
 * 23/10/15 - Option to hide header when SlickNav displays, this will only apply to themes with a header class of '.site-header' otherwise it will need to be done in the CSS, minor updates to descriptive text. Less padding around top & bottom of brand logo.
 
-= 1.7.2 =
+= 1.7.0 =
 
-* 12/12/15 - Updated core SlickNav to match 1.0.6, fixes for Undefined index notices displayed when WP_Debug set to true.
+* 30/9/15 - Now add comma separated menus for one combined menu -> props Ov3rfly, filter name more descriptively named.
+
+= 1.6.3 =
+
+* 17/9/15 - Backend fixes, nonce referrer completed, remove global variables, restructure output based on no values set -> props Ov3rfly.
+
+= 1.6.2 =
+
+* 17/9/15 - Added a filter so Slicknav options can be changed outside of regular options page, props -> Ov3rfly - Instructions - https://wpbeaches.com/slicknav-wordpress-filter-to-adjust-values/
+
+= 1.6.1 =
+
+* 10/9/15 - Menu Button Position - if set to left, brand logo (if used) will then appear to the right, code error fix ups, added a form nonce for security -> props Ov3rfly.
+
+= 1.6.0 =
+
+* 15/8/15 - Back end PHP functions are now namespaced, script handle names redefined with more description, minor CSS tweaks for spacing on search field, option added for Button background color when menu is expanded, CSS styles added so menu is visible when logged in with Admin toolbar visible, updated translation files. Added fallback to body selector if selector is blank.
+
+= 1.5.6 =
+
+* 25/7/15 - Color option for Search Icon background, logo link to home page, logo alt text field - Set Menu selection back to manual text input.
+
+= 1.5.5 =
+
+* 2/7/15 - CSS bug fix for fixed positioning.
+
+= 1.5.4 =
+
+* 28/6/15 - Select menu from dropdown of available menus instead of text input field - original menu still has to be already output on the page.
+
+
+= 1.5.3 =
+
+* 26/6/15 - Bug fixes: removed placeholder value for brand logo, added a max-width value on logo,  code tidy up.
+
+= 1.5.2 =
+
+* 13/6/15 - Options to change the opening and closing symbols.
+
+= 1.5.1 =
+
+* 11/6/15 - Option to add in a search field at bottom of menu.
+
+= 1.5.0 =
+
+* 7/6/15 - Updated POT file, Core SlickNav upgrade version to 1.0.4, option for Branding Logo opposite label, using input field of media uploader.
+
+= 1.4.2 =
+
+* 31/5/15 - Option to fix menu to Head by using position fixed to body tag.
+
+= 1.4.1 =
+
+* 17/5/15 - No front end changes, Fix wp-debug notice on undefined index when checkboxes are not set.
+
+= 1.4.0 =
+
+* 12/5/15 - No front end changes, All javascript now passed via wp_localize_script, Parent links on by default, Show Child links on open. is off by default
+
+= 1.3.2 =
+
+* 3/5/15 - Added Child Links show/hide on open - Added 'Settings Updated' admin notify.
+
+= 1.3.1 =
+
+* 28/4/15 - Core SlickNav upgrade version 1.0.3 - CSS minified - Hover Color Option for Items that contain submenus.
+
+= 1.3.0 =
+
+* 26/4/15 - Internationalized - French translation added.
+
+= 1.2.1	=
+
+* 18/4/15  - Added color pickers for color options.
+
+= 1.2.0	=
+
+* 17/4/15  - Added shadow on/off for label and icon, added label font size adjustment, label weight adjustment,  admin layout tweaks.
+
+= 1.1.5	=
+
+* 16/4/15 - Added link color and background color hover on links.
+
+= 1.1.4	=
+
+* 15/4/15 - Added color options for Menu label name and icon, redid dropdown value retentions.
+
+= 1.1.3	=
+
+* 13/4/15 - BugFix, Select Option Dropdowns now retains previous selection on update.
+
+= 1.1.2	=
+
+* 12/4/15 - Added open/close Menu speed amount.
+
+= 1.1.1	=
+
+* 12/4/15 - Position, Label and Parent Links options added. Placeholder text added.
+
+= 1.1.0	=
+
+* 11/4/15 - Position, Label and Parent Links options added. Placeholder text added.
+
+= 1.0.0 =
+
+* Initial release.
