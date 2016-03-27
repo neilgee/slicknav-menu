@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: slicknav-mobile-menu\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-10-23 12:33+1000\n"
+"POT-Creation-Date: 2016-03-26 17:42+1000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Neil Gee <ngowran@mac.com>\n"
 "Language-Team: WP Beaches <web@wpbeaches.com>\n"
@@ -43,11 +43,11 @@ msgid ""
 "separated."
 msgstr ""
 
-#: inc/options-page-wrapper.php:42 inc/options-page-wrapper.php:245
+#: inc/options-page-wrapper.php:42 inc/options-page-wrapper.php:259
 msgid "CSS Menu ID or Class to use for SlickNav Mobile"
 msgstr ""
 
-#: inc/options-page-wrapper.php:43 inc/options-page-wrapper.php:246
+#: inc/options-page-wrapper.php:43 inc/options-page-wrapper.php:260
 msgid "CSS Selector Menu Name"
 msgstr ""
 
@@ -55,53 +55,53 @@ msgstr ""
 msgid "Maximum width to use SlickNav (600px Default)"
 msgstr ""
 
-#: inc/options-page-wrapper.php:50 inc/options-page-wrapper.php:254
+#: inc/options-page-wrapper.php:50 inc/options-page-wrapper.php:268
 msgid "Menu Background Color"
 msgstr ""
 
-#: inc/options-page-wrapper.php:54 inc/options-page-wrapper.php:258
+#: inc/options-page-wrapper.php:54 inc/options-page-wrapper.php:272
 msgid "Menu Button Color"
 msgstr ""
 
-#: inc/options-page-wrapper.php:58 inc/options-page-wrapper.php:262
+#: inc/options-page-wrapper.php:58 inc/options-page-wrapper.php:276
 msgid "Menu Button Color Expanded"
 msgstr ""
 
-#: inc/options-page-wrapper.php:62 inc/options-page-wrapper.php:266
+#: inc/options-page-wrapper.php:62 inc/options-page-wrapper.php:280
 msgid "Menu Label Color"
 msgstr ""
 
-#: inc/options-page-wrapper.php:66 inc/options-page-wrapper.php:270
+#: inc/options-page-wrapper.php:66 inc/options-page-wrapper.php:284
 msgid "Menu Icon Color"
 msgstr ""
 
-#: inc/options-page-wrapper.php:70 inc/options-page-wrapper.php:274
+#: inc/options-page-wrapper.php:70 inc/options-page-wrapper.php:288
 msgid "Menu Label Shadow"
 msgstr ""
 
 #: inc/options-page-wrapper.php:73 inc/options-page-wrapper.php:82
-#: inc/options-page-wrapper.php:277 inc/options-page-wrapper.php:286
+#: inc/options-page-wrapper.php:291 inc/options-page-wrapper.php:300
 msgid "On"
 msgstr ""
 
 #: inc/options-page-wrapper.php:74 inc/options-page-wrapper.php:83
-#: inc/options-page-wrapper.php:278 inc/options-page-wrapper.php:287
+#: inc/options-page-wrapper.php:292 inc/options-page-wrapper.php:301
 msgid "Off"
 msgstr ""
 
-#: inc/options-page-wrapper.php:79 inc/options-page-wrapper.php:283
+#: inc/options-page-wrapper.php:79 inc/options-page-wrapper.php:297
 msgid "Menu Icon Shadow"
 msgstr ""
 
-#: inc/options-page-wrapper.php:88 inc/options-page-wrapper.php:292
+#: inc/options-page-wrapper.php:88 inc/options-page-wrapper.php:306
 msgid "Menu Link Color"
 msgstr ""
 
-#: inc/options-page-wrapper.php:92 inc/options-page-wrapper.php:296
+#: inc/options-page-wrapper.php:92 inc/options-page-wrapper.php:310
 msgid "Menu Link Hover Color"
 msgstr ""
 
-#: inc/options-page-wrapper.php:96 inc/options-page-wrapper.php:300
+#: inc/options-page-wrapper.php:96 inc/options-page-wrapper.php:314
 msgid "Menu Link Hover Color, Containing SubMenus"
 msgstr ""
 
@@ -110,202 +110,211 @@ msgid "Menu Button Position, default is right"
 msgstr ""
 
 #: inc/options-page-wrapper.php:103 inc/options-page-wrapper.php:141
-#: inc/options-page-wrapper.php:308 inc/options-page-wrapper.php:346
+#: inc/options-page-wrapper.php:322 inc/options-page-wrapper.php:360
 msgid "Right"
 msgstr ""
 
 #: inc/options-page-wrapper.php:104 inc/options-page-wrapper.php:140
-#: inc/options-page-wrapper.php:309 inc/options-page-wrapper.php:347
+#: inc/options-page-wrapper.php:323 inc/options-page-wrapper.php:361
 msgid "Left"
 msgstr ""
 
-#: inc/options-page-wrapper.php:109 inc/options-page-wrapper.php:315
+#: inc/options-page-wrapper.php:109 inc/options-page-wrapper.php:329
 msgid "Menu Font Size (16px Default)"
 msgstr ""
 
-#: inc/options-page-wrapper.php:113 inc/options-page-wrapper.php:319
+#: inc/options-page-wrapper.php:113 inc/options-page-wrapper.php:333
 msgid "Menu Label Size (16px Default)"
 msgstr ""
 
-#: inc/options-page-wrapper.php:117 inc/options-page-wrapper.php:323
+#: inc/options-page-wrapper.php:117 inc/options-page-wrapper.php:337
 msgid "Menu Label Weight"
 msgstr ""
 
-#: inc/options-page-wrapper.php:120 inc/options-page-wrapper.php:326
+#: inc/options-page-wrapper.php:120 inc/options-page-wrapper.php:340
 msgid "Normal"
 msgstr ""
 
-#: inc/options-page-wrapper.php:121 inc/options-page-wrapper.php:327
+#: inc/options-page-wrapper.php:121 inc/options-page-wrapper.php:341
 msgid "Bold"
 msgstr ""
 
-#: inc/options-page-wrapper.php:126 inc/options-page-wrapper.php:332
+#: inc/options-page-wrapper.php:126 inc/options-page-wrapper.php:346
 msgid "Menu link font case"
 msgstr ""
 
-#: inc/options-page-wrapper.php:129 inc/options-page-wrapper.php:335
+#: inc/options-page-wrapper.php:129 inc/options-page-wrapper.php:349
 msgid "None"
 msgstr ""
 
-#: inc/options-page-wrapper.php:130 inc/options-page-wrapper.php:336
+#: inc/options-page-wrapper.php:130 inc/options-page-wrapper.php:350
 msgid "Capitalize"
 msgstr ""
 
-#: inc/options-page-wrapper.php:131 inc/options-page-wrapper.php:337
+#: inc/options-page-wrapper.php:131 inc/options-page-wrapper.php:351
 msgid "Lowercase"
 msgstr ""
 
-#: inc/options-page-wrapper.php:132 inc/options-page-wrapper.php:338
+#: inc/options-page-wrapper.php:132 inc/options-page-wrapper.php:352
 msgid "Uppercase"
 msgstr ""
 
-#: inc/options-page-wrapper.php:137 inc/options-page-wrapper.php:343
+#: inc/options-page-wrapper.php:137 inc/options-page-wrapper.php:357
 msgid "SubMenu Button Indicator"
 msgstr ""
 
-#: inc/options-page-wrapper.php:146 inc/options-page-wrapper.php:352
+#: inc/options-page-wrapper.php:146 inc/options-page-wrapper.php:366
 msgid "Menu Position (body by default, using body puts the Menu at the top."
 msgstr ""
 
-#: inc/options-page-wrapper.php:147 inc/options-page-wrapper.php:353
+#: inc/options-page-wrapper.php:147 inc/options-page-wrapper.php:367
 msgid "However you can adjust this location by adding in a CSS class"
 msgstr ""
 
-#: inc/options-page-wrapper.php:151 inc/options-page-wrapper.php:357
+#: inc/options-page-wrapper.php:151 inc/options-page-wrapper.php:371
 msgid ""
 "Menu Label (\"MENU\" by default, leave blank for no label and just the "
 "symbol)"
 msgstr ""
 
 #: inc/options-page-wrapper.php:155 inc/options-page-wrapper.php:159
-#: inc/options-page-wrapper.php:361 inc/options-page-wrapper.php:365
-msgid "Allow Parent Links"
+#: inc/options-page-wrapper.php:375 inc/options-page-wrapper.php:379
+msgid "Close Menu on Click"
 msgstr ""
 
 #: inc/options-page-wrapper.php:164 inc/options-page-wrapper.php:168
-#: inc/options-page-wrapper.php:371 inc/options-page-wrapper.php:375
+#: inc/options-page-wrapper.php:384 inc/options-page-wrapper.php:388
+msgid "Allow Parent Links"
+msgstr ""
+
+#: inc/options-page-wrapper.php:173 inc/options-page-wrapper.php:177
+#: inc/options-page-wrapper.php:394 inc/options-page-wrapper.php:398
 msgid "Show Child Links on Open"
 msgstr ""
 
-#: inc/options-page-wrapper.php:173 inc/options-page-wrapper.php:380
+#: inc/options-page-wrapper.php:182 inc/options-page-wrapper.php:403
 msgid "Show search field at bottom of Menu"
 msgstr ""
 
-#: inc/options-page-wrapper.php:177
+#: inc/options-page-wrapper.php:186
 msgid "Show Search Field"
 msgstr ""
 
-#: inc/options-page-wrapper.php:182 inc/options-page-wrapper.php:389
+#: inc/options-page-wrapper.php:191 inc/options-page-wrapper.php:412
 msgid "Search Icon Background Color"
 msgstr ""
 
-#: inc/options-page-wrapper.php:186 inc/options-page-wrapper.php:190
+#: inc/options-page-wrapper.php:195 inc/options-page-wrapper.php:416
+msgid "Search Label Text"
+msgstr ""
+
+#: inc/options-page-wrapper.php:200 inc/options-page-wrapper.php:204
 msgid "Fix Menu to Head"
 msgstr ""
 
-#: inc/options-page-wrapper.php:195 inc/options-page-wrapper.php:402
+#: inc/options-page-wrapper.php:209 inc/options-page-wrapper.php:429
 msgid ""
 " Enter a URL or upload an image for a logo, smaller is better here, like "
 "45px in depth and up to 200px in width, default position is left, to swap to "
 "right change Menu Button Position (above) to left"
 msgstr ""
 
-#: inc/options-page-wrapper.php:200 inc/options-page-wrapper.php:407
+#: inc/options-page-wrapper.php:214 inc/options-page-wrapper.php:434
 msgid "Logo Alt Text"
 msgstr ""
 
-#: inc/options-page-wrapper.php:204 inc/options-page-wrapper.php:411
+#: inc/options-page-wrapper.php:218 inc/options-page-wrapper.php:438
 msgid "Hide Main Header "
 msgstr ""
 
-#: inc/options-page-wrapper.php:208 inc/options-page-wrapper.php:415
+#: inc/options-page-wrapper.php:222 inc/options-page-wrapper.php:442
 msgid "Hide Main Header when Mobile Menu is Visible"
 msgstr ""
 
-#: inc/options-page-wrapper.php:213
+#: inc/options-page-wrapper.php:227
 msgid "Speed of Menu open/close (Higher numbers are slower)"
 msgstr ""
 
-#: inc/options-page-wrapper.php:226
+#: inc/options-page-wrapper.php:240
 msgid "Closed Symbol, default &#9658;"
 msgstr ""
 
-#: inc/options-page-wrapper.php:230
+#: inc/options-page-wrapper.php:244
 msgid "Opened Symbol, default &#9660;"
 msgstr ""
 
-#: inc/options-page-wrapper.php:234
+#: inc/options-page-wrapper.php:248
 msgid "Save"
 msgstr ""
 
-#: inc/options-page-wrapper.php:250
+#: inc/options-page-wrapper.php:264
 msgid "Maximum Width to use SlickNav (600px Default)"
 msgstr ""
 
-#: inc/options-page-wrapper.php:304
+#: inc/options-page-wrapper.php:318
 msgid "Menu Button Position"
 msgstr ""
 
-#: inc/options-page-wrapper.php:384
+#: inc/options-page-wrapper.php:407
 msgid "Show search field"
 msgstr ""
 
-#: inc/options-page-wrapper.php:393
+#: inc/options-page-wrapper.php:420
 msgid "Sticky Menu to Head"
 msgstr ""
 
-#: inc/options-page-wrapper.php:397
+#: inc/options-page-wrapper.php:424
 msgid "Stick Menu to Head"
 msgstr ""
 
-#: inc/options-page-wrapper.php:420
+#: inc/options-page-wrapper.php:447
 msgid "Speed of Menu open/close (Lower numbers are faster)"
 msgstr ""
 
-#: inc/options-page-wrapper.php:433
+#: inc/options-page-wrapper.php:460
 msgid "Closed Symbol, default  "
 msgstr ""
 
-#: inc/options-page-wrapper.php:437
+#: inc/options-page-wrapper.php:464
 msgid "Opened Symbol, default  "
 msgstr ""
 
-#: inc/options-page-wrapper.php:441
+#: inc/options-page-wrapper.php:468
 msgid "Update"
 msgstr ""
 
-#: inc/options-page-wrapper.php:445
+#: inc/options-page-wrapper.php:472
 msgid "Settings Updated"
 msgstr ""
 
-#: inc/options-page-wrapper.php:471
+#: inc/options-page-wrapper.php:498
 msgid "Additional Resources"
 msgstr ""
 
-#: inc/options-page-wrapper.php:474
+#: inc/options-page-wrapper.php:501
 msgid "More Slick Nav Info..."
 msgstr ""
 
-#: inc/options-page-wrapper.php:476
+#: inc/options-page-wrapper.php:503
 msgid "SlickNav Home"
 msgstr ""
 
-#: inc/options-page-wrapper.php:477
+#: inc/options-page-wrapper.php:504
 msgid "SlickNav GitHub"
 msgstr ""
 
-#: inc/options-page-wrapper.php:478
+#: inc/options-page-wrapper.php:505
 msgid "Advanced Filter Guide"
 msgstr ""
 
-#: inc/options-page-wrapper.php:479
+#: inc/options-page-wrapper.php:506
 msgid "Symbol Reference"
 msgstr ""
 
-#: slicknav-mobile-menu.php:229
+#: slicknav-mobile-menu.php:263
 msgid "SlickNav Options Plugin"
 msgstr ""
 
-#: slicknav-mobile-menu.php:230
+#: slicknav-mobile-menu.php:264
 msgid "SlickNav Menu"
 msgstr ""
