@@ -5,7 +5,7 @@ Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com/using-slick-responsive-menus-genesis-child-theme/
 Description: Using SlickNav Responsive Mobile Menus in WordPress
 Author: Neil Gee
-Version: 1.7.4
+Version: 1.7.5
 Author URI: http://wpbeaches.com
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -37,7 +37,7 @@ function scripts_styles() {
 if ( $options !== false ) {
   wp_register_script( 'slicknavjs' , plugins_url( '/js/jquery.slicknav.min.js',  __FILE__ ), array( 'jquery' ), '1.0.7', false );
   wp_register_style( 'slicknavcss' , plugins_url( '/css/slicknav.min.css',  __FILE__ ), '' , '1.0.7', 'all' );
-  wp_register_script( 'slicknav-init' , plugins_url( '/js/slick-init.js',  __FILE__ ), array( 'slicknavjs' ), '1.7.4', false );
+  wp_register_script( 'slicknav-init' , plugins_url( '/js/slick-init.js',  __FILE__ ), array( 'slicknavjs' ), '1.7.5', false );
 
   wp_enqueue_script( 'slicknavjs' );
   wp_enqueue_style( 'slicknavcss' );
@@ -130,8 +130,8 @@ function responsive_menucss() {
           'ng_slicknav_font'                     => '',
           'ng_slicknav_label_size'               => '',
           'ng_slicknav_submenu_position'         => '',
-          'ng_slicknav_link_hover_color_submenu' => '',
           'ng_slicknav_link_color'               => '',
+          'ng_slicknav_link_hover_text_color'    => '',
           'ng_slicknav_link_hover_color'         => '',
           'ng_slicknav_search_color'             => '',
           'ng_slicknav_font_case'                => '',
@@ -158,7 +158,7 @@ function responsive_menucss() {
        $ng_slicknav_label_size               = $options['ng_slicknav_label_size'];
        $ng_slicknav_submenu_position         = $options['ng_slicknav_submenu_position'];
        $ng_slicknav_link_hover_color         = $options['ng_slicknav_link_hover_color'];
-       $ng_slicknav_link_hover_color_submenu = $options['ng_slicknav_link_hover_color_submenu'];
+       $ng_slicknav_link_hover_text_color    = $options['ng_slicknav_link_hover_text_color'];
        $ng_slicknav_search_color             = $options['ng_slicknav_search_color'];
        $ng_slicknav_link_color               = $options['ng_slicknav_link_color'];
        $ng_slicknav_font_case                = $options['ng_slicknav_font_case'];
@@ -208,12 +208,13 @@ function responsive_menucss() {
                   font-size: {$ng_slicknav_font}px;
                   padding: 5px 10px;
                }
-               .slicknav_nav a:hover {
+               .slicknav_nav a:hover,
+               .slicknav_nav .menu-item a:hover,
+               .slicknav_nav .slicknav_row:hover {
                   background: {$ng_slicknav_link_hover_color};
+                  color: {$ng_slicknav_link_hover_text_color};
                }
-               .slicknav_nav .slicknav_row:hover{
-                  background: {$ng_slicknav_link_hover_color_submenu};
-               }
+
                .slicknav_nav input[type='submit']{
                   background: {$ng_slicknav_search_color};
                }
@@ -313,7 +314,7 @@ function menu_options_page() {
         $ng_slicknav_speed                    = esc_html( $_POST['ng_slicknav_speed'] );
         $ng_slicknav_link_color               = esc_html( $_POST['ng_slicknav_link_color'] );
         $ng_slicknav_link_hover_color         = esc_html( $_POST['ng_slicknav_link_hover_color'] );
-        $ng_slicknav_link_hover_color_submenu = esc_html( $_POST['ng_slicknav_link_hover_color_submenu'] );
+        $ng_slicknav_link_hover_text_color    = esc_html( $_POST['ng_slicknav_link_hover_text_color'] );
         $ng_slicknav_font_case                = esc_html( $_POST['ng_slicknav_font_case'] );
         $ng_slicknav_label_shadow             = esc_html( $_POST['ng_slicknav_label_shadow'] );
         $ng_slicknav_icon_shadow              = esc_html( $_POST['ng_slicknav_icon_shadow'] );
@@ -348,8 +349,8 @@ function menu_options_page() {
         $options['ng_slicknav_fixhead']                  = $ng_slicknav_fixhead;
         $options['ng_slicknav_speed']                    = $ng_slicknav_speed;
         $options['ng_slicknav_link_color']               = $ng_slicknav_link_color;
+        $options['ng_slicknav_link_hover_text_color']    = $ng_slicknav_link_hover_text_color;
         $options['ng_slicknav_link_hover_color']         = $ng_slicknav_link_hover_color;
-        $options['ng_slicknav_link_hover_color_submenu'] = $ng_slicknav_link_hover_color_submenu;
         $options['ng_slicknav_font_case']                = $ng_slicknav_font_case;
         $options['ng_slicknav_label_shadow']             = $ng_slicknav_label_shadow;
         $options['ng_slicknav_icon_shadow']              = $ng_slicknav_icon_shadow;
@@ -395,8 +396,8 @@ function menu_options_page() {
         'ng_slicknav_fixhead'                  => '',
         'ng_slicknav_speed'                    => '',
         'ng_slicknav_link_color'               => '',
+        'ng_slicknav_link_hover_text_color'    => '',
         'ng_slicknav_link_hover_color'         => '',
-        'ng_slicknav_link_hover_color_submenu' => '',
         'ng_slicknav_font_case'                => '',
         'ng_slicknav_label_shadow'             => '',
         'ng_slicknav_icon_shadow'              => '',
@@ -434,8 +435,8 @@ function menu_options_page() {
       $ng_slicknav_fixhead                  = $options['ng_slicknav_fixhead'];
       $ng_slicknav_speed                    = $options['ng_slicknav_speed'];
       $ng_slicknav_link_color               = $options['ng_slicknav_link_color'];
+      $ng_slicknav_link_hover_text_color    = $options['ng_slicknav_link_hover_text_color'];
       $ng_slicknav_link_hover_color         = $options['ng_slicknav_link_hover_color'];
-      $ng_slicknav_link_hover_color_submenu = $options['ng_slicknav_link_hover_color_submenu'];
       $ng_slicknav_font_case                = $options['ng_slicknav_font_case'];
       $ng_slicknav_label_shadow             = $options['ng_slicknav_label_shadow'];
       $ng_slicknav_icon_shadow              = $options['ng_slicknav_icon_shadow'];
