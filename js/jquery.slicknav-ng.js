@@ -10,8 +10,8 @@
             label: 'MENU',
             duplicate: true,
             duration: 200,
-            easingOpen: 'swing',
-            easingClose: 'swing',
+            easingOpen: 'linear',
+            easingClose: 'linear',
             closedSymbol: '&#9658;',
             openedSymbol: '&#9660;',
             prependTo: 'body',
@@ -25,6 +25,7 @@
             removeClasses: false,
             removeStyles: false,
             brand: '',
+
             init: function () {},
             beforeOpen: function () {},
             beforeClose: function () {},
@@ -33,6 +34,7 @@
         },
         mobileMenu = 'slicknav',
         prefix = 'slicknav';
+
 
     function Plugin(element, options) {
         this.element = element;
@@ -485,4 +487,6 @@
             return returns !== undefined ? returns : this;
         }
     };
+
+
 }(jQuery, document, window));

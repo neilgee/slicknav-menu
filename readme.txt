@@ -1,16 +1,16 @@
 === Plugin Name ===
 
 Contributors: neilgee
-Donate link: http://wpbeaches.com/
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=neil%40wpbeaches%2ecom&lc=AU&item_name=WP%20Beaches&item_number=Plugins&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
 Requires at least: 4.0
-Tested up to: 4.5
-Stable tag: 1.7.5
+Tested up to: 4.6
+Stable tag: 1.8.0
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
 Author: Neil Gee
-Version: 1.7.5
+Version: 1.8.0
 Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -124,11 +124,23 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
 3. Shows menu logo position and search form enabled
 
+4. Shows menu and text logo
+
 == Changelog ==
+
+= 1.8.0 =
+
+* 7/8/16
+- Redo options using Settings API.
+- Use RGBa color pickers for color options.
+- Add text logo alternative to image
+- Option for search icon color.
+- Option to toggle sublevel menus - show only one at a time.
+
 
 = 1.7.5 =
 
-* 4/3/16 - Add option for Link text hover color, this also applies to submenu items, remove submenu hover background color. Existing menu hover background color now applies to top and submenu items.
+* 4/6/16 - Add option for Link text hover color, this also applies to submenu items, remove submenu hover background color. Existing menu hover background color now applies to top and submenu items.
 
 = 1.7.4 =
 
