@@ -4,8 +4,8 @@ Contributors: neilgee
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=neil%40wpbeaches%2ecom&lc=AU&item_name=WP%20Beaches&item_number=Plugins&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
 Requires at least: 4.0
-Tested up to: 4.6
-Stable tag: 1.8.0
+Tested up to: 4.8
+Stable tag: 1.8.1
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
@@ -60,36 +60,6 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
  - Maximum width for the menu to appear, default is 600px
 
- - Menu background color, default is #4c4c4c
-
- - Menu button color, default is #333
-
- - Menu button expanded color, default is #333
-
- - Menu label color, default is #fff
-
- - Menu icon color, default is #fff
-
- - Menu label shadow, default is on
-
- - Menu icon shadow, default is on
-
- - Menu link color, default is #fff
-
- - Menu link hover background color, default is #ccc
-
- - Menu button position, default is right
-
- - Menu font size, default is 16px
-
- - Menu label size, default is 18px
-
- - Menu font case, default is none
-
- - Submenu button indicator position, default is right
-
- - Menu position, body tag is default
-
  - Menu Label, MENU is default
 
  - Parent links, true or false, whether a parent link that has a submenu is clickable to a page
@@ -127,6 +97,14 @@ The settings are found via the dashboard Settings > SlickNav Menu
 4. Shows menu and text logo
 
 == Changelog ==
+
+= 1.8.1 =
+
+* 24/6/17
+- Updated in line with SlickNav core 1.0.10
+- New option to swap animation library, jquery is default - velocity as an option too.
+- Better keyboard ARIA support with latest SlickNav 1.0.10
+
 
 = 1.8.0 =
 

@@ -40,13 +40,14 @@ jQuery(document).ready(function($) {
         prependTo       : slickNavVars.ng_slicknav.ng_slicknav_position,
         label           : slickNavVars.ng_slicknav.ng_slicknav_label,
         duration        : slickNavVars.ng_slicknav.ng_slicknav_speed,
+        animations      : slickNavVars.ng_slicknav_animation_library,
         showChildren    : slickNavVars.ng_slicknav.ng_slicknav_child_links,
         allowParentLinks: slickNavVars.ng_slicknav.ng_slicknav_parent_links,
         closeOnClick    : slickNavVars.ng_slicknav.ng_slicknav_close_click,
         brand           : slickNavVars.ng_slicknav.ng_slicknav_brand,
         openedSymbol    : slickNavVars.ng_slicknav.ng_slicknav_openedsymbol,
         closedSymbol    : slickNavVars.ng_slicknav.ng_slicknav_closedsymbol,
-		    duplicate       : ng_slicknav_menu_duplicate,	// Ov3rfly
+	duplicate       : ng_slicknav_menu_duplicate,	// Ov3rfly
         beforeOpen      : (slickNavVars.ng_slicknav.ng_slicknav_accordion == true) ? function(trigger) { slicknavOpened(trigger); } : function(){},
     });
 

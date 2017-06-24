@@ -30,7 +30,7 @@ function responsive_menucss() {
           'ng_slicknav_fixhead'                     => '',
           'ng_slicknav_header'                      => '',
           'ng_slicknav_search_icon_color'           => '',
-          'ng_slicknav_brand_text_color'            => '',
+          'ng_slicknav_brand_text_color'           => '',
 
 
 
@@ -123,6 +123,8 @@ function responsive_menucss() {
                .slicknav-logo-text a{
                  color: {$ng_slicknav_brand_text_color};
                }
+
+
 
            }";
 

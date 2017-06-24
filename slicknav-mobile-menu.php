@@ -5,7 +5,7 @@ Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com/using-slick-responsive-menus-genesis-child-theme/
 Description: Using SlickNav Responsive Mobile Menus in WordPress
 Author: Neil Gee
-Version: 1.8.0
+Version: 1.8.1
 Author URI: http://wpbeaches.com
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -34,8 +34,10 @@ add_action( 'plugins_loaded', __NAMESPACE__ . '\\load_textdomain' );
 function scripts_styles() {
   $options = get_option( 'ng_slicknavmenu' );
 if ( $options !== false ) {
-  wp_register_script( 'slicknavjs' , plugins_url( '/js/jquery.slicknav-ng.js',  __FILE__ ), array( 'jquery' ), '1.0.7', false );
-  wp_register_style( 'slicknavcss' , plugins_url( '/css/slicknav.css',  __FILE__ ), '' , '1.0.7', 'all' );
+  wp_register_script( 'slicknavjs' , plugins_url( '/js/jquery.slicknav.min.js',  __FILE__ ), array( 'jquery' ), '1.0.10', false );
+  //wp_register_script( 'slicknavjs' , plugins_url( '/js/jquery.slicknav-ng.js',  __FILE__ ), array( 'jquery' ), '1.0.10', false );
+  wp_register_script( 'velocityjs' , plugins_url( '/js/velocity.min.js',  __FILE__ ), array( 'jquery' ), '1.0.10', false );
+  wp_register_style( 'slicknavcss' , plugins_url( '/css/slicknav.css',  __FILE__ ), '' , '1.0.10', 'all' );
   wp_register_script( 'slicknav-init' , plugins_url( '/js/slick-init.js',  __FILE__ ), array( 'slicknavjs' ), '1.8.0', false );
 
   wp_enqueue_script( 'slicknavjs' );
@@ -44,47 +46,53 @@ if ( $options !== false ) {
     // Add new plugin options defaults here, set them to blank, this will avoid PHP notices of undefined, if new options are introduced to the plugin and are not saved or udated then the setting will be defined.
     $options_default = array(
 
-        'ng_slicknav_close_click'  => '',
-        'ng_slicknav_search_text'  => '',
-        'ng_slicknav_alt'          => '',
-        'ng_slicknav_brand_text'   => '',
-        'ng_slicknav_search'       => '',
-        'ng_slicknav_closedsymbol' => '',
-        'ng_slicknav_openedsymbol' => '',
-        'ng_slicknav_fixhead'      => '',
-        'ng_slicknav_child_links'  => '',
-        'ng_slicknav_parent_links' => '',
-        'ng_slicknav_accordion'    => '',
+        'ng_slicknav_close_click'       => '',
+        'ng_slicknav_search_text'       => '',
+        'ng_slicknav_alt'               => '',
+        'ng_slicknav_brand_text'        => '',
+        'ng_slicknav_search'            => '',
+        'ng_slicknav_closedsymbol'      => '',
+        'ng_slicknav_openedsymbol'      => '',
+        'ng_slicknav_fixhead'           => '',
+        'ng_slicknav_child_links'       => '',
+        'ng_slicknav_parent_links'      => '',
+        'ng_slicknav_accordion'         => '',
+        'ng_slicknav_animation_library' => '',
     );
 
     $options = wp_parse_args( $options, $options_default );
 
-    // Enqueue Dashicons only if Search option is ticked
-      if( (bool) $options['ng_slicknav_search'] == true ) {
-        wp_enqueue_style( 'dashicons' );
+        // Enqueue Dashicons only if Search option is ticked
+        if( (bool) $options['ng_slicknav_search'] == true ) {
+                wp_enqueue_style( 'dashicons' );
+        }
+        // Enqueue Velocity library only if selected
+        if( esc_html( $options['ng_slicknav_animation_library'] == 'velocity' )) {
+                wp_enqueue_script( 'velocityjs' );
         }
 
 
    $data = array (
 
       'ng_slicknav' => array(
-          'ng_slicknav_menu'         => esc_html( $options['ng_slicknav_menu'] ),
-          'ng_slicknav_position'     => esc_html( $options['ng_slicknav_position'] ),
-          'ng_slicknav_parent_links' => (bool)$options['ng_slicknav_parent_links'],
-          'ng_slicknav_close_click'  => (bool)$options['ng_slicknav_close_click'],
-          'ng_slicknav_child_links'  => (bool) $options['ng_slicknav_child_links'],
-          'ng_slicknav_speed'        => (int)$options['ng_slicknav_speed'],
-          'ng_slicknav_label'        => esc_html( $options['ng_slicknav_label'] ),
-          'ng_slicknav_fixhead'      => (bool) $options['ng_slicknav_fixhead'],
-          'ng_slicknav_brand'        => esc_html( $options['ng_slicknav_brand'] ),
-          'ng_slicknav_brand_text'   => $options['ng_slicknav_brand_text'],
-          'ng_slicknav_search'       => (bool) $options['ng_slicknav_search'],
-          'ng_slicknav_search_text'  => esc_html( $options['ng_slicknav_search_text'] ),
-          'ng_slicksearch'           => home_url( '/' ),
-          'ng_slicknav_closedsymbol' => esc_html( $options['ng_slicknav_closedsymbol'] ),
-          'ng_slicknav_openedsymbol' => esc_html( $options['ng_slicknav_openedsymbol'] ),
-          'ng_slicknav_alt'          => esc_html( $options['ng_slicknav_alt'] ),
-          'ng_slicknav_accordion'    => (bool)$options['ng_slicknav_accordion'],
+          'ng_slicknav_menu'              => esc_html( $options['ng_slicknav_menu'] ),
+          'ng_slicknav_position'          => esc_html( $options['ng_slicknav_position'] ),
+          'ng_slicknav_parent_links'      => (bool)$options['ng_slicknav_parent_links'],
+          'ng_slicknav_close_click'       => (bool)$options['ng_slicknav_close_click'],
+          'ng_slicknav_child_links'       => (bool) $options['ng_slicknav_child_links'],
+          'ng_slicknav_speed'             => (int)$options['ng_slicknav_speed'],
+          'ng_slicknav_label'             => esc_html( $options['ng_slicknav_label'] ),
+          'ng_slicknav_fixhead'           => (bool) $options['ng_slicknav_fixhead'],
+          'ng_slicknav_brand'             => esc_html( $options['ng_slicknav_brand'] ),
+          'ng_slicknav_brand_text'        => $options['ng_slicknav_brand_text'],
+          'ng_slicknav_search'            => (bool) $options['ng_slicknav_search'],
+          'ng_slicknav_search_text'       => esc_html( $options['ng_slicknav_search_text'] ),
+          'ng_slicksearch'                => home_url( '/' ),
+          'ng_slicknav_closedsymbol'      => esc_html( $options['ng_slicknav_closedsymbol'] ),
+          'ng_slicknav_openedsymbol'      => esc_html( $options['ng_slicknav_openedsymbol'] ),
+          'ng_slicknav_alt'               => esc_html( $options['ng_slicknav_alt'] ),
+          'ng_slicknav_accordion'         => (bool)$options['ng_slicknav_accordion'],
+          'ng_slicknav_animation_library' => esc_html( $options['ng_slicknav_animation_library'] ),
 
 
       ),
@@ -400,6 +408,13 @@ function plugin_settings() {
       'ng_slicknav_section'
   );
   add_settings_field(
+      'ng_slicknav_animation_library',
+      'Animation Library',
+       __NAMESPACE__ . '\\ng_slicknav_animation_library_callback',
+      'wpslicknav-menu',
+      'ng_slicknav_section'
+  );
+  add_settings_field(
       'ng_slicknav_closedsymbol',
       'Closed Symbol, default &#9658;',
        __NAMESPACE__ . '\\ng_slicknav_closedsymbol_callback',
@@ -474,7 +489,7 @@ function ng_slicknav_section_callback() {
 function ng_slicknav_menu_callback() {
 $options = get_option( 'ng_slicknavmenu' );
 
-if( !isset( $options['ng_slicknav_menu_'] ) ) $options['ng_slicknav_menu_'] = '';
+if( !isset( $options['ng_slicknav_menu'] ) ) $options['ng_slicknav_menu'] = '';
 echo '<input type="text" id="ng_slicknav_menu" name="ng_slicknavmenu[ng_slicknav_menu]" value="' . sanitize_text_field($options['ng_slicknav_menu']) . '" placeholder="Add menus here..." class="large-text" />';
 echo '<span class="description">' . __( 'Add the Menu CSS Class or ID to be used as SickNav Menu, comma separate multiple menus','slicknav-mobile-menu') . '</span>';
 }
@@ -969,6 +984,25 @@ if( !isset( $options['ng_slicknav_speed'] ) ) $options['ng_slicknav_speed'] = '4
   <option value="1000"<?php selected ($options['ng_slicknav_speed'], '1000'); ?> >1000</option>
   <option value="1200"<?php selected ($options['ng_slicknav_speed'], '1200'); ?> >1200</option>
 
+</select>
+<?php
+}
+
+
+/**
+ * Animation Library
+ *
+ * @since 1.8.1
+ */
+function ng_slicknav_animation_library_callback() {
+  $options = get_option( 'ng_slicknavmenu' );
+
+if( !isset( $options['ng_slicknav_animation_library'] ) ) $options['ng_slicknav_animation_library'] = 'jquery';
+
+?>
+<select name="ng_slicknavmenu[ng_slicknav_animation_library]" id="ng_slicknav_animation_library">
+	<option value="jquery"<?php selected($options['ng_slicknav_animation_library'], 'jquery'); ?> >jquery</option>
+	<option value="velocity"<?php selected ($options['ng_slicknav_animation_library'], 'velocity'); ?> >velocity</option>
 </select>
 <?php
 }
