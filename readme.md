@@ -119,7 +119,40 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
 3. Shows menu logo position and search form enabled
 
+
 == Changelog ==
+
+= 1.8.1 =
+
+* 24/6/17
+- Updated in line with SlickNav core 1.0.10
+- New option to swap animation library, jquery is default - velocity as an option too.
+- Better keyboard ARIA support with latest SlickNav 1.0.10
+
+
+= 1.8.0 =
+
+* 7/8/16
+- Redo options using Settings API.
+- Use RGBa color pickers for color options.
+- Add text logo alternative to image
+- Option for search icon color.
+- Option to toggle sublevel menus - show only one at a time.
+
+
+= 1.7.5 =
+
+* 4/6/16 - Add option for Link text hover color, this also applies to submenu items, remove submenu hover background color. Existing menu hover background color now applies to top and submenu items.
+
+= 1.7.4 =
+
+* 26/3/16 - Added close on click setting, useful for same page links, the menu will close after clicking, added a search text label field, upgraded SlickNav core to 1.0.7, refactored wp_add_inline_style CSS.
+
+= 1.7.3.1 =
+
+* 9/2/16 - Fix undefined notices on CSS variables when WP_Debug is set to true.
+
+
 
 = 1.7.3 =
 
