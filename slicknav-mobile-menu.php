@@ -5,7 +5,7 @@ Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com/using-slick-responsive-menus-genesis-child-theme/
 Description: Using SlickNav Responsive Mobile Menus in WordPress
 Author: Neil Gee
-Version: 1.8.1
+Version: 1.8.2
 Author URI: http://wpbeaches.com
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -35,9 +35,10 @@ function scripts_styles() {
   $options = get_option( 'ng_slicknavmenu' );
 if ( $options !== false ) {
   wp_register_script( 'slicknavjs' , plugins_url( '/js/jquery.slicknav.min.js',  __FILE__ ), array( 'jquery' ), '1.0.10', false );
-  //wp_register_script( 'slicknavjs' , plugins_url( '/js/jquery.slicknav-ng.js',  __FILE__ ), array( 'jquery' ), '1.0.10', false );
+ // wp_register_script( 'slicknavjs' , plugins_url( '/js/jquery.slicknav-ng.js',  __FILE__ ), array( 'jquery' ), '1.0.10', false );
   wp_register_script( 'velocityjs' , plugins_url( '/js/velocity.min.js',  __FILE__ ), array( 'jquery' ), '1.0.10', false );
-  wp_register_style( 'slicknavcss' , plugins_url( '/css/slicknav.css',  __FILE__ ), '' , '1.0.10', 'all' );
+  //wp_register_style( 'slicknavcss' , plugins_url( '/css/slicknav.css',  __FILE__ ), '' , '1.0.10', 'all' );
+  wp_register_style( 'slicknavcss' , plugins_url( '/css/slicknav.min.css',  __FILE__ ), '' , '1.0.10', 'all' );
   wp_register_script( 'slicknav-init' , plugins_url( '/js/slick-init.js',  __FILE__ ), array( 'slicknavjs' ), '1.8.0', false );
 
   wp_enqueue_script( 'slicknavjs' );
@@ -748,11 +749,16 @@ if( !isset( $options['ng_slicknav_button_position'] ) ) $options['ng_slicknav_bu
 ?>
 <fieldset>
 	<label title='g:i a'>
-		<input type="radio" name="ng_slicknavmenu[ng_slicknav_button_position]" value="right"<?php checked( 'right', $options['ng_slicknav_button_position'], true ); ?> />
+		<input type="radio" name="ng_slicknavmenu[ng_slicknav_button_position]" value="flex-end"<?php checked( 'flex-end', $options['ng_slicknav_button_position'], true ); ?> />
 		<span><?php esc_attr_e( 'Right', 'slicknav-mobile-menu' ); ?></span>
 	</label><br>
-  <label title='g:i a'>
-		<input type="radio" name="ng_slicknavmenu[ng_slicknav_button_position]" value="left"<?php checked( 'left', $options['ng_slicknav_button_position'], true ); ?> />
+        <label title='g:i a'>
+                <input type="radio" name="ng_slicknavmenu[ng_slicknav_button_position]" value="center"<?php checked( 'center', $options['ng_slicknav_button_position'], true ); ?> />
+                <span><?php esc_attr_e( 'Center', 'slicknav-mobile-menu' ); ?></span>
+        </label><br>
+
+        <label title='g:i a'>
+		<input type="radio" name="ng_slicknavmenu[ng_slicknav_button_position]" value="flex-start"<?php checked( 'flex-start', $options['ng_slicknav_button_position'], true ); ?> />
 		<span><?php esc_attr_e( 'Left', 'slicknav-mobile-menu' ); ?></span>
 	</label>
 </fieldset>
@@ -775,8 +781,8 @@ if( !isset( $options['ng_slicknav_submenu_position'] ) ) $options['ng_slicknav_s
 		<input type="radio" name="ng_slicknavmenu[ng_slicknav_submenu_position]" value="right"<?php checked( 'right', $options['ng_slicknav_submenu_position'], true ); ?> />
 		<span><?php esc_attr_e( 'Right', 'slicknav-mobile-menu' ); ?></span>
 	</label><br>
-  <label title='g:i a'>
-		<input type="radio" name="ng_slicknavmenu[ng_slicknav_submenu_position]" value="left"<?php checked( 'left', $options['ng_slicknav_submenu_position'], true ); ?> />
+        <label title='g:i a'>
+		<input type="radio" name="ng_slicknavmenu[ng_slicknav_submenu_position]" value="none"<?php checked( 'none', $options['ng_slicknav_submenu_position'], true ); ?> />
 		<span><?php esc_attr_e( 'Left', 'slicknav-mobile-menu' ); ?></span>
 	</label>
 </fieldset>

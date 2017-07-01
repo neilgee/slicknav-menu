@@ -136,6 +136,8 @@
             ].join('')
         );
         $(menuBar).append($this.btn);
+
+
         if(settings.appendTo !== '') {
             $(settings.appendTo).append(menuBar);
         } else {
