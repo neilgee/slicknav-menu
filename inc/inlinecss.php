@@ -69,143 +69,161 @@ function responsive_menucss() {
 
 
 
+       // All the user input CSS settings as set in SLicknav settings
+       $slicknav_custom_css = "
 
-        // All the user input CSS settings as set in SLicknav settings
-        $slicknav_custom_css = "
+        {$ng_slicknav_menu} {
+                display: none;
+        }
+
+        .slicknav_menu {
+                background: {$ng_slicknav_background};
+        }
+
+        .slicknav-flex{
+               display: -webkit-box;
+               display: -ms-flexbox;
+               display: flex;
+               justify-content:{$ng_slicknav_button_position};
+        }
+
+        .slicknav_btn {
+                background-color:{$ng_slicknav_button};
+        }
+
+        a.slicknav_open {
+                background-color:{$ng_slicknav_button_expand};
+        }
+
+        .slicknav_nav .slicknav_arrow {
+                float:{$ng_slicknav_submenu_position};
+        }
+
+        .slicknav_menu .slicknav_menutxt {
+                color: {$ng_slicknav_label_color};
+                text-shadow: none;
+                font-size: {$ng_slicknav_label_size}px;
+                font-weight: {$ng_slicknav_label_weight};
+        }
+
+        .slicknav_menu .slicknav_icon-bar {
+                background-color: {$ng_slicknav_icon_color};
+                box-shadow: none;
+        }
+
+        .slicknav_nav li a {
+                color: {$ng_slicknav_link_color};
+                text-transform: {$ng_slicknav_font_case};
+                font-size: {$ng_slicknav_font}px;
+                padding: 5px 10px;
+        }
+
+        .slicknav_nav a:hover,
+        .slicknav_nav .slicknav_row:hover {
+                background: {$ng_slicknav_link_hover_background_color};
+        }
+
+        .slicknav_nav .menu-item a:hover,
+        .slicknav_nav a span:hover {
+                color: {$ng_slicknav_link_hover_color};
+        }
+
+        .slicknav_nav input[type='submit']{
+                background: {$ng_slicknav_search_color};
+                color: {$ng_slicknav_search_icon_color};
+        }
+
+        .slicknav-logo-text a{
+                color: {$ng_slicknav_brand_text_color};
+        }
+
+
+        @media screen and (min-width: {$ng_slicknav_width}px) {
                 .slicknav_menu {
-                    display: none;
+                        display: none;
                 }
-            @media screen and (max-width: {$ng_slicknav_width}px) {
+
                 {$ng_slicknav_menu} {
-                  display: none;
-               }
-               .slicknav_menu {
-                  display: block;
-                  background: {$ng_slicknav_background};
-               }
-               .slicknav-flex{
-                       display: -webkit-box;
-                       display: -ms-flexbox;
-                       display: flex;
-                       justify-content:{$ng_slicknav_button_position};
-               }
-               .slicknav_btn {
-                  background-color:{$ng_slicknav_button};
-               }
-               a.slicknav_open {
-                  background-color:{$ng_slicknav_button_expand};
-               }
-               .slicknav_nav .slicknav_arrow {
-                  float:{$ng_slicknav_submenu_position};
-               }
-               .slicknav_menu .slicknav_menutxt {
-                  color: {$ng_slicknav_label_color};
-                  text-shadow: none;
-                  font-size: {$ng_slicknav_label_size}px;
-                  font-weight: {$ng_slicknav_label_weight};
-               }
-               .slicknav_menu .slicknav_icon-bar {
-                  background-color: {$ng_slicknav_icon_color};
-                  box-shadow: none;
-               }
-               .slicknav_nav li a {
-                  color: {$ng_slicknav_link_color};
-                  text-transform: {$ng_slicknav_font_case};
-                  font-size: {$ng_slicknav_font}px;
-                  padding: 5px 10px;
-               }
-               .slicknav_nav a:hover,
-               .slicknav_nav .slicknav_row:hover {
-                  background: {$ng_slicknav_link_hover_background_color};
-               }
-               .slicknav_nav .menu-item a:hover,
-               .slicknav_nav a span:hover {
-                 color: {$ng_slicknav_link_hover_color};
-
-               }
-
-               .slicknav_nav input[type='submit']{
-                  background: {$ng_slicknav_search_color};
-                  color: {$ng_slicknav_search_icon_color};
-               }
-               .slicknav-logo-text a{
-                 color: {$ng_slicknav_brand_text_color};
-               }
-
-
-           }";
-
-
-               // Set CSS shadow for label
-              if( $ng_slicknav_label_shadow == 1 )
-             $slicknav_custom_css .= "
-               .slicknav_menu .slicknav_menutxt {
-                  text-shadow: 0 1px 3px #000;
-               }";
-
-               // Set CSS shadow for icon
-              if( $ng_slicknav_icon_shadow == 1 )
-             $slicknav_custom_css .= "
-               .slicknav_menu .slicknav_icon-bar {
-                  box-shadow: 0 1px 0 rgba(0,0,0,0.25);
-               }";
-
-
-             if( ! $ng_slicknav_brand == '' || ! $ng_slicknav_brand_text == '' )
-             $slicknav_custom_css .= "
-                @media screen and (max-width: {$ng_slicknav_width}px) {
-                     .slicknav-flex{
-                             display: -webkit-box;
-                             display: -ms-flexbox;
-                             display: flex;
-                             -webkit-box-pack: justify;
-                             -ms-flex-pack: justify;
-                             justify-content:space-between;
-                     }
+                        display: inherit;
                 }
-             ";
-
-              // If Menu button is set to left, move brand logo to right, set in Slicknav settings
-             if( $ng_slicknav_button_position == "flex-start"  )
-            $slicknav_custom_css .= "
-                  .slicknav_brand {
-                          -ms-flex-order: 2;
-                          order: 2;
-                  }
-                  .slicknav-logo-text {
-                          -ms-flex-order: 2;
-                          order: 2;
-                  }
-                 .slicknav_btn {
-                         -ms-flex-order: -1;
-                         order: -1;
-                 }";
+        }
+        ";
 
 
+        // Set CSS shadow for label
+        if( $ng_slicknav_label_shadow == 1 )
+        $slicknav_custom_css .= "
+        .slicknav_menu .slicknav_menutxt {
+                text-shadow: 0 1px 3px #000;
+        }";
 
-            // Fix menu to position in header if set in Slicknav settings
-              if( $ng_slicknav_fixhead == true )
-            $slicknav_custom_css .= "
-             @media screen and (max-width: {$ng_slicknav_width}px) {
-                 .slicknav_menu {
-                    position: fixed;
-                    width: 100%;
-                    left: 0;
-                    top: 0;
-                    z-index: 999999;
-                }
-                 html {
-                    padding-top: 45px;
-                 }
-             }";
+        // Set CSS shadow for icon
+        if( $ng_slicknav_icon_shadow == 1 )
+        $slicknav_custom_css .= "
+        .slicknav_menu .slicknav_icon-bar {
+                box-shadow: 0 1px 0 rgba(0,0,0,0.25);
+        }";
 
-            //Hide header if option is clicked in SlickNav settings
-            if( $ng_slicknav_header == true )
+
+        if( ! $ng_slicknav_brand == '' || ! $ng_slicknav_brand_text == '' )
+        $slicknav_custom_css .= "
+        .slicknav-flex{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content:space-between;
+        }
+        ";
+
+        // If Menu button is set to left, move brand logo to right, set in Slicknav settings
+        if( $ng_slicknav_button_position == "flex-start"  )
+        $slicknav_custom_css .= "
+          .slicknav_brand {
+                -ms-flex-order: 2;
+                order: 2;
+          }
+
+          .slicknav-logo-text {
+                -ms-flex-order: 2;
+                order: 2;
+          }
+
+         .slicknav_btn {
+                -ms-flex-order: -1;
+                order: -1;
+         }";
+
+
+
+        // Fix menu to position in header if set in Slicknav settings
+        if( $ng_slicknav_fixhead == true )
+        $slicknav_custom_css .= "
+         .slicknav_menu {
+                position: fixed;
+                width: 100%;
+                left: 0;
+                top: 0;
+                z-index: 999999;
+        }
+
+         html {
+                padding-top: 45px;
+         }
+         ";
+
+        // Hide header if option is clicked in SlickNav settings
+        if( $ng_slicknav_header == true )
          $slicknav_custom_css .= "
-            @media screen and (max-width:{$ng_slicknav_width}px) {
-                 .site-header {
-                    display: none;
-                 }
+         .site-header {
+                display: none;
+         }
+
+        @media screen and (min-width:{$ng_slicknav_width}px) {
+         .site-header {
+                display: block;
+         }
             }";
 
   }
