@@ -13,7 +13,7 @@ Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
 Author: Neil Gee
-Version: 1.7.3
+Version: 1.8.2
 Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -121,6 +121,15 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
 
 == Changelog ==
+
+
+= 1.8.2 =
+
+* 01/7/17
+- Option to center SlickNav Menu Button
+- If a brand logo or text block is also used with the button then the spacing is set to 'space-between' which will space the items to the outer edges.
+- Fix submenu indicators if set to left
+
 
 = 1.8.1 =
 
