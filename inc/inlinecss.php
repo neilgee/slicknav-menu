@@ -208,9 +208,17 @@ function responsive_menucss() {
                 z-index: 999999;
         }
 
-         html {
-                padding-top: 45px;
-         }
+        html {
+               padding-top: 45px;
+        }
+
+        @media screen and (min-width:{$ng_slicknav_width}px) {
+
+                 html {
+                        padding-top: 0;
+                 }
+        }
+
          ";
 
         // Hide header if option is clicked in SlickNav settings

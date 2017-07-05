@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=neil%
 Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
 Requires at least: 4.0
 Tested up to: 4.8
-Stable tag: 1.8.2
+Stable tag: 1.8.3
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
@@ -98,12 +98,19 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
 == Changelog ==
 
+= 1.8.3 =
+
+* 05/7/17
+- CSS fix when menu sticks to head
+- JS init code clean up
+
 = 1.8.2 =
 
-* 01/7/17
+* 02/7/17
 - Option to center SlickNav Menu Button
 - If a brand logo or text block is also used with the button then the spacing is set to 'space-between' which will space the items to the outer edges.
 - Fix submenu indicators if set to left
+- Set inline CSS to mobile first min-width media queries
 
 = 1.8.1 =
 

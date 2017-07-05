@@ -101,11 +101,14 @@ jQuery(document).ready(function($) {
                 });
 
         }
-        // Add Flex container around brand and icon divs so button can be centered
-        if (! slickNavVars.ng_slicknav.ng_slicknav_brand == '') {
+
+        // Add Flex container around brand/brand text and Menu icon/label divs so button can be centered
+        var brandBlank = ( slickNavVars.ng_slicknav.ng_slicknav_brand ==  '' );
+        var brandBlankText = ( slickNavVars.ng_slicknav.ng_slicknav_brand_text ==  '' );
+        if ( ! brandBlank  ) {
                 $( ".slicknav_brand" ).next().addBack().wrapAll( "<div class='slicknav-flex'></div>" );
         }
-        else if (! slickNavVars.ng_slicknav.ng_slicknav_brand_text == '') {
+        else if ( ! brandBlankText ) {
                 $( ".slicknav-logo-text" ).next().addBack().wrapAll( "<div class='slicknav-flex'></div>" );
         }
         else

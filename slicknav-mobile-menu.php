@@ -5,7 +5,7 @@ Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com/using-slick-responsive-menus-genesis-child-theme/
 Description: Using SlickNav Responsive Mobile Menus in WordPress
 Author: Neil Gee
-Version: 1.8.2
+Version: 1.8.3
 Author URI: http://wpbeaches.com
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -37,7 +37,7 @@ if ( $options !== false ) {
   wp_register_script( 'slicknavjs' , plugins_url( '/js/jquery.slicknav.min.js',  __FILE__ ), array( 'jquery' ), '1.0.10', false );
  // wp_register_script( 'slicknavjs' , plugins_url( '/js/jquery.slicknav-ng.js',  __FILE__ ), array( 'jquery' ), '1.0.10', false );
   wp_register_script( 'velocityjs' , plugins_url( '/js/velocity.min.js',  __FILE__ ), array( 'jquery' ), '1.0.10', false );
- // wp_register_style( 'slicknavcss' , plugins_url( '/css/slicknav.css',  __FILE__ ), '' , '1.0.10', 'all' );
+  // wp_register_style( 'slicknavcss' , plugins_url( '/css/slicknav.css',  __FILE__ ), '' , '1.0.10', 'all' );
   wp_register_style( 'slicknavcss' , plugins_url( '/css/slicknav.min.css',  __FILE__ ), '' , '1.0.10', 'all' );
   wp_register_script( 'slicknav-init' , plugins_url( '/js/slick-init.js',  __FILE__ ), array( 'slicknavjs' ), '1.8.0', false );
 
