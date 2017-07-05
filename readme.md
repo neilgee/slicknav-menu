@@ -122,6 +122,12 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
 == Changelog ==
 
+= 1.8.3 =
+
+* 05/7/17
+- CSS fix when menu sticks to head
+- JS init code clean up
+
 
 = 1.8.2 =
 
