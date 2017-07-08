@@ -122,6 +122,11 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
 == Changelog ==
 
+= 1.8.4 =
+
+* 08/7/17
+- Minor fix for 2 undefined PHP notices
+
 = 1.8.3 =
 
 * 05/7/17

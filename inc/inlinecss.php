@@ -31,6 +31,8 @@ function responsive_menucss() {
           'ng_slicknav_header'                      => '',
           'ng_slicknav_search_icon_color'           => '',
           'ng_slicknav_brand_text_color'            => '',
+          'ng_slicknav_brand'                       => '',
+          'ng_slicknav_brand_text'                  => '',
 
 
 
