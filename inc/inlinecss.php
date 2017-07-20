@@ -146,7 +146,7 @@ function responsive_menucss() {
                 }
 
                 {$ng_slicknav_menu} {
-                        display: inherit;
+                        display: block;
                 }
         }
         ";
@@ -207,7 +207,7 @@ function responsive_menucss() {
                 width: 100%;
                 left: 0;
                 top: 0;
-                z-index: 999999;
+                z-index: 99999;
         }
 
         html {
