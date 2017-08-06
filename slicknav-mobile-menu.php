@@ -5,7 +5,7 @@ Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com/using-slick-responsive-menus-genesis-child-theme/
 Description: Using SlickNav Responsive Mobile Menus in WordPress
 Author: Neil Gee
-Version: 1.8.5
+Version: 1.8.6
 Author URI: http://wpbeaches.com
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -1067,8 +1067,8 @@ echo '<span class="description">' . __( 'alt text') . '</span>';
 function ng_slicknav_closedsymbol_callback() {
 $options = get_option( 'ng_slicknavmenu' );
 
-if( !isset( $options['ng_slicknav_closedsymbol'] ) ) $options['ng_slicknav_closedsymbol'] = '►';
-echo '<input type="text" id="ng_slicknav_closedsymbol" name="ng_slicknavmenu[ng_slicknav_closedsymbol]" value="' . sanitize_text_field($options['ng_slicknav_closedsymbol']) . '" placeholder="►" class="medium-text" />';
+if( !isset( $options['ng_slicknav_closedsymbol'] ) ) $options['ng_slicknav_closedsymbol'] = '';
+echo '<input type="text" id="ng_slicknav_closedsymbol" name="ng_slicknavmenu[ng_slicknav_closedsymbol]" value="' . sanitize_text_field($options['ng_slicknav_closedsymbol']) . '" placeholder="&#9658;" class="medium-text" />';
 }
 
 /**
@@ -1080,9 +1080,10 @@ echo '<input type="text" id="ng_slicknav_closedsymbol" name="ng_slicknavmenu[ng_
 function ng_slicknav_openedsymbol_callback() {
 $options = get_option( 'ng_slicknavmenu' );
 
-if( !isset( $options['ng_slicknav_openedsymbol'] ) ) $options['ng_slicknav_openedsymbol'] = '▼';
-echo '<input type="text" id="ng_slicknav_openedsymbol" name="ng_slicknavmenu[ng_slicknav_openedsymbol]" value="' . sanitize_text_field($options['ng_slicknav_openedsymbol']) . '" placeholder="▼" class="medium-text" />';
+if( !isset( $options['ng_slicknav_openedsymbol'] ) ) $options['ng_slicknav_openedsymbol'] = '';
+echo '<input type="text" id="ng_slicknav_openedsymbol" name="ng_slicknavmenu[ng_slicknav_openedsymbol]" value="' . sanitize_text_field($options['ng_slicknav_openedsymbol']) . '" placeholder="&#9660;" class="medium-text" />';
 }
+
 
 
 /*

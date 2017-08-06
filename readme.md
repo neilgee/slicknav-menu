@@ -122,6 +122,18 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
 == Changelog ==
 
+= 1.8.6 =
+
+* 06/08/17
+- Fix to store Unicode characters in older MySQL storage
+
+= 1.8.5 =
+
+* 19/7/17
+- Minor fix for 2 CSS
+- Lower z-index on Menu
+- display block on targetted menu
+
 = 1.8.4 =
 
 * 08/7/17
