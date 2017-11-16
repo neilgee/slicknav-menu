@@ -28,6 +28,7 @@ function responsive_menucss() {
           'ng_slicknav_icon_shadow'                 => '',
           'ng_slicknav_label_weight'                => '',
           'ng_slicknav_fixhead'                     => '',
+          'ng_slicknav_hidedesktop'                 => 'block',
           'ng_slicknav_header'                      => '',
           'ng_slicknav_search_icon_color'           => '',
           'ng_slicknav_brand_text_color'            => '',
@@ -63,6 +64,7 @@ function responsive_menucss() {
        $ng_slicknav_icon_shadow                 = $options['ng_slicknav_icon_shadow'];
        $ng_slicknav_label_weight                = $options['ng_slicknav_label_weight'];
        $ng_slicknav_fixhead                     = $options['ng_slicknav_fixhead'];
+       $ng_slicknav_hidedesktop                 = $options['ng_slicknav_hidedesktop'];       
        $ng_slicknav_header                      = $options['ng_slicknav_header'];
        $ng_slicknav_brand_text_color            = $options['ng_slicknav_brand_text_color'];
        $ng_slicknav_brand                       = $options['ng_slicknav_brand'];
@@ -146,10 +148,11 @@ function responsive_menucss() {
                 }
 
                 {$ng_slicknav_menu} {
-                        display: block;
+                        display: {$ng_slicknav_hidedesktop};
                 }
         }
         ";
+
 
 
         // Set CSS shadow for label
@@ -226,12 +229,14 @@ function responsive_menucss() {
         // Hide header if option is clicked in SlickNav settings
         if( $ng_slicknav_header == true )
          $slicknav_custom_css .= "
-         .site-header {
+         .site-header,
+         .fl-page-header {
                 display: none;
          }
 
         @media screen and (min-width:{$ng_slicknav_width}px) {
-         .site-header {
+         .site-header,
+         .fl-page-header {
                 display: block;
          }
             }";

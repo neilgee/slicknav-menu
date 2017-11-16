@@ -5,7 +5,7 @@ Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com/using-slick-responsive-menus-genesis-child-theme/
 Description: Using SlickNav Responsive Mobile Menus in WordPress
 Author: Neil Gee
-Version: 1.8.6
+Version: 1.8.7
 Author URI: http://wpbeaches.com
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -59,6 +59,7 @@ if ( $options !== false ) {
         'ng_slicknav_parent_links'      => '',
         'ng_slicknav_accordion'         => '',
         'ng_slicknav_animation_library' => '',
+        'ng_slicknav_hidedesktop'       => '',
     );
 
     $options = wp_parse_args( $options, $options_default );
@@ -84,6 +85,7 @@ if ( $options !== false ) {
           'ng_slicknav_speed'             => (int)$options['ng_slicknav_speed'],
           'ng_slicknav_label'             => esc_html( $options['ng_slicknav_label'] ),
           'ng_slicknav_fixhead'           => (bool) $options['ng_slicknav_fixhead'],
+          'ng_slicknav_hidedesktop'       => esc_html( $options['ng_slicknav_hidedesktop']),
           'ng_slicknav_brand'             => esc_html( $options['ng_slicknav_brand'] ),
           'ng_slicknav_brand_text'        => $options['ng_slicknav_brand_text'],
           'ng_slicknav_search'            => (bool) $options['ng_slicknav_search'],
@@ -177,6 +179,13 @@ function plugin_settings() {
       'wpslicknav-menu', //page that it appears on
       'ng_slicknav_section' //settings section declared in add_settings_section
   );
+  add_settings_field(
+    'ng_slicknav_hidedesktop',
+    'Display Desktop Menu, leave at block, unless you are displaying it differently',
+     __NAMESPACE__ . '\\ng_slicknav_hidedesktop_callback',
+    'wpslicknav-menu',
+    'ng_slicknav_section'
+);
   add_settings_field(
       'ng_slicknav_fixhead',
       'Fix Menu to Head',
@@ -932,6 +941,26 @@ if( !isset( $options['ng_slicknav_accordion'] ) ) $options['ng_slicknav_accordio
 <?php
 }
 
+/**
+ * Hide Menu on Desktop
+ *
+ * @since 1.8.0
+ */
+ function ng_slicknav_hidedesktop_callback(){
+    $options = get_option( 'ng_slicknavmenu' );
+    if( !isset( $options['ng_slicknav_hidedesktop'] ) ) $options['ng_slicknav_hidedesktop'] = 'block';
+    
+    ?>
+    <select name="ng_slicknavmenu[ng_slicknav_hidedesktop]" id="ng_slicknav_hidedesktop">
+        <option value="block"<?php selected($options['ng_slicknav_hidedesktop'], 'block'); ?> >block</option>
+        <option value="inline"<?php selected ($options['ng_slicknav_hidedesktop'], 'inline'); ?> >inline</option>
+        <option value="flex"<?php selected ($options['ng_slicknav_hidedesktop'], 'flex'); ?> >flex</option>
+        <option value="none"<?php selected ($options['ng_slicknav_hidedesktop'], 'none'); ?> >none</option>
+    </select>
+
+    <?php
+    }
+
 
 /**
  * Fix menu to head
@@ -965,7 +994,7 @@ if( !isset( $options['ng_slicknav_header'] ) ) $options['ng_slicknav_header'] = 
   <fieldset>
   	<label for="ng_slicknav_header">
   		<input name="ng_slicknavmenu[ng_slicknav_header]" type="checkbox" id="ng_slicknav_header" value="1"<?php checked( 1, $options['ng_slicknav_header'], true ); ?> />
-  		<span class="description"><?php esc_attr_e( 'Hide Main Header', 'slicknav-mobile-menu' ); ?></span>
+  		<span class="description"><?php esc_attr_e( 'Hide Main Header in Mobile View', 'slicknav-mobile-menu' ); ?></span>
   	</label>
   </fieldset>
 <?php
@@ -1101,6 +1130,6 @@ function backend_admin_page($hook) {
 
     // RGBA color picker for the color options
     wp_enqueue_style( 'wp-color-picker' );
-    wp_enqueue_script( 'wp-color-picker-alpha', plugins_url( '/js/wp-color-picker-alpha.min.js',  __FILE__ ), array( 'wp-color-picker' ), '1.2.2', true );
+    wp_enqueue_script( 'wp-color-picker-alpha', plugins_url( '/js/wp-color-picker-alpha.min.js',  __FILE__ ), array( 'wp-color-picker' ), '2.1.2', true );
 }
 add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\backend_admin_page');

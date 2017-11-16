@@ -4,13 +4,13 @@ Contributors: neilgee
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=neil%40wpbeaches%2ecom&lc=AU&item_name=WP%20Beaches&item_number=Plugins&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
 Requires at least: 4.0
-Tested up to: 4.8
-Stable tag: 1.8.6
+Tested up to: 4.9
+Stable tag: 1.8.7
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
 Author: Neil Gee
-Version: 1.8.0
+Version: 1.8.7
 Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -97,6 +97,12 @@ The settings are found via the dashboard Settings > SlickNav Menu
 4. Shows menu and text logo
 
 == Changelog ==
+
+= 1.8.7 =
+
+* 17/11/17
+- Option to display designated Mobile Menu when outside of mobile view, by various CSS display properties.
+- Update wp-color-picker to 2.1.2 to be compatible with WP 4.9
 
 = 1.8.6 =
 
