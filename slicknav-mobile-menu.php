@@ -5,7 +5,7 @@ Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com/using-slick-responsive-menus-genesis-child-theme/
 Description: Using SlickNav Responsive Mobile Menus in WordPress
 Author: Neil Gee
-Version: 1.8.7
+Version: 1.8.8
 Author URI: http://wpbeaches.com
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -953,6 +953,7 @@ if( !isset( $options['ng_slicknav_accordion'] ) ) $options['ng_slicknav_accordio
     ?>
     <select name="ng_slicknavmenu[ng_slicknav_hidedesktop]" id="ng_slicknav_hidedesktop">
         <option value="block"<?php selected($options['ng_slicknav_hidedesktop'], 'block'); ?> >block</option>
+        <option value="inline-block"<?php selected($options['ng_slicknav_hidedesktop'], 'inline-block'); ?> >inline-block</option>
         <option value="inline"<?php selected ($options['ng_slicknav_hidedesktop'], 'inline'); ?> >inline</option>
         <option value="flex"<?php selected ($options['ng_slicknav_hidedesktop'], 'flex'); ?> >flex</option>
         <option value="none"<?php selected ($options['ng_slicknav_hidedesktop'], 'none'); ?> >none</option>
