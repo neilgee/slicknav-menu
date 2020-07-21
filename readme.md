@@ -1,27 +1,24 @@
-#SlickNav Mobile Menu
-
-
 === Plugin Name ===
 
 Contributors: neilgee
-Donate link: http://wpbeaches.com/
-Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level, multi-combine menus
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=neil%40wpbeaches%2ecom&lc=AU&item_name=WP%20Beaches&item_number=Plugins&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
+Tags: mobile, menu, responsive, aria, accessible, graceful, submenu, multi-level
 Requires at least: 4.0
-Tested up to: 4.2
-Stable tag: 1.7.3
+Tested up to: 5.4
+Stable tag: 1.8.9
 Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com
 Description: SlickNav Mobile Menu
-Author: Neil Gee
-Version: 1.8.2
+Author: Neil Gowran
+Version: 1.8.9
 Author URI: http://wpbeaches.com/
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
-This plugin adds the option to use the SlickNav Responsive Mobile Menu in place of a regular menu(s) at a designated size.
+This plugin adds the option to use the SlickNav Responsive Mobile Menu in place of a regular menu at a designated size.
 
 
-##Description ==
+== Description ==
 
 This plugin adds SlickNav Responsive Mobile Menu functionality to WordPress.
 
@@ -39,15 +36,15 @@ Option to add a search field.
 
 Option to add a logo.
 
-Filter Hook.
-
 Internationalized.
 
-Combine multiple menus into one Mobile Mega Menu.
+Advanced Filter.
+
+Combine multiple menus.
 
 
 
-##Installation ==
+== Installation ==
 
 This section describes how to install the plugin:
 
@@ -55,41 +52,13 @@ This section describes how to install the plugin:
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Options are in Settings => SlickNav Menu
 
-###Usage ==
+== Usage ==
 
 The settings are found via the dashboard Settings > SlickNav Menu
 
  - Here you choose your Menu to be used as Mobile Menu - original has to already be on page
 
  - Maximum width for the menu to appear, default is 600px
-
- - Menu background color, default is #4c4c4c
-
- - Menu button color, default is #333
-
- - Menu label color, default is #fff
-
- - Menu icon color, default is #fff
-
- - Menu label shadow, default is on
-
- - Menu icon shadow, default is on
-
- - Menu link color, default is #fff
-
- - Menu link hover background color, default is #ccc
-
- - Menu button position, default is right
-
- - Menu font size, default is 16px
-
- - Menu label size, default is 18px
-
- - Menu font case, default is none
-
- - Submenu button indicator position, default is right
-
- - Menu position, body tag is default
 
  - Menu Label, MENU is default
 
@@ -103,13 +72,19 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
  - Option for branding logo opposite menu label - smaller works better such as 40px in height and up to 140px in width
 
+ - Option to hide header with a '.site-header' class when Slicknav Menu is visible
+
  - Option to add in a search field at the bottom of the menu
+
+ - Search icon background color
 
  - Options to change the opening and closing symbols
 
+ - Advanced filter to adjust Slicknav values - https://wpbeaches.com/slicknav-wordpress-filter-to-adjust-values/
+
  Demo - http://wpbeaches.com (resize browser window to below 600px)
 
- Please note that SlickNav is the work of Josh Cope, he is not responsible for the working or support of this plugin.
+ Please note that SlickNav jQuery plugin is the work of Josh Cope, he is not responsible for the working or support of this plugin.
 
 == Screenshots ==
 
@@ -119,8 +94,26 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
 3. Shows menu logo position and search form enabled
 
+4. Shows menu and text logo
 
 == Changelog ==
+
+= 1.8.9 =
+
+* 21/07/20
+- Updated wp-color-picker to 2.1.4
+
+= 1.8.8 =
+
+* 27/01/18
+- Added 'inline-block' display to display designated Mobile Menu when outside of mobile view.
+- Updated wp-color-picker to 2.1.3 to be compatible with WP 4.9
+
+= 1.8.7 =
+
+* 17/11/17
+- Option to display designated Mobile Menu when outside of mobile view, by various CSS display properties.
+- Update wp-color-picker to 2.1.2 to be compatible with WP 4.9
 
 = 1.8.6 =
 
@@ -139,20 +132,20 @@ The settings are found via the dashboard Settings > SlickNav Menu
 * 08/7/17
 - Minor fix for 2 undefined PHP notices
 
+
 = 1.8.3 =
 
 * 05/7/17
 - CSS fix when menu sticks to head
 - JS init code clean up
 
-
 = 1.8.2 =
 
-* 01/7/17
+* 02/7/17
 - Option to center SlickNav Menu Button
 - If a brand logo or text block is also used with the button then the spacing is set to 'space-between' which will space the items to the outer edges.
 - Fix submenu indicators if set to left
-
+- Set inline CSS to mobile first min-width media queries
 
 = 1.8.1 =
 
@@ -184,11 +177,9 @@ The settings are found via the dashboard Settings > SlickNav Menu
 
 * 9/2/16 - Fix undefined notices on CSS variables when WP_Debug is set to true.
 
-
-
 = 1.7.3 =
 
-* 5/2/16 - CSS inline styles now added via wp_add_inline_style
+* 5/2/16 - CSS inline styles now added via wp_add_inline_style.
 
 = 1.7.2 =
 
