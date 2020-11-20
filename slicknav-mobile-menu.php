@@ -5,7 +5,7 @@ Plugin Name: SlickNav Mobile Menu
 Plugin URI: http://wpbeaches.com/using-slick-responsive-menus-genesis-child-theme/
 Description: Using SlickNav Responsive Mobile Menus in WordPress
 Author: Neil Gee
-Version: 1.8.9
+Version: 1.9.0
 Author URI: http://wpbeaches.com
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -549,7 +549,7 @@ function ng_slicknav_background_callback(){
 $options = get_option( 'ng_slicknavmenu' );
 
 if( !isset( $options['ng_slicknav_background'] ) ) $options['ng_slicknav_background'] = '#4c4c4c';
-echo '<input type="text" class="color-picker" data-alpha="true" data-default-color="#4c4c4c" name="ng_slicknavmenu[ng_slicknav_background]" value="' . sanitize_text_field($options['ng_slicknav_background']) . '"/>';
+echo '<input type="text" class="color-picker" data-alpha-enabled="true" data-default-color="#4c4c4c" name="ng_slicknavmenu[ng_slicknav_background]" value="' . sanitize_text_field($options['ng_slicknav_background']) . '"/>';
 }
 
 /**
@@ -561,7 +561,7 @@ function ng_slicknav_button_callback(){
 $options = get_option( 'ng_slicknavmenu' );
 
 if( !isset( $options['ng_slicknav_button'] ) ) $options['ng_slicknav_button'] = '#222222';
-echo '<input type="text" class="color-picker" data-alpha="true" data-default-color="#222" name="ng_slicknavmenu[ng_slicknav_button]" value="' . sanitize_text_field($options['ng_slicknav_button']) . '"/>';
+echo '<input type="text" class="color-picker" data-alpha-enabled="true" data-default-color="#222" name="ng_slicknavmenu[ng_slicknav_button]" value="' . sanitize_text_field($options['ng_slicknav_button']) . '"/>';
 }
 
 /**
@@ -573,7 +573,7 @@ function ng_slicknav_brand_text_color_callback(){
 $options = get_option( 'ng_slicknavmenu' );
 
 if( !isset( $options['ng_slicknav_brand_text_color'] ) ) $options['ng_slicknav_brand_text_color'] = '#222222';
-echo '<input type="text" class="color-picker" data-alpha="true" data-default-color="#222" name="ng_slicknavmenu[ng_slicknav_brand_text_color]" value="' . sanitize_text_field($options['ng_slicknav_brand_text_color']) . '"/>';
+echo '<input type="text" class="color-picker" data-alpha-enabled="true" data-default-color="#222" name="ng_slicknavmenu[ng_slicknav_brand_text_color]" value="' . sanitize_text_field($options['ng_slicknav_brand_text_color']) . '"/>';
 }
 
 
@@ -587,7 +587,7 @@ function ng_slicknav_button_expand_callback(){
 $options = get_option( 'ng_slicknavmenu' );
 
 if( !isset( $options['ng_slicknav_button_expand'] ) ) $options['ng_slicknav_button_expand'] = '#222222';
-echo '<input type="text" class="color-picker" data-alpha="true" data-default-color="#222222" name="ng_slicknavmenu[ng_slicknav_button_expand]" value="' . sanitize_text_field($options['ng_slicknav_button_expand']) . '"/>';
+echo '<input type="text" class="color-picker" data-alpha-enabled="true" data-default-color="#222222" name="ng_slicknavmenu[ng_slicknav_button_expand]" value="' . sanitize_text_field($options['ng_slicknav_button_expand']) . '"/>';
 }
 
 /**
@@ -599,7 +599,7 @@ function ng_slicknav_label_color_callback(){
 $options = get_option( 'ng_slicknavmenu' );
 
 if( !isset( $options['ng_slicknav_label_color'] ) ) $options['ng_slicknav_label_color'] = '#fff';
-echo '<input type="text" class="color-picker" data-alpha="true" data-default-color="#fff" name="ng_slicknavmenu[ng_slicknav_label_color]" value="' . sanitize_text_field($options['ng_slicknav_label_color']) . '"/>';
+echo '<input type="text" class="color-picker" data-alpha-enabled="true" data-default-color="#fff" name="ng_slicknavmenu[ng_slicknav_label_color]" value="' . sanitize_text_field($options['ng_slicknav_label_color']) . '"/>';
 }
 
 /**
@@ -611,7 +611,7 @@ function ng_slicknav_icon_color_callback(){
 $options = get_option( 'ng_slicknavmenu' );
 
 if( !isset( $options['ng_slicknav_icon_color'] ) ) $options['ng_slicknav_icon_color'] = '#fff';
-echo '<input type="text" class="color-picker" data-alpha="true" data-default-color="#fff" name="ng_slicknavmenu[ng_slicknav_icon_color]" value="' . sanitize_text_field($options['ng_slicknav_icon_color']) . '"/>';
+echo '<input type="text" class="color-picker" data-alpha-enabled="true" data-default-color="#fff" name="ng_slicknavmenu[ng_slicknav_icon_color]" value="' . sanitize_text_field($options['ng_slicknav_icon_color']) . '"/>';
 }
 
 /**
@@ -623,7 +623,7 @@ function ng_slicknav_link_color_callback(){
 $options = get_option( 'ng_slicknavmenu' );
 
 if( !isset( $options['ng_slicknav_link_color'] ) ) $options['ng_slicknav_link_color'] = '#fff';
-echo '<input type="text" class="color-picker" data-alpha="true" data-default-color="rgba(0,0,0,0.85)" name="ng_slicknavmenu[ng_slicknav_link_color]" value="' . sanitize_text_field($options['ng_slicknav_link_color']) . '"/>';
+echo '<input type="text" class="color-picker" data-alpha-enabled="true" data-default-color="rgba(0,0,0,0.85)" name="ng_slicknavmenu[ng_slicknav_link_color]" value="' . sanitize_text_field($options['ng_slicknav_link_color']) . '"/>';
 }
 
 /**
@@ -635,7 +635,7 @@ function ng_slicknav_link_hover_color_callback(){
 $options = get_option( 'ng_slicknavmenu' );
 
 if( !isset( $options['ng_slicknav_link_hover_color'] ) ) $options['ng_slicknav_link_hover_color'] = '#222222';
-echo '<input type="text" class="color-picker" data-alpha="true" data-default-color="#222222" name="ng_slicknavmenu[ng_slicknav_link_hover_color]" value="' . sanitize_text_field($options['ng_slicknav_link_hover_color']) . '"/>';
+echo '<input type="text" class="color-picker" data-alpha-enabled="true" data-default-color="#222222" name="ng_slicknavmenu[ng_slicknav_link_hover_color]" value="' . sanitize_text_field($options['ng_slicknav_link_hover_color']) . '"/>';
 }
 
 /**
@@ -647,7 +647,7 @@ function ng_slicknav_link_hover_background_color_callback(){
 $options = get_option( 'ng_slicknavmenu' );
 
 if( !isset( $options['ng_slicknav_link_hover_background_color'] ) ) $options['ng_slicknav_link_hover_background_color'] = 'rgba(204,204,204,0.3)';
-echo '<input type="text" class="color-picker" data-alpha="true" data-default-color="rgba(204,204,204,0.3)" name="ng_slicknavmenu[ng_slicknav_link_hover_background_color]" value="' . sanitize_text_field($options['ng_slicknav_link_hover_background_color']) . '"/>';
+echo '<input type="text" class="color-picker" data-alpha-enabled="true" data-default-color="rgba(204,204,204,0.3)" name="ng_slicknavmenu[ng_slicknav_link_hover_background_color]" value="' . sanitize_text_field($options['ng_slicknav_link_hover_background_color']) . '"/>';
 }
 
 /**
@@ -692,7 +692,7 @@ function ng_slicknav_search_icon_color_callback(){
 $options = get_option( 'ng_slicknavmenu' );
 
 if( !isset( $options['ng_slicknav_search_icon_color'] ) ) $options['ng_slicknav_search_icon_color'] = '#fff';
-echo '<input type="text" class="color-picker" data-alpha="true" data-default-color="#fff" name="ng_slicknavmenu[ng_slicknav_search_icon_color]" value="' . sanitize_text_field($options['ng_slicknav_search_icon_color']) . '"/>';
+echo '<input type="text" class="color-picker" data-alpha-enabled="true" data-default-color="#fff" name="ng_slicknavmenu[ng_slicknav_search_icon_color]" value="' . sanitize_text_field($options['ng_slicknav_search_icon_color']) . '"/>';
 }
 
 /**
@@ -704,7 +704,7 @@ function ng_slicknav_search_color_callback(){
 $options = get_option( 'ng_slicknavmenu' );
 
 if( !isset( $options['ng_slicknav_search_color'] ) ) $options['ng_slicknav_search_color'] = '#222222';
-echo '<input type="text" class="color-picker" data-alpha="true" data-default-color="#222222" name="ng_slicknavmenu[ng_slicknav_search_color]" value="' . sanitize_text_field($options['ng_slicknav_search_color']) . '"/>';
+echo '<input type="text" class="color-picker" data-alpha-enabled="true" data-default-color="#222222" name="ng_slicknavmenu[ng_slicknav_search_color]" value="' . sanitize_text_field($options['ng_slicknav_search_color']) . '"/>';
 }
 
 /**
@@ -1131,6 +1131,8 @@ function backend_admin_page($hook) {
 
     // RGBA color picker for the color options
     wp_enqueue_style( 'wp-color-picker' );
-    wp_enqueue_script( 'wp-color-picker-alpha', plugins_url( '/js/wp-color-picker-alpha.min.js',  __FILE__ ), array( 'wp-color-picker' ), '2.1.2', true );
+    wp_enqueue_script( 'wp-color-picker-alpha', plugins_url( '/js/wp-color-picker-alpha.min.js',  __FILE__ ), array( 'wp-color-picker' ), '3.0.0', true );
+    wp_enqueue_script( 'slicknav-init-admin',  plugins_url( '/js/slicknav-backend.js',  __FILE__ ), array(), '1.9.0', true );
+
 }
 add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\backend_admin_page');
