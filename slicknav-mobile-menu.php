@@ -34,12 +34,12 @@ add_action( 'plugins_loaded', __NAMESPACE__ . '\\load_textdomain' );
 function scripts_styles() {
   $options = get_option( 'ng_slicknavmenu' );
 if ( $options !== false ) {
-  wp_register_script( 'slicknavjs' , plugins_url( '/js/jquery.slicknav.min.js',  __FILE__ ), array( 'jquery' ), '1.0.10', false );
- // wp_register_script( 'slicknavjs' , plugins_url( '/js/jquery.slicknav-ng.js',  __FILE__ ), array( 'jquery' ), '1.0.10', false );
-  wp_register_script( 'velocityjs' , plugins_url( '/js/velocity.min.js',  __FILE__ ), array( 'jquery' ), '1.0.10', false );
+  wp_register_script( 'slicknavjs' , plugins_url( '/js/jquery.slicknav.min.js',  __FILE__ ), array( 'jquery' ), '1.0.11', false );
+ // wp_register_script( 'slicknavjs' , plugins_url( '/js/jquery.slicknav-ng.js',  __FILE__ ), array( 'jquery' ), '1.0.11', false );
+  wp_register_script( 'velocityjs' , plugins_url( '/js/velocity.min.js',  __FILE__ ), array( 'jquery' ), '1.0.11', false );
   // wp_register_style( 'slicknavcss' , plugins_url( '/css/slicknav.css',  __FILE__ ), '' , '1.0.10', 'all' );
-  wp_register_style( 'slicknavcss' , plugins_url( '/css/slicknav.min.css',  __FILE__ ), '' , '1.0.10', 'all' );
-  wp_register_script( 'slicknav-init' , plugins_url( '/js/slick-init.js',  __FILE__ ), array( 'slicknavjs' ), '1.8.0', false );
+  wp_register_style( 'slicknavcss' , plugins_url( '/css/slicknav.min.css',  __FILE__ ), '' , '1.0.11', 'all' );
+  wp_register_script( 'slicknav-init' , plugins_url( '/js/slick-init.js',  __FILE__ ), array( 'slicknavjs' ), '1.9.1', false );
 
   wp_enqueue_script( 'slicknavjs' );
   wp_enqueue_style( 'slicknavcss' );
