@@ -25,15 +25,16 @@ jQuery(document).ready(function($) {
         	// multiple comma seperated selectors
         	// based on http://codepen.io/ComputerWolf/pen/tjyIg
         	// clone all menus to keep them intact
-        	ng_slicknav_menu = $( $.trim( ng_slicknav_menu_arr[0] ) ).clone();
+        	ng_slicknav_menu = $( ng_slicknav_menu_arr[0].trim() ).clone();
         	for ( var i = 1; i < ng_slicknav_menu_arr.length; i++ ) {
-        		var ng_slicknav_other = $( $.trim( ng_slicknav_menu_arr[i] ) ).clone();
+        		var ng_slicknav_other = $( ng_slicknav_menu_arr[i].trim() ).clone();
         		ng_slicknav_other.children( 'li' ).appendTo( ng_slicknav_menu );
         	}
         	ng_slicknav_menu_duplicate = false;
         } else {
         	// only one selector
-        	ng_slicknav_menu = $.trim( ng_slicknav_menu_arr[0] );
+        	ng_slicknav_menu = ng_slicknav_menu_arr[0].trim();
+        	//ng_slicknav_menu = ng_slicknav_menu.trim();
         }
 
         $(ng_slicknav_menu).slicknav({	// Ov3rfly

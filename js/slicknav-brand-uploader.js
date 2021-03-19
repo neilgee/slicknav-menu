@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
     var custom_uploader;
  
  
-    $('#upload_image_button').click(function(e) {
+    $('#upload_image_button').on('click', function(event){
  
         e.preventDefault();
  
